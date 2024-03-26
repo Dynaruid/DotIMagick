@@ -40,7 +40,3 @@ MagickImage image = new MagickImage(MagickColors.White, width, height);
 ||windows (x86)|✅|✅|❌|
 
 
-
-## Extra libraries
-
-Besides the quantum specific packages there are also some extra libraries in this project. One of these libraries is the [Magick.NET.Core](https://www.nuget.org/packages/Magick.NET.Core/) library that is a dependency of the quantum specific packages. This library can be used to add extra functionality and interact with the Magick.NET libraries. Two examples are [Magick.NET.SystemDrawing](https://www.nuget.org/packages/Magick.NET.SystemDrawing/) and [Magick.NET.SystemWindowsMedia](https://www.nuget.org/packages/Magick.NET.SystemWindowsMedia/) that can be used to interact with `System.Drawing` and `System.Windows.Media`.
