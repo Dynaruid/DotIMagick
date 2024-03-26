@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.12</Version>
+    <TargetFrameworks>net8</TargetFrameworks>
+    <Platforms>x86;x64;arm64;AnyCPU</Platforms>
+    <RuntimeIdentifiers>win-x64;linux-x64;osx-arm64</RuntimeIdentifiers>
+    <Configurations>
+      DebugQ8;DebugQ16;DebugQ16-HDRI;TestQ8;TestQ16;TestQ16-HDRI;TestQ8-OpenMP;TestQ16-OpenMP;TestQ16-HDRI-OpenMP;ReleaseQ8;ReleaseQ8-OpenMP;ReleaseQ16;ReleaseQ16-OpenMP;ReleaseQ16-HDRI;ReleaseQ16-HDRI-OpenMP</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(Configuration.EndsWith('Q8'))">
+    <DefineConstants>Q8;PLATFORM_$(Platform)</DefineConstants>
+    <QuantumType>Q8</QuantumType>
+    <QuantumName>Q8</QuantumName>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('Q8-OpenMP'))">
+    <DefineConstants>Q8;OPENMP;PLATFORM_$(Platform)</DefineConstants>
+    <QuantumType>Q8</QuantumType>
+    <QuantumName>Q8-OpenMP</QuantumName>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('Q16'))">
+    <DefineConstants>Q16;PLATFORM_$(Platform)</DefineConstants>
+    <QuantumType>Q16</QuantumType>
+    <QuantumName>Q16</QuantumName>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('Q16-OpenMP'))">
+    <DefineConstants>Q16;OPENMP;PLATFORM_$(Platform)</DefineConstants>
+    <QuantumType>Q16</QuantumType>
+    <QuantumName>Q16-OpenMP</QuantumName>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('Q16-HDRI'))">
+    <DefineConstants>Q16HDRI;PLATFORM_$(Platform)</DefineConstants>
+    <QuantumType>Q16-HDRI</QuantumType>
+    <QuantumName>Q16-HDRI</QuantumName>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('Q16-HDRI-OpenMP'))">
+    <DefineConstants>Q16HDRI;OPENMP;PLATFORM_$(Platform)</DefineConstants>
+    <QuantumType>Q16-HDRI</QuantumType>
+    <QuantumName>Q16-HDRI-OpenMP</QuantumName>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Platform)' == 'x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Platform)' == 'x64'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Platform)' == 'arm64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+  </PropertyGroup>
+  
+
+  <ItemGroup>
+    <Compile Include="../Magick.Native/TrademarkAttribute.cs" Link="TrademarkAttribute.cs" />
+    <Compile Include="../Shared/Bytes.cs" Link="Helpers/Bytes.cs" />
+    <Compile Include="../Shared/EnumHelper.cs" Link="Helpers/EnumHelper.cs" />
+    <Compile Include="../Shared/FileHelper.cs" Link="Helpers/FileHelper.cs" />
+    <Compile Include="../Shared/Throw.cs" Link="Helpers/Throw.cs" />
+    <Compile Include="../Shared/TypeHelper.cs" Link="Helpers/TypeHelper.cs" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);CS0414</NoWarn>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <AssemblyName>DotIMagick-$(QuantumName)-$(Platform)</AssemblyName>
+    <AssemblyTitle>DotIMagick $(QuantumName) $(Platform) $(TargetFrameWork)</AssemblyTitle>
+    
+  </PropertyGroup>
+  <Import Project="CopyTargetsFile.targets" />
+  <Import Project="DotIMagick.targets" />
+
+  <ItemGroup>
+    <Content Include="build\$(AssemblyName).targets" >
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <ProjectReference Include="..\DotIMagick.Core\DotIMagick.Core.csproj" />
+    <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+  <Import Project="../DotIMagick.props" />
+</Project>

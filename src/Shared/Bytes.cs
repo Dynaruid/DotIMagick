@@ -19,8 +19,7 @@ internal sealed partial class Bytes
         _length = length;
     }
 
-    public int Length
-        => _length;
+    public int Length => _length;
 
     public static Bytes Create(Stream stream, bool allowEmptyStream = false)
     {
@@ -55,8 +54,7 @@ internal sealed partial class Bytes
         return new Bytes(data, length);
     }
 
-    public byte[] GetData()
-        => _data;
+    public byte[] GetData() => _data;
 
     private static byte[] GetData(Stream stream, out int length)
     {
@@ -81,7 +79,10 @@ internal sealed partial class Bytes
         return GetDataFromMemoryStream(tempStream, out length);
     }
 
-    private static async Task<(byte[] Bytes, int Length)> GetDataAsync(Stream stream, CancellationToken cancellationToken)
+    private static async Task<(byte[] Bytes, int Length)> GetDataAsync(
+        Stream stream,
+        CancellationToken cancellationToken
+    )
     {
         int length;
         byte[] bytes;
@@ -95,12 +96,19 @@ internal sealed partial class Bytes
         Throw.IfFalse(nameof(stream), stream.CanRead, "The stream is not readable.");
 
         if (stream.CanSeek)
-            return await GetDataWithSeekableStreamAsync(stream, cancellationToken).ConfigureAwait(false);
+            return await GetDataWithSeekableStreamAsync(stream, cancellationToken)
+                .ConfigureAwait(false);
 
         int count;
         var buffer = new byte[BufferSize];
         using var tempStream = new MemoryStream();
-        while ((count = await stream.ReadAsync(buffer, 0, BufferSize, cancellationToken).ConfigureAwait(false)) != 0)
+        while (
+            (
+                count = await stream
+                    .ReadAsync(buffer, 0, BufferSize, cancellationToken)
+                    .ConfigureAwait(false)
+            ) != 0
+        )
         {
             CheckLength(tempStream.Length + count);
 
@@ -128,7 +136,10 @@ internal sealed partial class Bytes
         return data;
     }
 
-    private static async Task<(byte[] Bytes, int Length)> GetDataWithSeekableStreamAsync(Stream stream, CancellationToken cancellationToken)
+    private static async Task<(byte[] Bytes, int Length)> GetDataWithSeekableStreamAsync(
+        Stream stream,
+        CancellationToken cancellationToken
+    )
     {
         CheckLength(stream.Length);
 
@@ -137,7 +148,13 @@ internal sealed partial class Bytes
 
         var read = 0;
         int bytesRead;
-        while ((bytesRead = await stream.ReadAsync(data, read, length - read, cancellationToken).ConfigureAwait(false)) != 0)
+        while (
+            (
+                bytesRead = await stream
+                    .ReadAsync(data, read, length - read, cancellationToken)
+                    .ConfigureAwait(false)
+            ) != 0
+        )
         {
             read += bytesRead;
         }
@@ -176,9 +193,13 @@ internal sealed partial class Bytes
         return null;
     }
 
-    private static void CheckLength(long length)
-        => Throw.IfFalse(nameof(length), IsSupportedLength(length), "Streams with a length larger than {0} are not supported, read from file instead.", int.MaxValue);
+    private static void CheckLength(long length) =>
+        Throw.IfFalse(
+            nameof(length),
+            IsSupportedLength(length),
+            "Streams with a length larger than {0} are not supported, read from file instead.",
+            int.MaxValue
+        );
 
-    private static bool IsSupportedLength(long length)
-        => length <= int.MaxValue;
+    private static bool IsSupportedLength(long length) => length <= int.MaxValue;
 }

@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!--무조건 netstandard20 이어야함-->
+    <TargetFrameworks>netstandard20</TargetFrameworks>
+    <LangVersion>12.0</LangVersion>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <Configurations>Debug;Release;DebugQ8;ReleaseQ8</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard20|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='DebugQ8|netstandard20|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard20|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='ReleaseQ8|netstandard20|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="Drawables\DrawablesAttribute.cs">
+      <LogicalName>DrawablesAttribute</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExifTagDescription\ExifTagDescriptionAttribute.cs">
+      <LogicalName>ExifTagDescriptionAttribute</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paths\PathsAttribute.cs">
+      <LogicalName>PathsAttribute</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.9.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
+    <PackageReference Include="System.Collections.Immutable" Version="8.0.0" />
+  </ItemGroup>
+
+  <Import Project="../DotIMagick.props" />
+</Project>

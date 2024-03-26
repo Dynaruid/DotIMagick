@@ -9,16 +9,13 @@ namespace ImageMagick;
 internal static class EnumHelper
 {
     public static string ConvertFlags<TEnum>(TEnum value)
-        where TEnum : struct, Enum
-        => value.ToString();
+        where TEnum : struct, Enum => value.ToString();
 
     public static bool HasFlag<TEnum>(TEnum value, TEnum flag)
-        where TEnum : struct, Enum
-        => value.HasFlag(flag);
+        where TEnum : struct, Enum => value.HasFlag(flag);
 
     public static TEnum Parse<TEnum>(int value, TEnum defaultValue)
-        where TEnum : struct, Enum
-        => Parse((object)value, defaultValue);
+        where TEnum : struct, Enum => Parse((object)value, defaultValue);
 
     public static TEnum Parse<TEnum>(string? value, TEnum defaultValue)
         where TEnum : struct, Enum
@@ -30,8 +27,7 @@ internal static class EnumHelper
     }
 
     public static TEnum Parse<TEnum>(ushort value, TEnum defaultValue)
-        where TEnum : struct, Enum
-        => Parse((object)(int)value, defaultValue);
+        where TEnum : struct, Enum => Parse((object)(int)value, defaultValue);
 
     public static MagickFormat ParseMagickFormatFromExtension(FileInfo file)
     {

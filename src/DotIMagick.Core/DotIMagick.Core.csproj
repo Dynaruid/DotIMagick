@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <Platforms>AnyCPU</Platforms>
+    <Configurations>Debug;Test;Release;DebugQ8;ReleaseQ8</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../Shared/Bytes.cs" Link="Helpers/Bytes.cs" />
+    <Compile Include="../Shared/EnumHelper.cs" Link="Helpers/EnumHelper.cs" />
+    <Compile Include="../Shared/FileHelper.cs" Link="Helpers/FileHelper.cs" />
+    <Compile Include="../Shared/Throw.cs" Link="Helpers/Throw.cs" />
+    <Compile Include="../Shared/TypeHelper.cs" Link="Helpers/TypeHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources/ColorProfiles/CMYK/CoatedFOGRA39.icc">
+      <LogicalName>ImageMagick.Resources.ColorProfiles.CMYK.CoatedFOGRA39.icc</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources/ColorProfiles/CMYK/USWebCoatedSWOP.icc">
+      <LogicalName>ImageMagick.Resources.ColorProfiles.CMYK.USWebCoatedSWOP.icc</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources/ColorProfiles/RGB/AdobeRGB1998.icc">
+      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.AdobeRGB1998.icc</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources/ColorProfiles/RGB/AppleRGB.icc">
+      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.AppleRGB.icc</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources/ColorProfiles/RGB/ColorMatchRGB.icc">
+      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.ColorMatchRGB.icc</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources/ColorProfiles/RGB/SRGB.icm">
+      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.SRGB.icm</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <Import Project="../DotIMagick.props" />
+</Project>
