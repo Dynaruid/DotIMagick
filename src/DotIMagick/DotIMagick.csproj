@@ -6,7 +6,7 @@
     <Configurations>
       DebugQ8;DebugQ16;DebugQ16-HDRI;TestQ8;TestQ16;TestQ16-HDRI;TestQ8-OpenMP;TestQ16-OpenMP;TestQ16-HDRI-OpenMP;ReleaseQ8;ReleaseQ8-OpenMP;ReleaseQ16;ReleaseQ16-OpenMP;ReleaseQ16-HDRI;ReleaseQ16-HDRI-OpenMP</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.14</Version>
+    <Version>1.0.15</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Apache-2.0 license</Copyright>
@@ -50,9 +50,9 @@
     <QuantumType>Q16-HDRI</QuantumType>
     <QuantumName>Q16-HDRI-OpenMP</QuantumName>
   </PropertyGroup>
+
   
   <ItemGroup>
-    <PackageReference Include="DotIMagick.Core" Version="1.0.13" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Platform)' == 'x86'">
@@ -93,6 +93,7 @@
     <Content Include="build\$(AssemblyName).targets">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+    <ProjectReference Include="..\DotIMagick.Core\DotIMagick.Core.csproj" />
     <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <None Include="README.md" Pack="true" PackagePath="\" />
     <None Include="LICENSE" Pack="true" PackagePath="\" />
