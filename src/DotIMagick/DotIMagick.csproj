@@ -10,7 +10,7 @@
     <PackageLicenseFile>../../LICENSE</PackageLicenseFile>
     <PackageReadmeFile>../../README.md</PackageReadmeFile>
     <Copyright>Apache-2.0 license</Copyright>
-    <PackageTags>ocr</PackageTags>
+    <PackageTags>imagemagick;image</PackageTags>
     <Description>This is a forked version of Magick.NET with AOT (Ahead-Of-Time compilation) support.</Description>
     <RepositoryUrl>https://github.com/Dynaruid/DotIMagick</RepositoryUrl>
   
@@ -89,7 +89,7 @@
   <Import Project="DotIMagick.targets" />
 
   <ItemGroup>
-    <Content Include="build\$(AssemblyName).targets" >
+    <Content Include="build\$(AssemblyName).targets">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <ProjectReference Include="..\DotIMagick.Core\DotIMagick.Core.csproj" />
