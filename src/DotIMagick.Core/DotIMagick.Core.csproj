@@ -1,11 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.0.12</Version>
     <TargetFrameworks>net8.0</TargetFrameworks>
     <Platforms>AnyCPU</Platforms>
     <Configurations>Debug;Test;Release;DebugQ8;ReleaseQ8</Configurations>
-    
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.13</Version>
+    <PackageLicenseFile>../../LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>../../README.md</PackageReadmeFile>
+    <Copyright>Apache-2.0 license</Copyright>
+    <PackageTags>ocr</PackageTags>
+    <Description>This is a forked version of Magick.NET with AOT (Ahead-Of-Time compilation) support.</Description>
     <RepositoryUrl>https://github.com/Dynaruid/DotIMagick</RepositoryUrl>
   </PropertyGroup>
 
