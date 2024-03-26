@@ -7,8 +7,8 @@
       DebugQ8;DebugQ16;DebugQ16-HDRI;TestQ8;TestQ16;TestQ16-HDRI;TestQ8-OpenMP;TestQ16-OpenMP;TestQ16-HDRI-OpenMP;ReleaseQ8;ReleaseQ8-OpenMP;ReleaseQ16;ReleaseQ16-OpenMP;ReleaseQ16-HDRI;ReleaseQ16-HDRI-OpenMP</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>1.0.13</Version>
-    <PackageLicenseFile>../../LICENSE</PackageLicenseFile>
-    <PackageReadmeFile>../../README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Apache-2.0 license</Copyright>
     <PackageTags>imagemagick;image</PackageTags>
     <Description>This is a forked version of Magick.NET with AOT (Ahead-Of-Time compilation) support.</Description>
