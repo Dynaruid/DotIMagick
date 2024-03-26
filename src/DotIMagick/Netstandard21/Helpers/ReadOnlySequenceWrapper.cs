@@ -3,7 +3,7 @@
 
 #if NETSTANDARD2_1
 
-using ImageMagick.Helpers;
+using DotIMagick.Helpers;
 using System;
 using System.Buffers;
 using System.IO;

@@ -2,7 +2,7 @@
 // Licensed under the Apache License, Version 2.0.
 
 using System;
-using ImageMagick.Helpers;
+using DotIMagick.Helpers;
 
 #if Q8
 using QuantumType = System.Byte;

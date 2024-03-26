@@ -5,7 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using ImageMagick.SourceGenerator;
+using DotIMagick.SourceGenerator;
 
 #if Q8
 using QuantumType = System.Byte;
