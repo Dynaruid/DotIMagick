@@ -94,8 +94,8 @@
     </Content>
     <ProjectReference Include="..\DotIMagick.Core\DotIMagick.Core.csproj" />
     <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
-    <None Include="../../README.md" Pack="true" PackagePath="\" />
-    <None Include="../../LICENSE" Pack="true" PackagePath="\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="LICENSE" Pack="true" PackagePath="\" />
   </ItemGroup>
   <Import Project="../DotIMagick.props" />
 </Project>
