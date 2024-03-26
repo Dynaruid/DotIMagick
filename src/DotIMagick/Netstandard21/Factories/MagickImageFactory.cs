@@ -26,7 +26,7 @@ public sealed partial class MagickImageFactory
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(ReadOnlySequence<byte> data) => new MagickImage(data);
 
     /// <summary>
@@ -35,7 +35,7 @@ public sealed partial class MagickImageFactory
     /// <param name="data">The sequence of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         ReadOnlySequence<byte> data,
         IMagickReadSettings<QuantumType> readSettings
@@ -46,7 +46,7 @@ public sealed partial class MagickImageFactory
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(ReadOnlySpan<byte> data) => new MagickImage(data);
 
     /// <summary>
@@ -55,7 +55,7 @@ public sealed partial class MagickImageFactory
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         ReadOnlySpan<byte> data,
         IMagickReadSettings<QuantumType> readSettings
@@ -67,7 +67,7 @@ public sealed partial class MagickImageFactory
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         ReadOnlySpan<byte> data,
         IPixelReadSettings<QuantumType> settings

@@ -20,7 +20,7 @@ public partial class MagickNET : IMagickNET
     private static LogEvents _logEvents = LogEvents.None;
 
     /// <summary>
-    /// Event that will be raised when something is logged by ImageMagick.
+    /// Event that will be raised when something is logged by DotIMagick.
     /// </summary>
     public static event EventHandler<LogEventArgs> Log
     {
@@ -49,7 +49,7 @@ public partial class MagickNET : IMagickNET
     }
 
     /// <summary>
-    /// Event that will be raised when something is logged by ImageMagick.
+    /// Event that will be raised when something is logged by DotIMagick.
     /// </summary>
     event EventHandler<LogEventArgs> IMagickNET.Log
     {
@@ -73,7 +73,7 @@ public partial class MagickNET : IMagickNET
     public static IReadOnlyCollection<IMagickFormatInfo> SupportedFormats => MagickFormatInfo.All;
 
     /// <summary>
-    /// Gets the font families that are known by ImageMagick.
+    /// Gets the font families that are known by DotIMagick.
     /// </summary>
     public static IReadOnlyCollection<string> FontFamilies
     {
@@ -110,7 +110,7 @@ public partial class MagickNET : IMagickNET
     }
 
     /// <summary>
-    /// Gets the font names that are known by ImageMagick.
+    /// Gets the font names that are known by DotIMagick.
     /// </summary>
     public static IReadOnlyCollection<string> FontNames
     {
@@ -143,7 +143,7 @@ public partial class MagickNET : IMagickNET
     }
 
     /// <summary>
-    /// Gets the version of ImageMagick.
+    /// Gets the version of DotIMagick.
     /// </summary>
     public static string ImageMagickVersion => NativeMagickNET.ImageMagickVersion;
 
@@ -173,17 +173,17 @@ public partial class MagickNET : IMagickNET
     string IMagickNET.Features => Features;
 
     /// <summary>
-    /// Gets the font families that are known by ImageMagick.
+    /// Gets the font families that are known by DotIMagick.
     /// </summary>
     IReadOnlyCollection<string> IMagickNET.FontFamilies => FontFamilies;
 
     /// <summary>
-    /// Gets the font names that are known by ImageMagick.
+    /// Gets the font names that are known by DotIMagick.
     /// </summary>
     IReadOnlyCollection<string> IMagickNET.FontNames => FontNames;
 
     /// <summary>
-    /// Gets the version of ImageMagick.
+    /// Gets the version of DotIMagick.
     /// </summary>
     string IMagickNET.ImageMagickVersion => ImageMagickVersion;
 
@@ -211,7 +211,7 @@ public partial class MagickNET : IMagickNET
     }
 
     /// <summary>
-    /// Initializes ImageMagick.
+    /// Initializes DotIMagick.
     /// </summary>
     public static void Initialize() => Environment.Initialize();
 
@@ -326,7 +326,7 @@ public partial class MagickNET : IMagickNET
     string? IMagickNET.GetEnvironmentVariable(string name) => GetEnvironmentVariable(name);
 
     /// <summary>
-    /// Initializes ImageMagick.
+    /// Initializes DotIMagick.
     /// </summary>
     void IMagickNET.Initialize() => Initialize();
 

@@ -27,22 +27,22 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources/ColorProfiles/CMYK/CoatedFOGRA39.icc">
-      <LogicalName>ImageMagick.Resources.ColorProfiles.CMYK.CoatedFOGRA39.icc</LogicalName>
+      <LogicalName>DotIMagick.Resources.ColorProfiles.CMYK.CoatedFOGRA39.icc</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources/ColorProfiles/CMYK/USWebCoatedSWOP.icc">
-      <LogicalName>ImageMagick.Resources.ColorProfiles.CMYK.USWebCoatedSWOP.icc</LogicalName>
+      <LogicalName>DotIMagick.Resources.ColorProfiles.CMYK.USWebCoatedSWOP.icc</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources/ColorProfiles/RGB/AdobeRGB1998.icc">
-      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.AdobeRGB1998.icc</LogicalName>
+      <LogicalName>DotIMagick.Resources.ColorProfiles.RGB.AdobeRGB1998.icc</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources/ColorProfiles/RGB/AppleRGB.icc">
-      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.AppleRGB.icc</LogicalName>
+      <LogicalName>DotIMagick.Resources.ColorProfiles.RGB.AppleRGB.icc</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources/ColorProfiles/RGB/ColorMatchRGB.icc">
-      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.ColorMatchRGB.icc</LogicalName>
+      <LogicalName>DotIMagick.Resources.ColorProfiles.RGB.ColorMatchRGB.icc</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources/ColorProfiles/RGB/SRGB.icm">
-      <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.SRGB.icm</LogicalName>
+      <LogicalName>DotIMagick.Resources.ColorProfiles.RGB.SRGB.icm</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
 

@@ -45,7 +45,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Initializes a new instance of the <see cref="MagickImageCollection"/> class.
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(byte[] data)
         : this() => Read(data);
 
@@ -55,7 +55,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(byte[] data, int offset, int count)
         : this() => Read(data, offset, count);
 
@@ -66,7 +66,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(byte[] data, int offset, int count, MagickFormat format)
         : this() => Read(data, offset, count, format);
 
@@ -77,7 +77,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(
         byte[] data,
         int offset,
@@ -91,7 +91,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(byte[] data, MagickFormat format)
         : this() => Read(data, format);
 
@@ -100,7 +100,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(byte[] data, IMagickReadSettings<QuantumType> readSettings)
         : this() => Read(data, readSettings);
 
@@ -108,7 +108,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Initializes a new instance of the <see cref="MagickImageCollection"/> class.
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(FileInfo file)
         : this() => Read(file);
 
@@ -117,7 +117,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(FileInfo file, MagickFormat format)
         : this() => Read(file, format);
 
@@ -126,7 +126,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(FileInfo file, IMagickReadSettings<QuantumType> readSettings)
         : this() => Read(file, readSettings);
 
@@ -134,7 +134,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Initializes a new instance of the <see cref="MagickImageCollection"/> class.
     /// </summary>
     /// <param name="images">The images to add to the collection.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(IEnumerable<IMagickImage<QuantumType>> images)
         : this() => AddRange(images);
 
@@ -142,7 +142,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Initializes a new instance of the <see cref="MagickImageCollection"/> class.
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(Stream stream)
         : this() => Read(stream);
 
@@ -151,7 +151,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(Stream stream, MagickFormat format)
         : this() => Read(stream, format);
 
@@ -160,7 +160,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(Stream stream, IMagickReadSettings<QuantumType> readSettings)
         : this() => Read(stream, readSettings);
 
@@ -168,7 +168,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Initializes a new instance of the <see cref="MagickImageCollection"/> class.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(string fileName)
         : this() => Read(fileName);
 
@@ -177,7 +177,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(string fileName, MagickFormat format)
         : this() => Read(fileName, format);
 
@@ -186,7 +186,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(string fileName, IMagickReadSettings<QuantumType> readSettings)
         : this() => Read(fileName, readSettings);
 
@@ -196,7 +196,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     ~MagickImageCollection() => Dispose(false);
 
     /// <summary>
-    /// Event that will we raised when a warning is raised by ImageMagick.
+    /// Event that will we raised when a warning is raised by DotIMagick.
     /// </summary>
     public event EventHandler<WarningEventArgs> Warning
     {
@@ -256,14 +256,14 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Adds an image with the specified file name to the collection.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Add(string fileName) => _images.Add(new MagickImage(fileName));
 
     /// <summary>
     /// Adds the image(s) from the specified byte array to the collection.
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void AddRange(byte[] data) => AddRange(data, null);
 
     /// <summary>
@@ -271,7 +271,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void AddRange(byte[] data, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfNullOrEmpty(nameof(data), data);
@@ -283,7 +283,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Adds the specified images to this collection.
     /// </summary>
     /// <param name="images">The images to add to the collection.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void AddRange(IEnumerable<IMagickImage<QuantumType>> images)
     {
         Throw.IfNull(nameof(images), images);
@@ -303,7 +303,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Adds the image(s) from the specified file name to the collection.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void AddRange(string fileName) => AddRange(fileName, null);
 
     /// <summary>
@@ -311,7 +311,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void AddRange(string fileName, IMagickReadSettings<QuantumType>? readSettings) =>
         AddImages(fileName, readSettings, false);
 
@@ -319,7 +319,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Adds the image(s) from the specified stream to the collection.
     /// </summary>
     /// <param name="stream">The stream to read the images from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void AddRange(Stream stream) => AddRange(stream, null);
 
     /// <summary>
@@ -327,7 +327,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to read the images from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void AddRange(Stream stream, IMagickReadSettings<QuantumType>? readSettings) =>
         AddImages(stream, readSettings, false);
 
@@ -335,7 +335,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Creates a single image, by appending all the images in the collection horizontally (+append).
     /// </summary>
     /// <returns>A single image, by appending all the images in the collection horizontally (+append).</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> AppendHorizontally()
     {
         ThrowIfEmpty();
@@ -356,7 +356,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Creates a single image, by appending all the images in the collection vertically (-append).
     /// </summary>
     /// <returns>A single image, by appending all the images in the collection vertically (-append).</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> AppendVertically()
     {
         ThrowIfEmpty();
@@ -377,7 +377,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Merge a sequence of images. This is useful for GIF animation sequences that have page
     /// offsets and disposal methods.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Coalesce()
     {
         ThrowIfEmpty();
@@ -432,7 +432,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// image 1 => Red, 2 => Green, 3 => Blue, etc.
     /// </summary>
     /// <returns>The images combined into a single image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Combine() => Combine(ColorSpace.sRGB);
 
     /// <summary>
@@ -442,7 +442,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="colorSpace">The image colorspace.</param>
     /// <returns>The images combined into a single image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Combine(ColorSpace colorSpace)
     {
         ThrowIfEmpty();
@@ -463,7 +463,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Perform complex mathematics on an image sequence.
     /// </summary>
     /// <param name="complexSettings">The complex settings.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Complex(IComplexSettings complexSettings)
     {
         Throw.IfNull(nameof(complexSettings), complexSettings);
@@ -533,7 +533,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Break down an image sequence into constituent parts. This is useful for creating GIF or
     /// MNG animation sequences.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Deconstruct()
     {
         ThrowIfEmpty();
@@ -571,7 +571,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="evaluateOperator">The operator.</param>
     /// <returns>The resulting image of the evaluation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Evaluate(EvaluateOperator evaluateOperator)
     {
         ThrowIfEmpty();
@@ -594,7 +594,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// This can be used to 'fill out' a given virtual canvas.
     /// </summary>
     /// <returns>The resulting image of the flatten operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Flatten() => Merge(LayerMethod.Flatten);
 
     /// <summary>
@@ -660,7 +660,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Remap image colors with closest color from reference image.
     /// </summary>
     /// <param name="image">The image to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Map(IMagickImage<QuantumType> image) => Map(image, new QuantizeSettings());
 
     /// <summary>
@@ -668,7 +668,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="image">The image to use.</param>
     /// <param name="settings">Quantize settings.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Map(IMagickImage<QuantumType> image, IQuantizeSettings settings)
     {
         ThrowIfEmpty();
@@ -692,7 +692,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// canvas of the first image is preserved but otherwise ignored.
     /// </summary>
     /// <returns>The resulting image of the merge operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Merge() => Merge(LayerMethod.Merge);
 
     /// <summary>
@@ -700,7 +700,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="settings">The settings to use.</param>
     /// <returns>The resulting image of the montage operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Montage(IMontageSettings<QuantumType> settings)
     {
         ThrowIfEmpty();
@@ -738,7 +738,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// the second by a number of intervening images as specified by frames.
     /// </summary>
     /// <param name="frames">The number of in-between images to generate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Morph(int frames)
     {
         ThrowIfCountLowerThan(2);
@@ -766,7 +766,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// all images. Images with negative offsets will be clipped.
     /// </summary>
     /// <returns>The resulting image of the mosaic operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Mosaic() => Merge(LayerMethod.Mosaic);
 
     /// <summary>
@@ -774,7 +774,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// this it attempts to select the smallest cropped image to replace each frame, while
     /// preserving the results of the GIF animation.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Optimize()
     {
         ThrowIfEmpty();
@@ -801,7 +801,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// OptimizePlus is exactly as Optimize, but may also add or even remove extra frames in the
     /// animation, if it improves the total number of pixels in the resulting GIF animation.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void OptimizePlus()
     {
         ThrowIfEmpty();
@@ -828,7 +828,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Compares each image the GIF disposed forms of the previous image in the sequence. Any
     /// pixel that does not change the displayed result is replaced with transparency.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void OptimizeTransparency()
     {
         ThrowIfEmpty();
@@ -848,7 +848,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(byte[] data) => Ping(data, null);
 
     /// <summary>
@@ -857,7 +857,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(byte[] data, int offset, int count) => Ping(data, offset, count, null);
 
     /// <summary>
@@ -867,7 +867,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(
         byte[] data,
         int offset,
@@ -898,7 +898,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(byte[] data, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfNullOrEmpty(nameof(data), data);
@@ -911,7 +911,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(FileInfo file) => Ping(file, null);
 
     /// <summary>
@@ -919,7 +919,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(FileInfo file, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfNull(nameof(file), file);
@@ -931,7 +931,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(Stream stream) => Ping(stream, null);
 
     /// <summary>
@@ -939,7 +939,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(Stream stream, IMagickReadSettings<QuantumType>? readSettings)
     {
         Clear();
@@ -950,7 +950,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(string fileName) => Ping(fileName, null);
 
     /// <summary>
@@ -958,7 +958,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(string fileName, IMagickReadSettings<QuantumType>? readSettings)
     {
         Clear();
@@ -994,7 +994,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Quantize images (reduce number of colors).
     /// </summary>
     /// <returns>The resulting image of the quantize operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickErrorInfo? Quantize() => Quantize(new QuantizeSettings());
 
     /// <summary>
@@ -1002,7 +1002,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="settings">Quantize settings.</param>
     /// <returns>The resulting image of the quantize operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickErrorInfo? Quantize(IQuantizeSettings settings)
     {
         ThrowIfEmpty();
@@ -1029,7 +1029,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read all image frames.
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(byte[] data) => Read(data, null);
 
     /// <summary>
@@ -1038,7 +1038,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(byte[] data, int offset, int count) => Read(data, offset, count, null);
 
     /// <summary>
@@ -1048,7 +1048,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(byte[] data, int offset, int count, MagickFormat format) =>
         Read(data, offset, count, new MagickReadSettings { Format = format });
 
@@ -1059,7 +1059,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(
         byte[] data,
         int offset,
@@ -1090,7 +1090,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(byte[] data, MagickFormat format) =>
         Read(data, new MagickReadSettings { Format = format });
 
@@ -1099,7 +1099,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(byte[] data, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfNullOrEmpty(nameof(data), data);
@@ -1112,7 +1112,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read all image frames.
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(FileInfo file) => Read(file, null);
 
     /// <summary>
@@ -1120,7 +1120,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(FileInfo file, MagickFormat format) =>
         Read(file, new MagickReadSettings { Format = format });
 
@@ -1129,7 +1129,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(FileInfo file, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfNull(nameof(file), file);
@@ -1141,7 +1141,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read all image frames.
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(Stream stream) => Read(stream, null);
 
     /// <summary>
@@ -1149,7 +1149,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(Stream stream, MagickFormat format) =>
         Read(stream, new MagickReadSettings { Format = format });
 
@@ -1158,7 +1158,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(Stream stream, IMagickReadSettings<QuantumType>? readSettings)
     {
         Clear();
@@ -1169,7 +1169,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// Read all image frames.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(string fileName) => Read(fileName, null);
 
     /// <summary>
@@ -1177,7 +1177,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(string fileName, MagickFormat format) =>
         Read(fileName, new MagickReadSettings { Format = format });
 
@@ -1186,7 +1186,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(string fileName, IMagickReadSettings<QuantumType>? readSettings)
     {
         Clear();
@@ -1198,7 +1198,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(FileInfo file) => ReadAsync(file, CancellationToken.None);
 
     /// <summary>
@@ -1207,7 +1207,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(FileInfo file, CancellationToken cancellationToken) =>
         ReadAsync(file, null, cancellationToken);
 
@@ -1217,7 +1217,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(FileInfo file, IMagickReadSettings<QuantumType>? readSettings) =>
         ReadAsync(file, readSettings, CancellationToken.None);
 
@@ -1228,7 +1228,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(
         FileInfo file,
         IMagickReadSettings<QuantumType>? readSettings,
@@ -1246,7 +1246,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(FileInfo file, MagickFormat format) =>
         ReadAsync(file, format, CancellationToken.None);
 
@@ -1257,7 +1257,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(
         FileInfo file,
         MagickFormat format,
@@ -1269,7 +1269,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(string fileName) => ReadAsync(fileName, CancellationToken.None);
 
     /// <summary>
@@ -1278,7 +1278,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(string fileName, CancellationToken cancellationToken) =>
         ReadAsync(fileName, null, cancellationToken);
 
@@ -1288,7 +1288,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(string fileName, IMagickReadSettings<QuantumType>? readSettings) =>
         ReadAsync(fileName, readSettings, CancellationToken.None);
 
@@ -1299,7 +1299,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task ReadAsync(
         string fileName,
         IMagickReadSettings<QuantumType>? readSettings,
@@ -1324,7 +1324,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(string fileName, MagickFormat format) =>
         ReadAsync(fileName, format, CancellationToken.None);
 
@@ -1335,7 +1335,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(
         string fileName,
         MagickFormat format,
@@ -1347,7 +1347,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(Stream stream) => ReadAsync(stream, CancellationToken.None);
 
     /// <summary>
@@ -1356,7 +1356,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(Stream stream, CancellationToken cancellationToken) =>
         ReadAsync(stream, null);
 
@@ -1366,7 +1366,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(Stream stream, MagickFormat format) =>
         ReadAsync(stream, format, CancellationToken.None);
 
@@ -1377,7 +1377,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(
         Stream stream,
         MagickFormat format,
@@ -1390,7 +1390,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task ReadAsync(Stream stream, IMagickReadSettings<QuantumType>? readSettings) =>
         ReadAsync(stream, readSettings, CancellationToken.None);
 
@@ -1401,7 +1401,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task ReadAsync(
         Stream stream,
         IMagickReadSettings<QuantumType>? readSettings,
@@ -1430,7 +1430,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <summary>
     /// Resets the page property of every image in the collection.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void RePage()
     {
         foreach (var image in _images)
@@ -1449,7 +1449,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="offset">Minimum distance in pixels between images.</param>
     /// <returns>The resulting image of the smush operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> SmushHorizontal(int offset) => Smush(offset, false);
 
     /// <summary>
@@ -1457,7 +1457,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="offset">Minimum distance in pixels between images.</param>
     /// <returns>The resulting image of the smush operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> SmushVertical(int offset) => Smush(offset, true);
 
     /// <summary>
@@ -1497,7 +1497,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="byte"/> array.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public byte[] ToByteArray(IWriteDefines defines)
     {
         SetDefines(defines);
@@ -1509,7 +1509,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <returns>A <see cref="byte"/> array.</returns>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public byte[] ToByteArray(MagickFormat format)
     {
         using var tempFormat = new TemporaryMagickFormat(this, format);
@@ -1542,7 +1542,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// then adjust the the canvas and offsets to be relative to those bounds,
     /// without overlaying the images.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void TrimBounds()
     {
         ThrowIfEmpty();
@@ -1563,7 +1563,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// allow multi-image files multiple files will be written.
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(FileInfo file)
     {
         Throw.IfNull(nameof(file), file);
@@ -1578,7 +1578,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
     /// <param name="defines">The defines to set.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(FileInfo file, IWriteDefines defines)
     {
         SetDefines(defines);
@@ -1591,7 +1591,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(FileInfo file, MagickFormat format)
     {
         using var tempFormat = new TemporaryMagickFormat(this, format);
@@ -1603,7 +1603,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// allow multi-image files multiple files will be written.
     /// </summary>
     /// <param name="stream">The stream to write the images to.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(Stream stream)
     {
         Throw.IfNull(nameof(stream), stream);
@@ -1647,7 +1647,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to write the images to.</param>
     /// <param name="defines">The defines to set.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(Stream stream, IWriteDefines defines)
     {
         SetDefines(defines);
@@ -1659,7 +1659,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to write the image data to.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(Stream stream, MagickFormat format)
     {
         using var tempFormat = new TemporaryMagickFormat(this, format);
@@ -1671,7 +1671,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// allow multi-image files multiple files will be written.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(string fileName)
     {
         var filePath = FileHelper.CheckForBaseDirectory(fileName);
@@ -1701,7 +1701,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="defines">The defines to set.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(string fileName, IWriteDefines defines)
     {
         SetDefines(defines);
@@ -1714,7 +1714,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(string fileName, MagickFormat format)
     {
         using var tempFormat = new TemporaryMagickFormat(this, format);
@@ -1727,7 +1727,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(FileInfo file) => WriteAsync(file, CancellationToken.None);
 
     /// <summary>
@@ -1737,7 +1737,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="file">The file to write the image to.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(FileInfo file, CancellationToken cancellationToken)
     {
         Throw.IfNull(nameof(file), file);
@@ -1756,7 +1756,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="file">The file to write the image to.</param>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(FileInfo file, IWriteDefines defines) =>
         WriteAsync(file, defines, CancellationToken.None);
 
@@ -1768,7 +1768,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="defines">The defines to set.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(
         FileInfo file,
         IWriteDefines defines,
@@ -1786,7 +1786,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="file">The file to write the image to.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(FileInfo file, MagickFormat format) =>
         WriteAsync(file, format, CancellationToken.None);
 
@@ -1798,7 +1798,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(FileInfo file, MagickFormat format, CancellationToken cancellationToken)
     {
         Throw.IfNull(nameof(file), file);
@@ -1815,7 +1815,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="stream">The stream to write the images to.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(Stream stream) => WriteAsync(stream, CancellationToken.None);
 
     /// <summary>
@@ -1825,7 +1825,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="stream">The stream to write the images to.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task WriteAsync(Stream stream, CancellationToken cancellationToken)
     {
         Throw.IfNull(nameof(stream), stream);
@@ -1855,7 +1855,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="stream">The stream to write the images to.</param>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(Stream stream, IWriteDefines defines) =>
         WriteAsync(stream, defines, CancellationToken.None);
 
@@ -1867,7 +1867,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="defines">The defines to set.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(
         Stream stream,
         IWriteDefines defines,
@@ -1884,7 +1884,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="stream">The stream to write the image data to.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(Stream stream, MagickFormat format) =>
         WriteAsync(stream, format, CancellationToken.None);
 
@@ -1895,7 +1895,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task WriteAsync(
         Stream stream,
         MagickFormat format,
@@ -1912,7 +1912,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(string fileName) => WriteAsync(fileName, CancellationToken.None);
 
     /// <summary>
@@ -1922,7 +1922,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(string fileName, CancellationToken cancellationToken)
     {
         var filePath = FileHelper.CheckForBaseDirectory(fileName);
@@ -1938,7 +1938,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(string fileName, IWriteDefines defines) =>
         WriteAsync(fileName, defines, CancellationToken.None);
 
@@ -1950,7 +1950,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="defines">The defines to set.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(
         string fileName,
         IWriteDefines defines,
@@ -1968,7 +1968,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(string fileName, MagickFormat format) =>
         WriteAsync(fileName, format, CancellationToken.None);
 
@@ -1980,7 +1980,7 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task WriteAsync(
         string fileName,
         MagickFormat format,

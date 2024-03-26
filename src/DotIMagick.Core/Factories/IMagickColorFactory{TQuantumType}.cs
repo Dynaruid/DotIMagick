@@ -69,7 +69,7 @@ public interface IMagickColorFactory<TQuantumType>
     /// <summary>
     /// Initializes a new instance that implements <see cref="IMagickColor{TQuantumType}"/>.
     /// </summary>
-    /// <param name="color">The RGBA/CMYK hex string or name of the color (http://www.imagemagick.org/script/color.php).
+    /// <param name="color">The RGBA/CMYK hex string or name of the color (http://www.DotIMagick.org/script/color.php).
     /// For example: #F000, #FF000000, #FFFF000000000000.</param>
     /// <returns>A new <see cref="IMagickColor{TQuantumType}"/> instance.</returns>
     IMagickColor<TQuantumType> Create(string color);

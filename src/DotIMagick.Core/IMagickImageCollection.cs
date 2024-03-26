@@ -14,7 +14,7 @@ namespace DotIMagick;
 public partial interface IMagickImageCollection : IDisposable
 {
     /// <summary>
-    /// Event that will we raised when a warning is raised by ImageMagick.
+    /// Event that will we raised when a warning is raised by DotIMagick.
     /// </summary>
     event EventHandler<WarningEventArgs> Warning;
 
@@ -22,49 +22,49 @@ public partial interface IMagickImageCollection : IDisposable
     /// Adds an image with the specified file name to the collection.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Add(string fileName);
 
     /// <summary>
     /// Adds the image(s) from the specified byte array to the collection.
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void AddRange(byte[] data);
 
     /// <summary>
     /// Adds the image(s) from the specified file name to the collection.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void AddRange(string fileName);
 
     /// <summary>
     /// Adds the image(s) from the specified stream to the collection.
     /// </summary>
     /// <param name="stream">The stream to read the images from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void AddRange(Stream stream);
 
     /// <summary>
     /// Merge a sequence of images. This is useful for GIF animation sequences that have page
     /// offsets and disposal methods.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Coalesce();
 
     /// <summary>
     /// Perform complex mathematics on an image sequence.
     /// </summary>
     /// <param name="complexSettings">The complex settings.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Complex(IComplexSettings complexSettings);
 
     /// <summary>
     /// Break down an image sequence into constituent parts. This is useful for creating GIF or
     /// MNG animation sequences.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Deconstruct();
 
     /// <summary>
@@ -79,7 +79,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// the second by a number of intervening images as specified by frames.
     /// </summary>
     /// <param name="frames">The number of in-between images to generate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Morph(int frames);
 
     /// <summary>
@@ -87,28 +87,28 @@ public partial interface IMagickImageCollection : IDisposable
     /// this it attempts to select the smallest cropped image to replace each frame, while
     /// preserving the results of the GIF animation.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Optimize();
 
     /// <summary>
     /// OptimizePlus is exactly as Optimize, but may also add or even remove extra frames in the
     /// animation, if it improves the total number of pixels in the resulting GIF animation.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void OptimizePlus();
 
     /// <summary>
     /// Compares each image the GIF disposed forms of the previous image in the sequence. Any
     /// pixel that does not change the displayed result is replaced with transparency.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void OptimizeTransparency();
 
     /// <summary>
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(byte[] data);
 
     /// <summary>
@@ -117,35 +117,35 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(byte[] data, int offset, int count);
 
     /// <summary>
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(FileInfo file);
 
     /// <summary>
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(Stream stream);
 
     /// <summary>
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(string fileName);
 
     /// <summary>
     /// Quantize images (reduce number of colors).
     /// </summary>
     /// <returns>The resulting image of the quantize operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickErrorInfo? Quantize();
 
     /// <summary>
@@ -153,14 +153,14 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="settings">Quantize settings.</param>
     /// <returns>The resulting image of the quantize operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickErrorInfo? Quantize(IQuantizeSettings settings);
 
     /// <summary>
     /// Read all image frames.
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data);
 
     /// <summary>
@@ -169,7 +169,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data, int offset, int count);
 
     /// <summary>
@@ -179,7 +179,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data, int offset, int count, MagickFormat format);
 
     /// <summary>
@@ -187,14 +187,14 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data, MagickFormat format);
 
     /// <summary>
     /// Read all image frames.
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(FileInfo file);
 
     /// <summary>
@@ -202,14 +202,14 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(FileInfo file, MagickFormat format);
 
     /// <summary>
     /// Read all image frames.
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(Stream stream);
 
     /// <summary>
@@ -217,14 +217,14 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(Stream stream, MagickFormat format);
 
     /// <summary>
     /// Read all image frames.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(string fileName);
 
     /// <summary>
@@ -232,7 +232,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(string fileName, MagickFormat format);
 
     /// <summary>
@@ -240,7 +240,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="file">The file to read the frames from.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(FileInfo file);
 
     /// <summary>
@@ -249,7 +249,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(FileInfo file, CancellationToken cancellationToken);
 
     /// <summary>
@@ -258,7 +258,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="file">The file to read the frames from.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(FileInfo file, MagickFormat format);
 
     /// <summary>
@@ -268,7 +268,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(FileInfo file, MagickFormat format, CancellationToken cancellationToken);
 
     /// <summary>
@@ -276,7 +276,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(Stream stream);
 
     /// <summary>
@@ -285,7 +285,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(Stream stream, CancellationToken cancellationToken);
 
     /// <summary>
@@ -294,7 +294,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(Stream stream, MagickFormat format);
 
     /// <summary>
@@ -304,7 +304,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(Stream stream, MagickFormat format, CancellationToken cancellationToken);
 
     /// <summary>
@@ -312,7 +312,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(string fileName);
 
     /// <summary>
@@ -321,7 +321,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(string fileName, CancellationToken cancellationToken);
 
     /// <summary>
@@ -330,7 +330,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(string fileName, MagickFormat format);
 
     /// <summary>
@@ -340,13 +340,13 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(string fileName, MagickFormat format, CancellationToken cancellationToken);
 
     /// <summary>
     /// Resets the page property of every image in the collection.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void RePage();
 
     /// <summary>
@@ -365,7 +365,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="byte"/> array.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     byte[] ToByteArray(IWriteDefines defines);
 
     /// <summary>
@@ -373,7 +373,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <returns>A <see cref="byte"/> array.</returns>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     byte[] ToByteArray(MagickFormat format);
 
     /// <summary>
@@ -394,7 +394,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// then adjust the the canvas and offsets to be relative to those bounds,
     /// without overlaying the images.
     /// </summary>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void TrimBounds();
 
     /// <summary>
@@ -402,7 +402,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// allow multi-image files multiple files will be written.
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(FileInfo file);
 
     /// <summary>
@@ -411,7 +411,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
     /// <param name="defines">The defines to set.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(FileInfo file, IWriteDefines defines);
 
     /// <summary>
@@ -420,7 +420,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(FileInfo file, MagickFormat format);
 
     /// <summary>
@@ -428,7 +428,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// allow multi-image files multiple files will be written.
     /// </summary>
     /// <param name="stream">The stream to write the images to.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(Stream stream);
 
     /// <summary>
@@ -437,7 +437,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="stream">The stream to write the images to.</param>
     /// <param name="defines">The defines to set.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(Stream stream, IWriteDefines defines);
 
     /// <summary>
@@ -445,7 +445,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="stream">The stream to write the image data to.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(Stream stream, MagickFormat format);
 
     /// <summary>
@@ -453,7 +453,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// allow multi-image files multiple files will be written.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(string fileName);
 
     /// <summary>
@@ -462,7 +462,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="defines">The defines to set.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(string fileName, IWriteDefines defines);
 
     /// <summary>
@@ -471,7 +471,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Write(string fileName, MagickFormat format);
 
     /// <summary>
@@ -480,7 +480,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="file">The file to write the image to.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(FileInfo file);
 
     /// <summary>
@@ -490,7 +490,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="file">The file to write the image to.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(FileInfo file, CancellationToken cancellationToken);
 
     /// <summary>
@@ -500,7 +500,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="file">The file to write the image to.</param>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(FileInfo file, IWriteDefines defines);
 
     /// <summary>
@@ -511,7 +511,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="defines">The defines to set.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(FileInfo file, IWriteDefines defines, CancellationToken cancellationToken);
 
     /// <summary>
@@ -521,7 +521,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="file">The file to write the image to.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(FileInfo file, MagickFormat format);
 
     /// <summary>
@@ -532,7 +532,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(FileInfo file, MagickFormat format, CancellationToken cancellationToken);
 
     /// <summary>
@@ -541,7 +541,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="stream">The stream to write the images to.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(Stream stream);
 
     /// <summary>
@@ -551,7 +551,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="stream">The stream to write the images to.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(Stream stream, CancellationToken cancellationToken);
 
     /// <summary>
@@ -561,7 +561,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="stream">The stream to write the images to.</param>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(Stream stream, IWriteDefines defines);
 
     /// <summary>
@@ -572,7 +572,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="defines">The defines to set.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(Stream stream, IWriteDefines defines, CancellationToken cancellationToken);
 
     /// <summary>
@@ -581,7 +581,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="stream">The stream to write the image data to.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(Stream stream, MagickFormat format);
 
     /// <summary>
@@ -591,7 +591,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(Stream stream, MagickFormat format, CancellationToken cancellationToken);
 
     /// <summary>
@@ -600,7 +600,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(string fileName);
 
     /// <summary>
@@ -610,7 +610,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(string fileName, CancellationToken cancellationToken);
 
     /// <summary>
@@ -620,7 +620,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="defines">The defines to set.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(string fileName, IWriteDefines defines);
 
     /// <summary>
@@ -631,7 +631,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="defines">The defines to set.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(string fileName, IWriteDefines defines, CancellationToken cancellationToken);
 
     /// <summary>
@@ -641,7 +641,7 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="format">The format to use.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(string fileName, MagickFormat format);
 
     /// <summary>
@@ -652,6 +652,6 @@ public partial interface IMagickImageCollection : IDisposable
     /// <param name="format">The format to use.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task WriteAsync(string fileName, MagickFormat format, CancellationToken cancellationToken);
 }

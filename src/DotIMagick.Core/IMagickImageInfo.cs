@@ -64,7 +64,7 @@ public partial interface IMagickImageInfo
     /// Read basic information about an image.
     /// </summary>
     /// <param name="data">The byte array to read the information from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data);
 
     /// <summary>
@@ -73,27 +73,27 @@ public partial interface IMagickImageInfo
     /// <param name="data">The byte array to read the information from.</param>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data, int offset, int count);
 
     /// <summary>
     /// Read basic information about an image.
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(FileInfo file);
 
     /// <summary>
     /// Read basic information about an image.
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(Stream stream);
 
     /// <summary>
     /// Read basic information about an image.
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(string fileName);
 }

@@ -19,7 +19,7 @@ public partial interface IMagickImageInfoFactory<TQuantumType> : IMagickImageInf
     /// <param name="data">The byte array to read the information from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImageInfo Create(byte[] data, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -30,7 +30,7 @@ public partial interface IMagickImageInfoFactory<TQuantumType> : IMagickImageInf
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImageInfo Create(
         byte[] data,
         int offset,
@@ -44,7 +44,7 @@ public partial interface IMagickImageInfoFactory<TQuantumType> : IMagickImageInf
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImageInfo Create(FileInfo file, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -53,7 +53,7 @@ public partial interface IMagickImageInfoFactory<TQuantumType> : IMagickImageInf
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImageInfo Create(Stream stream, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -62,6 +62,6 @@ public partial interface IMagickImageInfoFactory<TQuantumType> : IMagickImageInf
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImageInfo Create(string fileName, IMagickReadSettings<TQuantumType>? readSettings);
 }

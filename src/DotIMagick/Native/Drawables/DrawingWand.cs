@@ -1096,7 +1096,7 @@ internal partial class DrawingWand : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.TypeMetric.Dispose(result);
+                    DotIMagick.TypeMetric.Dispose(result);
                 throw magickException;
             }
             RaiseWarning(magickException);

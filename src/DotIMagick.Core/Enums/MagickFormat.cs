@@ -4,7 +4,7 @@
 namespace DotIMagick;
 
 /// <summary>
-/// Specifies the different image formats that are supported by ImageMagick.
+/// Specifies the different image formats that are supported by DotIMagick.
 /// </summary>
 public enum MagickFormat
 {

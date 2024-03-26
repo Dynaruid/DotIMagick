@@ -6,7 +6,7 @@ using System;
 namespace DotIMagick;
 
 /// <summary>
-/// Interface that represents the quantum information of ImageMagick.
+/// Interface that represents the quantum information of DotIMagick.
 /// </summary>
 /// <typeparam name="TQuantumType">The quantum type.</typeparam>
 public interface IQuantum<TQuantumType> : IQuantum

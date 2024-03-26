@@ -11,7 +11,7 @@ if "%platformName%"=="" goto invalid
 
 cd ..\..\..\..\Magick.Native\build\windows\
 
-powershell .\build.ImageMagick.ps1 -config %config% -quantumName %quantumName% -platformName %platformName%
+powershell .\build.DotIMagick.ps1 -config %config% -quantumName %quantumName% -platformName %platformName%
 if %errorlevel% neq 0 goto done
 
 powershell .\build.Native.ps1 -config  %config% -quantumName %quantumName% -platformName %platformName%

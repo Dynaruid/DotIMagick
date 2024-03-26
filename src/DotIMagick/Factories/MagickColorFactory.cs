@@ -77,7 +77,7 @@ public sealed class MagickColorFactory : IMagickColorFactory<QuantumType>
     /// <summary>
     /// Initializes a new instance that implements <see cref="IMagickColor{TQuantumType}"/>.
     /// </summary>
-    /// <param name="color">The RGBA/CMYK hex string or name of the color (http://www.imagemagick.org/script/color.php).
+    /// <param name="color">The RGBA/CMYK hex string or name of the color (http://www.DotIMagick.org/script/color.php).
     /// For example: #F000, #FF000000, #FFFF000000000000.</param>
     /// <returns>A new <see cref="IMagickColor{TQuantumType}"/> instance.</returns>
     public IMagickColor<QuantumType> Create(string color) => new MagickColor(color);

@@ -24,7 +24,7 @@ public sealed partial class MagickImageCollection
     /// Initializes a new instance of the <see cref="MagickImageCollection"/> class.
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(ReadOnlySequence<byte> data)
         : this() => Read(data);
 
@@ -33,7 +33,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(ReadOnlySequence<byte> data, MagickFormat format)
         : this() => Read(data, format);
 
@@ -42,7 +42,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(
         ReadOnlySequence<byte> data,
         IMagickReadSettings<QuantumType> readSettings
@@ -53,7 +53,7 @@ public sealed partial class MagickImageCollection
     /// Initializes a new instance of the <see cref="MagickImageCollection"/> class.
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(ReadOnlySpan<byte> data)
         : this() => Read(data);
 
@@ -62,7 +62,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(ReadOnlySpan<byte> data, MagickFormat format)
         : this() => Read(data, format);
 
@@ -71,7 +71,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public MagickImageCollection(
         ReadOnlySpan<byte> data,
         IMagickReadSettings<QuantumType> readSettings
@@ -82,7 +82,7 @@ public sealed partial class MagickImageCollection
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(ReadOnlySequence<byte> data) => Ping(data, null);
 
     /// <summary>
@@ -90,7 +90,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(ReadOnlySequence<byte> data, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfEmpty(nameof(data), data);
@@ -103,7 +103,7 @@ public sealed partial class MagickImageCollection
     /// Read only metadata and not the pixel data from all image frames.
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(ReadOnlySpan<byte> data) => Ping(data, null);
 
     /// <summary>
@@ -111,7 +111,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Ping(ReadOnlySpan<byte> data, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfEmpty(nameof(data), data);
@@ -124,7 +124,7 @@ public sealed partial class MagickImageCollection
     /// Read all image frames.
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(ReadOnlySequence<byte> data) => Read(data, null);
 
     /// <summary>
@@ -132,7 +132,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(ReadOnlySequence<byte> data, MagickFormat format) =>
         Read(data, new MagickReadSettings { Format = format });
 
@@ -141,7 +141,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The sequence of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(ReadOnlySequence<byte> data, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfEmpty(nameof(data), data);
@@ -154,7 +154,7 @@ public sealed partial class MagickImageCollection
     /// Read all image frames.
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(ReadOnlySpan<byte> data) => Read(data, null);
 
     /// <summary>
@@ -162,7 +162,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(ReadOnlySpan<byte> data, MagickFormat format) =>
         Read(data, new MagickReadSettings { Format = format });
 
@@ -171,7 +171,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="data">The span of bytes to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Read(ReadOnlySpan<byte> data, IMagickReadSettings<QuantumType>? readSettings)
     {
         Throw.IfEmpty(nameof(data), data);
@@ -185,7 +185,7 @@ public sealed partial class MagickImageCollection
     /// allow multi-image files multiple files will be written.
     /// </summary>
     /// <param name="bufferWriter">The buffer writer to write the images to.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(IBufferWriter<byte> bufferWriter)
     {
         Throw.IfNull(nameof(bufferWriter), bufferWriter);
@@ -217,7 +217,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="bufferWriter">The buffer writer to write the images to.</param>
     /// <param name="defines">The defines to set.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(IBufferWriter<byte> bufferWriter, IWriteDefines defines)
     {
         SetDefines(defines);
@@ -230,7 +230,7 @@ public sealed partial class MagickImageCollection
     /// </summary>
     /// <param name="bufferWriter">The buffer writer to write the images to.</param>
     /// <param name="format">The format to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public void Write(IBufferWriter<byte> bufferWriter, MagickFormat format)
     {
         using var tempFormat = new TemporaryMagickFormat(this, format);

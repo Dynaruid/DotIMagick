@@ -353,7 +353,7 @@
         }
       ],
       "cleanup": {
-        "name": "ImageMagick.TypeMetric.Dispose"
+        "name": "DotIMagick.TypeMetric.Dispose"
       }
     },
     {

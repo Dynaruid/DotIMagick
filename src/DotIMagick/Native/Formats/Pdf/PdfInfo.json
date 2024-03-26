@@ -1,5 +1,5 @@
 ﻿{
-  "namespace": "ImageMagick.Formats",
+  "namespace": "DotIMagick.Formats",
   "dynamic": "NativeToManaged",
   "instance": false,
   "methods": [

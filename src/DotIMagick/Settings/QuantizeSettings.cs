@@ -14,7 +14,7 @@ public sealed partial class QuantizeSettings : IQuantizeSettings
     public QuantizeSettings()
     {
         Colors = 256;
-        DitherMethod = ImageMagick.DitherMethod.Riemersma;
+        DitherMethod = DotIMagick.DitherMethod.Riemersma;
     }
 
     /// <summary>
@@ -47,7 +47,7 @@ public sealed partial class QuantizeSettings : IQuantizeSettings
         var instance = new NativeQuantizeSettings();
         instance.SetColors(settings.Colors);
         instance.SetColorSpace(settings.ColorSpace);
-        instance.SetDitherMethod(settings.DitherMethod ?? ImageMagick.DitherMethod.No);
+        instance.SetDitherMethod(settings.DitherMethod ?? DotIMagick.DitherMethod.No);
         instance.SetMeasureErrors(settings.MeasureErrors);
         instance.SetTreeDepth(settings.TreeDepth);
 

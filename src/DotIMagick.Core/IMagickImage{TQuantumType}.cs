@@ -49,7 +49,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="geometry">The area to clone.</param>
     /// <returns>A clone of the current image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImage<TQuantumType> Clone(IMagickGeometry geometry);
 
     /// <summary>
@@ -74,7 +74,7 @@ public partial interface IMagickImage<TQuantumType>
     /// Sets the alpha channel to the specified color.
     /// </summary>
     /// <param name="color">The color to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ColorAlpha(IMagickColor<TQuantumType> color);
 
     /// <summary>
@@ -82,7 +82,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="color">The color to use.</param>
     /// <param name="alpha">The alpha percentage.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Colorize(IMagickColor<TQuantumType> color, Percentage alpha);
 
     /// <summary>
@@ -93,7 +93,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="alphaRed">The alpha percentage for red.</param>
     /// <param name="alphaGreen">The alpha percentage for green.</param>
     /// <param name="alphaBlue">The alpha percentage for blue.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Colorize(
         IMagickColor<TQuantumType> color,
         Percentage alphaRed,
@@ -118,7 +118,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="settings">The settings to use.</param>
     /// <param name="difference">The image that will contain the difference.</param>
     /// <returns>The distortion based on the specified metric.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     double Compare(
         IMagickImage image,
         ICompareSettings<TQuantumType> settings,
@@ -133,7 +133,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="difference">The image that will contain the difference.</param>
     /// <param name="channels">The channel(s) to compare.</param>
     /// <returns>The distortion based on the specified metric.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     double Compare(
         IMagickImage image,
         ICompareSettings<TQuantumType> settings,
@@ -146,7 +146,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="connectivity">How many neighbors to visit, choose from 4 or 8.</param>
     /// <returns>The connected-components of the image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IReadOnlyCollection<IConnectedComponent<TQuantumType>> ConnectedComponents(int connectivity);
 
     /// <summary>
@@ -154,7 +154,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="settings">The settings for this operation.</param>
     /// <returns>The connected-components of the image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IReadOnlyCollection<IConnectedComponent<TQuantumType>> ConnectedComponents(
         IConnectedComponentsSettings settings
     );
@@ -178,7 +178,7 @@ public partial interface IMagickImage<TQuantumType>
     /// Draw on image using one or more drawables.
     /// </summary>
     /// <param name="drawables">The drawable(s) to draw on the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Draw(IDrawables<TQuantumType> drawables);
 
     /// <summary>
@@ -187,7 +187,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="width">The width to extend the image to.</param>
     /// <param name="height">The height to extend the image to.</param>
     /// <param name="backgroundColor">The background color to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Extent(int width, int height, IMagickColor<TQuantumType> backgroundColor);
 
     /// <summary>
@@ -197,7 +197,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="height">The height to extend the image to.</param>
     /// <param name="gravity">The placement gravity.</param>
     /// <param name="backgroundColor">The background color to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Extent(int width, int height, Gravity gravity, IMagickColor<TQuantumType> backgroundColor);
 
     /// <summary>
@@ -205,7 +205,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="geometry">The geometry to extend the image to.</param>
     /// <param name="backgroundColor">The background color to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Extent(IMagickGeometry geometry, IMagickColor<TQuantumType> backgroundColor);
 
     /// <summary>
@@ -214,7 +214,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="geometry">The geometry to extend the image to.</param>
     /// <param name="gravity">The placement gravity.</param>
     /// <param name="backgroundColor">The background color to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Extent(
         IMagickGeometry geometry,
         Gravity gravity,
@@ -228,7 +228,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="alpha">The alpha to use.</param>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void FloodFill(TQuantumType alpha, int x, int y);
 
     /// <summary>
@@ -238,7 +238,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="color">The color to use.</param>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void FloodFill(IMagickColor<TQuantumType> color, int x, int y);
 
     /// <summary>
@@ -249,7 +249,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
     /// <param name="target">The target color.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void FloodFill(
         IMagickColor<TQuantumType> color,
         int x,
@@ -264,7 +264,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="image">The image to use.</param>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void FloodFill(IMagickImage<TQuantumType> image, int x, int y);
 
     /// <summary>
@@ -275,7 +275,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
     /// <param name="target">The target color.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void FloodFill(
         IMagickImage<TQuantumType> image,
         int x,
@@ -288,43 +288,43 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="index">The position index.</param>
     /// <returns>The color at colormap position index.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickColor<TQuantumType>? GetColormapColor(int index);
 
     /// <summary>
     /// Returns a pixel collection that can be used to read or modify the pixels of this image.
     /// </summary>
     /// <returns>A pixel collection that can be used to read or modify the pixels of this image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IPixelCollection<TQuantumType> GetPixels();
 
     /// <summary>
     /// Returns a pixel collection that can be used to read or modify the pixels of this image. This instance
-    /// will not do any bounds checking and directly call ImageMagick.
+    /// will not do any bounds checking and directly call DotIMagick.
     /// </summary>
     /// <returns>A pixel collection that can be used to read or modify the pixels of this image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IUnsafePixelCollection<TQuantumType> GetPixelsUnsafe();
 
     /// <summary>
     /// Gets the associated read mask of the image.
     /// </summary>
     /// <returns>The associated read mask of the image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImage<TQuantumType>? GetReadMask();
 
     /// <summary>
     /// Gets the associated write mask of the image.
     /// </summary>
     /// <returns>The associated write mask of the image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImage<TQuantumType>? GetWriteMask();
 
     /// <summary>
     /// Creates a color histogram.
     /// </summary>
     /// <returns>A color histogram.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IReadOnlyDictionary<IMagickColor<TQuantumType>, int> Histogram();
 
 #if !Q8
@@ -333,7 +333,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="data">The quantum array to read the pixels from.</param>
     /// <param name="settings">The import settings to use when importing the pixels.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ImportPixels(TQuantumType[] data, IPixelImportSettings settings);
 
     /// <summary>
@@ -342,7 +342,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="data">The quantum array to read the pixels from.</param>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="settings">The import settings to use when importing the pixels.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ImportPixels(TQuantumType[] data, int offset, IPixelImportSettings settings);
 #endif
 
@@ -350,7 +350,7 @@ public partial interface IMagickImage<TQuantumType>
     /// Returns the sum of values (pixel values) in the image.
     /// </summary>
     /// <returns>The sum of values (pixel values) in the image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImage<TQuantumType>? Integral();
 
     /// <summary>
@@ -360,7 +360,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="alpha">The alpha to use.</param>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseFloodFill(TQuantumType alpha, int x, int y);
 
     /// <summary>
@@ -370,7 +370,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="color">The color to use.</param>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseFloodFill(IMagickColor<TQuantumType> color, int x, int y);
 
     /// <summary>
@@ -381,7 +381,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
     /// <param name="target">The target color.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseFloodFill(
         IMagickColor<TQuantumType> color,
         int x,
@@ -396,7 +396,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="image">The image to use.</param>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseFloodFill(IMagickImage<TQuantumType> image, int x, int y);
 
     /// <summary>
@@ -407,7 +407,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="x">The X coordinate.</param>
     /// <param name="y">The Y coordinate.</param>
     /// <param name="target">The target color.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseFloodFill(
         IMagickImage<TQuantumType> image,
         int x,
@@ -422,7 +422,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="blackPoint">The darkest color in the image. Colors darker are set to zero.</param>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseLevel(TQuantumType blackPoint, TQuantumType whitePoint);
 
     /// <summary>
@@ -433,7 +433,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="blackPoint">The darkest color in the image. Colors darker are set to zero.</param>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
     /// <param name="channels">The channel(s) to level.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseLevel(TQuantumType blackPoint, TQuantumType whitePoint, Channels channels);
 
     /// <summary>
@@ -444,7 +444,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="blackPoint">The darkest color in the image. Colors darker are set to zero.</param>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
     /// <param name="midpoint">The gamma correction to apply to the image. (Useful range of 0 to 10).</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseLevel(TQuantumType blackPoint, TQuantumType whitePoint, double midpoint);
 
     /// <summary>
@@ -456,7 +456,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
     /// <param name="midpoint">The gamma correction to apply to the image. (Useful range of 0 to 10).</param>
     /// <param name="channels">The channel(s) to level.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseLevel(
         TQuantumType blackPoint,
         TQuantumType whitePoint,
@@ -471,7 +471,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="blackColor">The color to map black to/from.</param>
     /// <param name="whiteColor">The color to map white to/from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseLevelColors(
         IMagickColor<TQuantumType> blackColor,
         IMagickColor<TQuantumType> whiteColor
@@ -485,7 +485,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="blackColor">The color to map black to/from.</param>
     /// <param name="whiteColor">The color to map white to/from.</param>
     /// <param name="channels">The channel(s) to level.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseLevelColors(
         IMagickColor<TQuantumType> blackColor,
         IMagickColor<TQuantumType> whiteColor,
@@ -497,14 +497,14 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="target">The color to replace.</param>
     /// <param name="fill">The color to replace opaque color with.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseOpaque(IMagickColor<TQuantumType> target, IMagickColor<TQuantumType> fill);
 
     /// <summary>
     /// Add alpha channel to image, setting pixels that don't match the specified color to transparent.
     /// </summary>
     /// <param name="color">The color that should not be made transparent.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseTransparent(IMagickColor<TQuantumType> color);
 
     /// <summary>
@@ -513,7 +513,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="colorLow">The low target color.</param>
     /// <param name="colorHigh">The high target color.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void InverseTransparentChroma(
         IMagickColor<TQuantumType> colorLow,
         IMagickColor<TQuantumType> colorHigh
@@ -525,7 +525,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="blackPoint">The darkest color in the image. Colors darker are set to zero.</param>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Level(TQuantumType blackPoint, TQuantumType whitePoint);
 
     /// <summary>
@@ -535,7 +535,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="blackPoint">The darkest color in the image. Colors darker are set to zero.</param>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
     /// <param name="channels">The channel(s) to level.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Level(TQuantumType blackPoint, TQuantumType whitePoint, Channels channels);
 
     /// <summary>
@@ -545,7 +545,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="blackPoint">The darkest color in the image. Colors darker are set to zero.</param>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
     /// <param name="gamma">The gamma correction to apply to the image. (Useful range of 0 to 10).</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Level(TQuantumType blackPoint, TQuantumType whitePoint, double gamma);
 
     /// <summary>
@@ -556,7 +556,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="whitePoint">The lightest color in the image. Colors brighter are set to the maximum quantum value.</param>
     /// <param name="gamma">The gamma correction to apply to the image. (Useful range of 0 to 10).</param>
     /// <param name="channels">The channel(s) to level.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Level(TQuantumType blackPoint, TQuantumType whitePoint, double gamma, Channels channels);
 
     /// <summary>
@@ -566,7 +566,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="blackColor">The color to map black to/from.</param>
     /// <param name="whiteColor">The color to map white to/from.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void LevelColors(IMagickColor<TQuantumType> blackColor, IMagickColor<TQuantumType> whiteColor);
 
     /// <summary>
@@ -577,7 +577,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="blackColor">The color to map black to/from.</param>
     /// <param name="whiteColor">The color to map white to/from.</param>
     /// <param name="channels">The channel(s) to level.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void LevelColors(
         IMagickColor<TQuantumType> blackColor,
         IMagickColor<TQuantumType> whiteColor,
@@ -589,7 +589,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="colors">The colors to use.</param>
     /// <returns>The error informaton.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickErrorInfo Map(IEnumerable<IMagickColor<TQuantumType>> colors);
 
     /// <summary>
@@ -598,7 +598,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="colors">The colors to use.</param>
     /// <param name="settings">Quantize settings.</param>
     /// <returns>The error informaton.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickErrorInfo Map(
         IEnumerable<IMagickColor<TQuantumType>> colors,
         IQuantizeSettings settings
@@ -609,7 +609,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="target">The color to replace.</param>
     /// <param name="fill">The color to replace opaque color with.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Opaque(IMagickColor<TQuantumType> target, IMagickColor<TQuantumType> fill);
 
     /// <summary>
@@ -619,7 +619,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(byte[] data, int offset, int count, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -627,7 +627,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="data">The byte array to read the information from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(byte[] data, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -635,7 +635,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(FileInfo file, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -643,7 +643,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(Stream stream, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -651,7 +651,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Ping(string fileName, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -660,7 +660,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="low">The low threshold.</param>
     /// <param name="high">The high threshold.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void RandomThreshold(TQuantumType low, TQuantumType high);
 
     /// <summary>
@@ -670,7 +670,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="low">The low threshold.</param>
     /// <param name="high">The high threshold.</param>
     /// <param name="channels">The channel(s) to use.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void RandomThreshold(TQuantumType low, TQuantumType high, Channels channels);
 
     /// <summary>
@@ -680,7 +680,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="lowWhite">Defines the minimum white threshold value.</param>
     /// <param name="highWhite">Defines the maximum white threshold value.</param>
     /// <param name="highBlack">Defines the maximum black threshold value.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void RangeThreshold(
         TQuantumType lowBlack,
         TQuantumType lowWhite,
@@ -695,7 +695,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data, int offset, int count, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -703,7 +703,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(byte[] data, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -711,7 +711,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(FileInfo file, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -720,7 +720,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="color">The color to fill the image with.</param>
     /// <param name="width">The width.</param>
     /// <param name="height">The height.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(IMagickColor<TQuantumType> color, int width, int height);
 
     /// <summary>
@@ -728,7 +728,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(Stream stream, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -736,7 +736,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(string fileName, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -745,7 +745,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(FileInfo file, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -755,7 +755,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(
         FileInfo file,
         IMagickReadSettings<TQuantumType>? readSettings,
@@ -768,7 +768,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(Stream stream, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -778,7 +778,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(
         Stream stream,
         IMagickReadSettings<TQuantumType>? readSettings,
@@ -791,7 +791,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(string fileName, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -801,7 +801,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadAsync(
         string fileName,
         IMagickReadSettings<TQuantumType>? readSettings,
@@ -813,7 +813,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ReadPixels(byte[] data, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -823,7 +823,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ReadPixels(byte[] data, int offset, int count, IPixelReadSettings<TQuantumType> settings);
 
 #if !Q8
@@ -832,7 +832,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="data">The quantum array to read the image data from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ReadPixels(TQuantumType[] data, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -842,7 +842,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of items to read.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ReadPixels(
         TQuantumType[] data,
         int offset,
@@ -856,7 +856,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ReadPixels(FileInfo file, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -864,7 +864,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ReadPixels(Stream stream, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -872,7 +872,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void ReadPixels(string fileName, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -881,7 +881,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="file">The file to read the image from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadPixelsAsync(FileInfo file, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -891,7 +891,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadPixelsAsync(
         FileInfo file,
         IPixelReadSettings<TQuantumType> settings,
@@ -904,7 +904,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadPixelsAsync(Stream stream, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -914,7 +914,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadPixelsAsync(
         Stream stream,
         IPixelReadSettings<TQuantumType> settings,
@@ -927,7 +927,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadPixelsAsync(string fileName, IPixelReadSettings<TQuantumType> settings);
 
     /// <summary>
@@ -937,7 +937,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     Task ReadPixelsAsync(
         string fileName,
         IPixelReadSettings<TQuantumType> settings,
@@ -948,7 +948,7 @@ public partial interface IMagickImage<TQuantumType>
     /// Separates the channels from the image and returns it as grayscale images.
     /// </summary>
     /// <returns>The channels from the image as grayscale images.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IReadOnlyCollection<IMagickImage<TQuantumType>> Separate();
 
     /// <summary>
@@ -956,7 +956,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="channels">The channel(s) to separates.</param>
     /// <returns>The channels from the image as grayscale images.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IReadOnlyCollection<IMagickImage<TQuantumType>> Separate(Channels channels);
 
     /// <summary>
@@ -964,14 +964,14 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="index">The position index.</param>
     /// <param name="color">The color.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void SetColormapColor(int index, IMagickColor<TQuantumType> color);
 
     /// <summary>
     /// Simulate an image shadow.
     /// </summary>
     /// <param name="color">The color of the shadow.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Shadow(IMagickColor<TQuantumType> color);
 
     /// <summary>
@@ -982,7 +982,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="sigma">The standard deviation of the Gaussian, in pixels.</param>
     /// <param name="alpha">Transparency percentage.</param>
     /// <param name="color">The color of the shadow.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Shadow(int x, int y, double sigma, Percentage alpha, IMagickColor<TQuantumType> color);
 
     /// <summary>
@@ -991,7 +991,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="method">The sparse color method to use.</param>
     /// <param name="args">The sparse color arguments.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void SparseColor(SparseColorMethod method, IEnumerable<ISparseColorArg<TQuantumType>> args);
 
     /// <summary>
@@ -1000,7 +1000,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="method">The sparse color method to use.</param>
     /// <param name="args">The sparse color arguments.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void SparseColor(SparseColorMethod method, params ISparseColorArg<TQuantumType>[] args);
 
     /// <summary>
@@ -1010,7 +1010,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="channels">The channel(s) to use.</param>
     /// <param name="method">The sparse color method to use.</param>
     /// <param name="args">The sparse color arguments.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void SparseColor(
         Channels channels,
         SparseColorMethod method,
@@ -1024,7 +1024,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="channels">The channel(s) to use.</param>
     /// <param name="method">The sparse color method to use.</param>
     /// <param name="args">The sparse color arguments.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void SparseColor(
         Channels channels,
         SparseColorMethod method,
@@ -1038,7 +1038,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="image">The image to search for.</param>
     /// <returns>The result of the search action.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickSearchResult<TQuantumType> SubImageSearch(IMagickImage<TQuantumType> image);
 
     /// <summary>
@@ -1049,7 +1049,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="image">The image to search for.</param>
     /// <param name="metric">The metric to use.</param>
     /// <returns>The result of the search action.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickSearchResult<TQuantumType> SubImageSearch(
         IMagickImage<TQuantumType> image,
         ErrorMetric metric
@@ -1064,7 +1064,7 @@ public partial interface IMagickImage<TQuantumType>
     /// <param name="metric">The metric to use.</param>
     /// <param name="similarityThreshold">Minimum distortion for (sub)image match.</param>
     /// <returns>The result of the search action.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickSearchResult<TQuantumType> SubImageSearch(
         IMagickImage<TQuantumType> image,
         ErrorMetric metric,
@@ -1078,14 +1078,14 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="opacity">An opacity value used for tinting.</param>
     /// <param name="color">A color value used for tinting.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Tint(IMagickGeometry opacity, IMagickColor<TQuantumType> color);
 
     /// <summary>
     /// Add alpha channel to image, setting pixels matching color to transparent.
     /// </summary>
     /// <param name="color">The color to make transparent.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Transparent(IMagickColor<TQuantumType> color);
 
     /// <summary>
@@ -1094,7 +1094,7 @@ public partial interface IMagickImage<TQuantumType>
     /// </summary>
     /// <param name="colorLow">The low target color.</param>
     /// <param name="colorHigh">The high target color.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void TransparentChroma(
         IMagickColor<TQuantumType> colorLow,
         IMagickColor<TQuantumType> colorHigh
@@ -1104,7 +1104,7 @@ public partial interface IMagickImage<TQuantumType>
     /// Returns the unique colors of an image.
     /// </summary>
     /// <returns>The unique colors of an image.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     IMagickImage<TQuantumType>? UniqueColors();
 
     /// <summary>

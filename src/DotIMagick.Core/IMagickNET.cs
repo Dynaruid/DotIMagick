@@ -13,7 +13,7 @@ namespace DotIMagick;
 public interface IMagickNET
 {
     /// <summary>
-    /// Event that will be raised when something is logged by ImageMagick.
+    /// Event that will be raised when something is logged by DotIMagick.
     /// </summary>
     event EventHandler<LogEventArgs> Log;
 
@@ -28,17 +28,17 @@ public interface IMagickNET
     string Features { get; }
 
     /// <summary>
-    /// Gets the font families that are known by ImageMagick.
+    /// Gets the font families that are known by DotIMagick.
     /// </summary>
     IReadOnlyCollection<string> FontFamilies { get; }
 
     /// <summary>
-    /// Gets the font names that are known by ImageMagick.
+    /// Gets the font names that are known by DotIMagick.
     /// </summary>
     IReadOnlyCollection<string> FontNames { get; }
 
     /// <summary>
-    /// Gets the version of ImageMagick.
+    /// Gets the version of DotIMagick.
     /// </summary>
     string ImageMagickVersion { get; }
 
@@ -60,7 +60,7 @@ public interface IMagickNET
     string? GetEnvironmentVariable(string name);
 
     /// <summary>
-    /// Initializes ImageMagick.
+    /// Initializes DotIMagick.
     /// </summary>
     void Initialize();
 

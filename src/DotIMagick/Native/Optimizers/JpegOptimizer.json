@@ -1,5 +1,5 @@
 ﻿{
-  "namespace": "ImageMagick.ImageOptimizers",
+  "namespace": "DotIMagick.ImageOptimizers",
   "dynamic": "NativeToManaged",
   "instance": false,
   "delegates": [

@@ -4,7 +4,7 @@
 namespace DotIMagick;
 
 /// <summary>
-/// Interface that represents the quantum information of ImageMagick.
+/// Interface that represents the quantum information of DotIMagick.
 /// </summary>
 public interface IQuantum
 {

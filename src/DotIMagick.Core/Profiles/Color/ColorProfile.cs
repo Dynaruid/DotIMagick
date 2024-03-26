@@ -51,36 +51,36 @@ public sealed class ColorProfile : ImageProfile, IColorProfile
     /// Gets the AdobeRGB1998 profile.
     /// </summary>
     public static ColorProfile AdobeRGB1998 =>
-        Load("ImageMagick.Resources.ColorProfiles.RGB", "AdobeRGB1998.icc");
+        Load("DotIMagick.Resources.ColorProfiles.RGB", "AdobeRGB1998.icc");
 
     /// <summary>
     /// Gets the AppleRGB profile.
     /// </summary>
     public static ColorProfile AppleRGB =>
-        Load("ImageMagick.Resources.ColorProfiles.RGB", "AppleRGB.icc");
+        Load("DotIMagick.Resources.ColorProfiles.RGB", "AppleRGB.icc");
 
     /// <summary>
     /// Gets the CoatedFOGRA39 profile.
     /// </summary>
     public static ColorProfile CoatedFOGRA39 =>
-        Load("ImageMagick.Resources.ColorProfiles.CMYK", "CoatedFOGRA39.icc");
+        Load("DotIMagick.Resources.ColorProfiles.CMYK", "CoatedFOGRA39.icc");
 
     /// <summary>
     /// Gets the ColorMatchRGB profile.
     /// </summary>
     public static ColorProfile ColorMatchRGB =>
-        Load("ImageMagick.Resources.ColorProfiles.RGB", "ColorMatchRGB.icc");
+        Load("DotIMagick.Resources.ColorProfiles.RGB", "ColorMatchRGB.icc");
 
     /// <summary>
     /// Gets the sRGB profile.
     /// </summary>
-    public static ColorProfile SRGB => Load("ImageMagick.Resources.ColorProfiles.RGB", "SRGB.icm");
+    public static ColorProfile SRGB => Load("DotIMagick.Resources.ColorProfiles.RGB", "SRGB.icm");
 
     /// <summary>
     /// Gets the USWebCoatedSWOP profile.
     /// </summary>
     public static ColorProfile USWebCoatedSWOP =>
-        Load("ImageMagick.Resources.ColorProfiles.CMYK", "USWebCoatedSWOP.icc");
+        Load("DotIMagick.Resources.ColorProfiles.CMYK", "USWebCoatedSWOP.icc");
 
     /// <summary>
     /// Gets the color space of the profile.

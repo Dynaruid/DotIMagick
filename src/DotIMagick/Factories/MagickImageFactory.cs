@@ -26,7 +26,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// Initializes a new instance that implements <see cref="IMagickImage{TQuantumType}"/>.
     /// </summary>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create() => new MagickImage();
 
     /// <summary>
@@ -34,7 +34,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// </summary>
     /// <param name="data">The byte array to read the image data from.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType>"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(byte[] data) => new MagickImage(data);
 
     /// <summary>
@@ -44,7 +44,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <returns>A new <see cref="IMagickImage{QuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(byte[] data, int offset, int count) =>
         new MagickImage(data, offset, count);
 
@@ -56,7 +56,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         byte[] data,
         int offset,
@@ -70,7 +70,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="data">The byte array to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         byte[] data,
         IMagickReadSettings<QuantumType> readSettings
@@ -81,7 +81,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <returns>A new <see cref="MagickImage"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(FileInfo file) => new MagickImage(file);
 
     /// <summary>
@@ -90,7 +90,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         FileInfo file,
         IMagickReadSettings<QuantumType> readSettings
@@ -114,7 +114,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(Stream stream) => new MagickImage(stream);
 
     /// <summary>
@@ -123,7 +123,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         Stream stream,
         IMagickReadSettings<QuantumType> readSettings
@@ -134,7 +134,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(string fileName) => new MagickImage(fileName);
 
     /// <summary>
@@ -144,7 +144,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="width">The width.</param>
     /// <param name="height">The height.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(string fileName, int width, int height) =>
         new MagickImage(fileName, width, height);
 
@@ -154,7 +154,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImage<QuantumType> Create(
         string fileName,
         IMagickReadSettings<QuantumType> readSettings
@@ -165,7 +165,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(FileInfo file) =>
         CreateAsync(file, CancellationToken.None);
 
@@ -175,7 +175,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="file">The file to read the image from.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         FileInfo file,
         CancellationToken cancellationToken
@@ -193,7 +193,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(
         FileInfo file,
         IMagickReadSettings<QuantumType> readSettings
@@ -206,7 +206,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         FileInfo file,
         IMagickReadSettings<QuantumType> readSettings,
@@ -225,7 +225,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="file">The file to read the image from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(
         FileInfo file,
         IPixelReadSettings<QuantumType> settings
@@ -238,7 +238,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         FileInfo file,
         IPixelReadSettings<QuantumType> settings,
@@ -256,7 +256,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(Stream stream) =>
         CreateAsync(stream, CancellationToken.None);
 
@@ -266,7 +266,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         Stream stream,
         CancellationToken cancellationToken
@@ -284,7 +284,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(
         Stream stream,
         IMagickReadSettings<QuantumType> readSettings
@@ -297,7 +297,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         Stream stream,
         IMagickReadSettings<QuantumType> readSettings,
@@ -316,7 +316,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(
         Stream stream,
         IPixelReadSettings<QuantumType> settings
@@ -329,7 +329,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         Stream stream,
         IPixelReadSettings<QuantumType> settings,
@@ -347,7 +347,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(string fileName) =>
         CreateAsync(fileName, CancellationToken.None);
 
@@ -357,7 +357,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         string fileName,
         CancellationToken cancellationToken
@@ -375,7 +375,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(
         string fileName,
         IMagickReadSettings<QuantumType> readSettings
@@ -388,7 +388,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         string fileName,
         IMagickReadSettings<QuantumType> readSettings,
@@ -407,7 +407,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public Task<IMagickImage<QuantumType>> CreateAsync(
         string fileName,
         IPixelReadSettings<QuantumType> settings
@@ -420,7 +420,7 @@ public sealed partial class MagickImageFactory : IMagickImageFactory<QuantumType
     /// <param name="settings">The pixel settings to use when reading the image.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
     /// <returns>A new <see cref="IMagickImage{TQuantumType}"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public async Task<IMagickImage<QuantumType>> CreateAsync(
         string fileName,
         IPixelReadSettings<QuantumType> settings,

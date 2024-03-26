@@ -70,10 +70,10 @@ public sealed class TiffWriteDefines : IWriteDefines
             if (Alpha.HasValue)
                 yield return new MagickDefine(Format, "alpha", Alpha.Value);
 
-            if (Endian.HasValue && Endian.Value != ImageMagick.Endian.Undefined)
+            if (Endian.HasValue && Endian.Value != DotIMagick.Endian.Undefined)
                 yield return new MagickDefine(Format, "endian", Endian.Value);
 
-            if (FillOrder.HasValue && FillOrder.Value != ImageMagick.Endian.Undefined)
+            if (FillOrder.HasValue && FillOrder.Value != DotIMagick.Endian.Undefined)
                 yield return new MagickDefine(Format, "fill-order", FillOrder.Value);
 
             if (JpegTablesMode.HasValue)

@@ -4,7 +4,7 @@
 namespace DotIMagick;
 
 /// <summary>
-/// Interface that represents the resource limits of ImageMagick.
+/// Interface that represents the resource limits of DotIMagick.
 /// </summary>
 public interface IResourceLimits
 {

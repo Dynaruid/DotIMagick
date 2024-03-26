@@ -95,7 +95,7 @@ public partial interface IDrawables<TQuantumType> : IEnumerable<IDrawable>
     /// </summary>
     /// <param name="text">The text to get the font metrics for.</param>
     /// <returns>The font metrics for text.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     ITypeMetric? FontTypeMetrics(string text);
 
     /// <summary>
@@ -104,7 +104,7 @@ public partial interface IDrawables<TQuantumType> : IEnumerable<IDrawable>
     /// <param name="text">The text to get the font metrics for.</param>
     /// <param name="ignoreNewlines">Specifies if newlines should be ignored.</param>
     /// <returns>The font metrics for text.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     ITypeMetric? FontTypeMetrics(string text, bool ignoreNewlines);
 
     /// <summary>

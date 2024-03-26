@@ -17,7 +17,7 @@ public partial interface IMagickImageInfo<TQuantumType> : IMagickImageInfo
     /// </summary>
     /// <param name="data">The sequence of bytes to read the information from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(ReadOnlySequence<byte> data, IMagickReadSettings<TQuantumType>? readSettings);
 
     /// <summary>
@@ -25,7 +25,7 @@ public partial interface IMagickImageInfo<TQuantumType> : IMagickImageInfo
     /// </summary>
     /// <param name="data">The span of bytes to read the information from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     void Read(ReadOnlySpan<byte> data, IMagickReadSettings<TQuantumType>? readSettings);
 }
 

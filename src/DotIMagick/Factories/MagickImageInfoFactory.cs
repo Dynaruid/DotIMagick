@@ -31,7 +31,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// </summary>
     /// <param name="data">The byte array to read the information from.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(byte[] data) => new MagickImageInfo(data);
 
     /// <summary>
@@ -40,7 +40,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// <param name="data">The byte array to read the information from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(byte[] data, IMagickReadSettings<QuantumType>? readSettings) =>
         new MagickImageInfo(data, readSettings);
 
@@ -51,7 +51,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// <param name="offset">The offset at which to begin reading data.</param>
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(byte[] data, int offset, int count) =>
         Create(data, offset, count, null);
 
@@ -63,7 +63,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// <param name="count">The maximum number of bytes to read.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(
         byte[] data,
         int offset,
@@ -76,7 +76,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// </summary>
     /// <param name="file">The file to read the image from.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(FileInfo file) => Create(file, null);
 
     /// <summary>
@@ -85,7 +85,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// <param name="file">The file to read the image from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(FileInfo file, IMagickReadSettings<QuantumType>? readSettings) =>
         new MagickImageInfo(file, readSettings);
 
@@ -94,7 +94,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// </summary>
     /// <param name="stream">The stream to read the image data from.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(Stream stream) => Create(stream, null);
 
     /// <summary>
@@ -103,7 +103,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// <param name="stream">The stream to read the image data from.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(Stream stream, IMagickReadSettings<QuantumType>? readSettings) =>
         new MagickImageInfo(stream, readSettings);
 
@@ -112,7 +112,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// </summary>
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(string fileName) => Create(fileName, null);
 
     /// <summary>
@@ -121,7 +121,7 @@ public sealed partial class MagickImageInfoFactory : IMagickImageInfoFactory<Qua
     /// <param name="fileName">The fully qualified name of the image file, or the relative image file name.</param>
     /// <param name="readSettings">The settings to use when reading the image.</param>
     /// <returns>A new <see cref="IMagickImageInfo"/> instance.</returns>
-    /// <exception cref="MagickException">Thrown when an error is raised by ImageMagick.</exception>
+    /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
     public IMagickImageInfo Create(
         string fileName,
         IMagickReadSettings<QuantumType>? readSettings

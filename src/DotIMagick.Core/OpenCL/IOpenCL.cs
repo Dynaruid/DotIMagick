@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace DotIMagick;
 
 /// <summary>
-/// Interface that represents the OpenCL information of ImageMagick.
+/// Interface that represents the OpenCL information of DotIMagick.
 /// </summary>
 public interface IOpenCL
 {

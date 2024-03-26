@@ -948,7 +948,7 @@
         }
       ],
       "cleanup": {
-        "name": "ImageMagick.PointInfoCollection.DisposeList"
+        "name": "DotIMagick.PointInfoCollection.DisposeList"
       }
     },
     {
@@ -1276,7 +1276,7 @@
         }
       ],
       "cleanup": {
-        "name": "ImageMagick.TypeMetric.Dispose"
+        "name": "DotIMagick.TypeMetric.Dispose"
       }
     },
     {
@@ -1480,7 +1480,7 @@
         }
       ],
       "cleanup": {
-        "name": "ImageMagick.MagickColorCollection.DisposeList"
+        "name": "DotIMagick.MagickColorCollection.DisposeList"
       }
     },
     {
@@ -1775,7 +1775,7 @@
       "type": "Instance",
       "throws": true,
       "cleanup": {
-        "name": "ImageMagick.Moments.DisposeList"
+        "name": "DotIMagick.Moments.DisposeList"
       }
     },
     {
@@ -1800,7 +1800,7 @@
         }
       ],
       "cleanup": {
-        "name": "ImageMagick.PointInfoCollection.DisposeList"
+        "name": "DotIMagick.PointInfoCollection.DisposeList"
       }
     },
     {
@@ -1929,7 +1929,7 @@
       "type": "Instance",
       "throws": true,
       "cleanup": {
-        "name": "ImageMagick.PerceptualHash.DisposeList"
+        "name": "DotIMagick.PerceptualHash.DisposeList"
       }
     },
     {
@@ -2713,7 +2713,7 @@
         }
       ],
       "cleanup": {
-        "name": "ImageMagick.Statistics.DisposeList"
+        "name": "DotIMagick.Statistics.DisposeList"
       }
     },
     {

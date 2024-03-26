@@ -18,7 +18,7 @@ using QuantumType = System.Single;
 #endif
 
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-using NativeChannelsType = ImageMagick.NativeChannels;
+using NativeChannelsType = DotIMagick.NativeChannels;
 #else
 using NativeChannelsType = System.UIntPtr;
 #endif
@@ -4851,7 +4851,7 @@ public partial class MagickImage : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.PointInfoCollection.DisposeList(result);
+                    DotIMagick.PointInfoCollection.DisposeList(result);
                 throw magickException;
             }
             RaiseWarning(magickException);
@@ -5496,7 +5496,7 @@ public partial class MagickImage : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.TypeMetric.Dispose(result);
+                    DotIMagick.TypeMetric.Dispose(result);
                 throw magickException;
             }
             RaiseWarning(magickException);
@@ -5994,7 +5994,7 @@ public partial class MagickImage : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.MagickColorCollection.DisposeList(result);
+                    DotIMagick.MagickColorCollection.DisposeList(result);
                 throw magickException;
             }
             RaiseWarning(magickException);
@@ -6456,7 +6456,7 @@ public partial class MagickImage : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.Moments.DisposeList(result);
+                    DotIMagick.Moments.DisposeList(result);
                 throw magickException;
             }
             RaiseWarning(magickException);
@@ -6514,7 +6514,7 @@ public partial class MagickImage : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.PointInfoCollection.DisposeList(result);
+                    DotIMagick.PointInfoCollection.DisposeList(result);
                 throw magickException;
             }
             RaiseWarning(magickException);
@@ -6745,7 +6745,7 @@ public partial class MagickImage : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.PerceptualHash.DisposeList(result);
+                    DotIMagick.PerceptualHash.DisposeList(result);
                 throw magickException;
             }
             RaiseWarning(magickException);
@@ -8095,7 +8095,7 @@ public partial class MagickImage : IDisposable
             if (magickException is MagickErrorException)
             {
                 if (result != IntPtr.Zero)
-                    ImageMagick.Statistics.DisposeList(result);
+                    DotIMagick.Statistics.DisposeList(result);
                 throw magickException;
             }
             RaiseWarning(magickException);
