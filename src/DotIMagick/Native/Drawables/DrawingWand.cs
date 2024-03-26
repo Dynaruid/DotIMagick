@@ -17,7 +17,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal partial class DrawingWand : IDisposable
 {
@@ -554,19 +554,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Dispose(instance);
+                NativeMethods.ARM64.DrawingWand_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Dispose(instance);
+                NativeMethods.X64.DrawingWand_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Dispose(instance);
+                NativeMethods.X86.DrawingWand_Dispose(instance);
 #endif
         }
         public NativeDrawingWand(IMagickImage image, DrawingSettings settings)
@@ -576,19 +576,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.DrawingWand_Create(MagickImage.GetInstance(image), settingsNative.Instance);
+                Instance = NativeMethods.ARM64.DrawingWand_Create(MagickImage.GetInstance(image), settingsNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.DrawingWand_Create(MagickImage.GetInstance(image), settingsNative.Instance);
+                Instance = NativeMethods.X64.DrawingWand_Create(MagickImage.GetInstance(image), settingsNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.DrawingWand_Create(MagickImage.GetInstance(image), settingsNative.Instance);
+                Instance = NativeMethods.X86.DrawingWand_Create(MagickImage.GetInstance(image), settingsNative.Instance);
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -607,19 +607,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Affine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY, out exception);
+                NativeMethods.ARM64.DrawingWand_Affine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Affine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY, out exception);
+                NativeMethods.X64.DrawingWand_Affine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Affine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY, out exception);
+                NativeMethods.X86.DrawingWand_Affine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY, out exception);
 #endif
             CheckException(exception);
         }
@@ -630,19 +630,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Alpha(Instance, x, y, (UIntPtr)paintMethod, out exception);
+                NativeMethods.ARM64.DrawingWand_Alpha(Instance, x, y, (UIntPtr)paintMethod, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Alpha(Instance, x, y, (UIntPtr)paintMethod, out exception);
+                NativeMethods.X64.DrawingWand_Alpha(Instance, x, y, (UIntPtr)paintMethod, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Alpha(Instance, x, y, (UIntPtr)paintMethod, out exception);
+                NativeMethods.X86.DrawingWand_Alpha(Instance, x, y, (UIntPtr)paintMethod, out exception);
 #endif
             CheckException(exception);
         }
@@ -653,19 +653,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Arc(Instance, startX, startY, endX, endY, startDegrees, endDegrees, out exception);
+                NativeMethods.ARM64.DrawingWand_Arc(Instance, startX, startY, endX, endY, startDegrees, endDegrees, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Arc(Instance, startX, startY, endX, endY, startDegrees, endDegrees, out exception);
+                NativeMethods.X64.DrawingWand_Arc(Instance, startX, startY, endX, endY, startDegrees, endDegrees, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Arc(Instance, startX, startY, endX, endY, startDegrees, endDegrees, out exception);
+                NativeMethods.X86.DrawingWand_Arc(Instance, startX, startY, endX, endY, startDegrees, endDegrees, out exception);
 #endif
             CheckException(exception);
         }
@@ -676,19 +676,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Bezier(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.ARM64.DrawingWand_Bezier(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Bezier(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.X64.DrawingWand_Bezier(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Bezier(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.X86.DrawingWand_Bezier(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
             CheckException(exception);
         }
@@ -700,19 +700,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_BorderColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_BorderColor(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_BorderColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_BorderColor(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_BorderColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_BorderColor(Instance, valueNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -723,19 +723,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Circle(Instance, originX, originY, perimeterX, perimeterY, out exception);
+                NativeMethods.ARM64.DrawingWand_Circle(Instance, originX, originY, perimeterX, perimeterY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Circle(Instance, originX, originY, perimeterX, perimeterY, out exception);
+                NativeMethods.X64.DrawingWand_Circle(Instance, originX, originY, perimeterX, perimeterY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Circle(Instance, originX, originY, perimeterX, perimeterY, out exception);
+                NativeMethods.X86.DrawingWand_Circle(Instance, originX, originY, perimeterX, perimeterY, out exception);
 #endif
             CheckException(exception);
         }
@@ -747,19 +747,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_ClipPath(Instance, valueNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_ClipPath(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_ClipPath(Instance, valueNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_ClipPath(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_ClipPath(Instance, valueNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_ClipPath(Instance, valueNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -770,19 +770,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_ClipRule(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_ClipRule(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_ClipRule(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_ClipRule(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_ClipRule(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_ClipRule(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -793,19 +793,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_ClipUnits(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_ClipUnits(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_ClipUnits(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_ClipUnits(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_ClipUnits(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_ClipUnits(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -816,19 +816,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Color(Instance, x, y, (UIntPtr)paintMethod, out exception);
+                NativeMethods.ARM64.DrawingWand_Color(Instance, x, y, (UIntPtr)paintMethod, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Color(Instance, x, y, (UIntPtr)paintMethod, out exception);
+                NativeMethods.X64.DrawingWand_Color(Instance, x, y, (UIntPtr)paintMethod, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Color(Instance, x, y, (UIntPtr)paintMethod, out exception);
+                NativeMethods.X86.DrawingWand_Color(Instance, x, y, (UIntPtr)paintMethod, out exception);
 #endif
             CheckException(exception);
         }
@@ -839,19 +839,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Composite(Instance, x, y, width, height, (UIntPtr)compositeOperator, MagickImage.GetInstance(image), out exception);
+                NativeMethods.ARM64.DrawingWand_Composite(Instance, x, y, width, height, (UIntPtr)compositeOperator, MagickImage.GetInstance(image), out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Composite(Instance, x, y, width, height, (UIntPtr)compositeOperator, MagickImage.GetInstance(image), out exception);
+                NativeMethods.X64.DrawingWand_Composite(Instance, x, y, width, height, (UIntPtr)compositeOperator, MagickImage.GetInstance(image), out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Composite(Instance, x, y, width, height, (UIntPtr)compositeOperator, MagickImage.GetInstance(image), out exception);
+                NativeMethods.X86.DrawingWand_Composite(Instance, x, y, width, height, (UIntPtr)compositeOperator, MagickImage.GetInstance(image), out exception);
 #endif
             CheckException(exception);
         }
@@ -863,19 +863,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Density(Instance, valueNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_Density(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Density(Instance, valueNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_Density(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Density(Instance, valueNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_Density(Instance, valueNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -886,19 +886,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Ellipse(Instance, originX, originY, radiusX, radiusY, startDegrees, endDegrees, out exception);
+                NativeMethods.ARM64.DrawingWand_Ellipse(Instance, originX, originY, radiusX, radiusY, startDegrees, endDegrees, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Ellipse(Instance, originX, originY, radiusX, radiusY, startDegrees, endDegrees, out exception);
+                NativeMethods.X64.DrawingWand_Ellipse(Instance, originX, originY, radiusX, radiusY, startDegrees, endDegrees, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Ellipse(Instance, originX, originY, radiusX, radiusY, startDegrees, endDegrees, out exception);
+                NativeMethods.X86.DrawingWand_Ellipse(Instance, originX, originY, radiusX, radiusY, startDegrees, endDegrees, out exception);
 #endif
             CheckException(exception);
         }
@@ -910,19 +910,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_FillColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_FillColor(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_FillColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_FillColor(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_FillColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_FillColor(Instance, valueNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -933,19 +933,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_FillOpacity(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_FillOpacity(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_FillOpacity(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_FillOpacity(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_FillOpacity(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_FillOpacity(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -957,19 +957,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_FillPatternUrl(Instance, urlNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_FillPatternUrl(Instance, urlNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_FillPatternUrl(Instance, urlNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_FillPatternUrl(Instance, urlNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_FillPatternUrl(Instance, urlNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_FillPatternUrl(Instance, urlNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -980,19 +980,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_FillRule(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_FillRule(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_FillRule(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_FillRule(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_FillRule(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_FillRule(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -1004,19 +1004,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Font(Instance, fontNameNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_Font(Instance, fontNameNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Font(Instance, fontNameNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_Font(Instance, fontNameNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Font(Instance, fontNameNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_Font(Instance, fontNameNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1028,19 +1028,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_FontFamily(Instance, familyNative.Instance, (UIntPtr)style, (UIntPtr)weight, (UIntPtr)stretch, out exception);
+                NativeMethods.ARM64.DrawingWand_FontFamily(Instance, familyNative.Instance, (UIntPtr)style, (UIntPtr)weight, (UIntPtr)stretch, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_FontFamily(Instance, familyNative.Instance, (UIntPtr)style, (UIntPtr)weight, (UIntPtr)stretch, out exception);
+                NativeMethods.X64.DrawingWand_FontFamily(Instance, familyNative.Instance, (UIntPtr)style, (UIntPtr)weight, (UIntPtr)stretch, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_FontFamily(Instance, familyNative.Instance, (UIntPtr)style, (UIntPtr)weight, (UIntPtr)stretch, out exception);
+                NativeMethods.X86.DrawingWand_FontFamily(Instance, familyNative.Instance, (UIntPtr)style, (UIntPtr)weight, (UIntPtr)stretch, out exception);
 #endif
             CheckException(exception);
         }
@@ -1051,19 +1051,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_FontPointSize(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_FontPointSize(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_FontPointSize(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_FontPointSize(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_FontPointSize(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_FontPointSize(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -1076,19 +1076,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.DrawingWand_FontTypeMetrics(Instance, textNative.Instance, ignoreNewLines, out exception);
+                result = NativeMethods.ARM64.DrawingWand_FontTypeMetrics(Instance, textNative.Instance, ignoreNewLines, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.DrawingWand_FontTypeMetrics(Instance, textNative.Instance, ignoreNewLines, out exception);
+                result = NativeMethods.X64.DrawingWand_FontTypeMetrics(Instance, textNative.Instance, ignoreNewLines, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.DrawingWand_FontTypeMetrics(Instance, textNative.Instance, ignoreNewLines, out exception);
+                result = NativeMethods.X86.DrawingWand_FontTypeMetrics(Instance, textNative.Instance, ignoreNewLines, out exception);
 #endif
             var magickException = MagickExceptionHelper.Create(exception);
             if (magickException is null)
@@ -1109,19 +1109,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Gravity(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_Gravity(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Gravity(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_Gravity(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Gravity(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_Gravity(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -1132,19 +1132,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Line(Instance, startX, startY, endX, endY, out exception);
+                NativeMethods.ARM64.DrawingWand_Line(Instance, startX, startY, endX, endY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Line(Instance, startX, startY, endX, endY, out exception);
+                NativeMethods.X64.DrawingWand_Line(Instance, startX, startY, endX, endY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Line(Instance, startX, startY, endX, endY, out exception);
+                NativeMethods.X86.DrawingWand_Line(Instance, startX, startY, endX, endY, out exception);
 #endif
             CheckException(exception);
         }
@@ -1155,19 +1155,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathArcAbs(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
+                NativeMethods.ARM64.DrawingWand_PathArcAbs(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathArcAbs(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
+                NativeMethods.X64.DrawingWand_PathArcAbs(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathArcAbs(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
+                NativeMethods.X86.DrawingWand_PathArcAbs(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
 #endif
             CheckException(exception);
         }
@@ -1178,19 +1178,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathArcRel(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
+                NativeMethods.ARM64.DrawingWand_PathArcRel(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathArcRel(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
+                NativeMethods.X64.DrawingWand_PathArcRel(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathArcRel(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
+                NativeMethods.X86.DrawingWand_PathArcRel(Instance, x, y, radiusX, radiusY, rotationX, useLargeArc, useSweep, out exception);
 #endif
             CheckException(exception);
         }
@@ -1201,19 +1201,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Render(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_Render(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Render(Instance, out exception);
+                NativeMethods.X64.DrawingWand_Render(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Render(Instance, out exception);
+                NativeMethods.X86.DrawingWand_Render(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1225,19 +1225,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Text(Instance, x, y, textNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_Text(Instance, x, y, textNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Text(Instance, x, y, textNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_Text(Instance, x, y, textNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Text(Instance, x, y, textNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_Text(Instance, x, y, textNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1248,19 +1248,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathClose(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PathClose(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathClose(Instance, out exception);
+                NativeMethods.X64.DrawingWand_PathClose(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathClose(Instance, out exception);
+                NativeMethods.X86.DrawingWand_PathClose(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1271,19 +1271,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathCurveToAbs(Instance, x1, y1, x2, y2, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathCurveToAbs(Instance, x1, y1, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathCurveToAbs(Instance, x1, y1, x2, y2, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathCurveToAbs(Instance, x1, y1, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathCurveToAbs(Instance, x1, y1, x2, y2, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathCurveToAbs(Instance, x1, y1, x2, y2, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1294,19 +1294,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathCurveToRel(Instance, x1, y1, x2, y2, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathCurveToRel(Instance, x1, y1, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathCurveToRel(Instance, x1, y1, x2, y2, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathCurveToRel(Instance, x1, y1, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathCurveToRel(Instance, x1, y1, x2, y2, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathCurveToRel(Instance, x1, y1, x2, y2, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1317,19 +1317,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathFinish(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PathFinish(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathFinish(Instance, out exception);
+                NativeMethods.X64.DrawingWand_PathFinish(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathFinish(Instance, out exception);
+                NativeMethods.X86.DrawingWand_PathFinish(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1340,19 +1340,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathLineToAbs(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathLineToAbs(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathLineToAbs(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathLineToAbs(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathLineToAbs(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathLineToAbs(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1363,19 +1363,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathLineToRel(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathLineToRel(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathLineToRel(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathLineToRel(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathLineToRel(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathLineToRel(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1386,19 +1386,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathLineToHorizontalAbs(Instance, x, out exception);
+                NativeMethods.ARM64.DrawingWand_PathLineToHorizontalAbs(Instance, x, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathLineToHorizontalAbs(Instance, x, out exception);
+                NativeMethods.X64.DrawingWand_PathLineToHorizontalAbs(Instance, x, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathLineToHorizontalAbs(Instance, x, out exception);
+                NativeMethods.X86.DrawingWand_PathLineToHorizontalAbs(Instance, x, out exception);
 #endif
             CheckException(exception);
         }
@@ -1409,19 +1409,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathLineToHorizontalRel(Instance, x, out exception);
+                NativeMethods.ARM64.DrawingWand_PathLineToHorizontalRel(Instance, x, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathLineToHorizontalRel(Instance, x, out exception);
+                NativeMethods.X64.DrawingWand_PathLineToHorizontalRel(Instance, x, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathLineToHorizontalRel(Instance, x, out exception);
+                NativeMethods.X86.DrawingWand_PathLineToHorizontalRel(Instance, x, out exception);
 #endif
             CheckException(exception);
         }
@@ -1432,19 +1432,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathLineToVerticalAbs(Instance, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathLineToVerticalAbs(Instance, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathLineToVerticalAbs(Instance, y, out exception);
+                NativeMethods.X64.DrawingWand_PathLineToVerticalAbs(Instance, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathLineToVerticalAbs(Instance, y, out exception);
+                NativeMethods.X86.DrawingWand_PathLineToVerticalAbs(Instance, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1455,19 +1455,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathLineToVerticalRel(Instance, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathLineToVerticalRel(Instance, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathLineToVerticalRel(Instance, y, out exception);
+                NativeMethods.X64.DrawingWand_PathLineToVerticalRel(Instance, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathLineToVerticalRel(Instance, y, out exception);
+                NativeMethods.X86.DrawingWand_PathLineToVerticalRel(Instance, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1478,19 +1478,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathMoveToAbs(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathMoveToAbs(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathMoveToAbs(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathMoveToAbs(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathMoveToAbs(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathMoveToAbs(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1501,19 +1501,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathMoveToRel(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathMoveToRel(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathMoveToRel(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathMoveToRel(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathMoveToRel(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathMoveToRel(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1524,19 +1524,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathQuadraticCurveToAbs(Instance, x1, y1, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathQuadraticCurveToAbs(Instance, x1, y1, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathQuadraticCurveToAbs(Instance, x1, y1, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathQuadraticCurveToAbs(Instance, x1, y1, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathQuadraticCurveToAbs(Instance, x1, y1, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathQuadraticCurveToAbs(Instance, x1, y1, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1547,19 +1547,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathQuadraticCurveToRel(Instance, x1, y1, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathQuadraticCurveToRel(Instance, x1, y1, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathQuadraticCurveToRel(Instance, x1, y1, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathQuadraticCurveToRel(Instance, x1, y1, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathQuadraticCurveToRel(Instance, x1, y1, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathQuadraticCurveToRel(Instance, x1, y1, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1570,19 +1570,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathSmoothCurveToAbs(Instance, x2, y2, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathSmoothCurveToAbs(Instance, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathSmoothCurveToAbs(Instance, x2, y2, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathSmoothCurveToAbs(Instance, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathSmoothCurveToAbs(Instance, x2, y2, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathSmoothCurveToAbs(Instance, x2, y2, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1593,19 +1593,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathSmoothCurveToRel(Instance, x2, y2, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathSmoothCurveToRel(Instance, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathSmoothCurveToRel(Instance, x2, y2, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathSmoothCurveToRel(Instance, x2, y2, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathSmoothCurveToRel(Instance, x2, y2, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathSmoothCurveToRel(Instance, x2, y2, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1616,19 +1616,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathSmoothQuadraticCurveToAbs(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathSmoothQuadraticCurveToAbs(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathSmoothQuadraticCurveToAbs(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathSmoothQuadraticCurveToAbs(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathSmoothQuadraticCurveToAbs(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathSmoothQuadraticCurveToAbs(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1639,19 +1639,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathSmoothQuadraticCurveToRel(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_PathSmoothQuadraticCurveToRel(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathSmoothQuadraticCurveToRel(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_PathSmoothQuadraticCurveToRel(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathSmoothQuadraticCurveToRel(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_PathSmoothQuadraticCurveToRel(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1662,19 +1662,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PathStart(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PathStart(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PathStart(Instance, out exception);
+                NativeMethods.X64.DrawingWand_PathStart(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PathStart(Instance, out exception);
+                NativeMethods.X86.DrawingWand_PathStart(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1685,19 +1685,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Point(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_Point(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Point(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_Point(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Point(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_Point(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1708,19 +1708,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Polygon(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.ARM64.DrawingWand_Polygon(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Polygon(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.X64.DrawingWand_Polygon(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Polygon(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.X86.DrawingWand_Polygon(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
             CheckException(exception);
         }
@@ -1731,19 +1731,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Polyline(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.ARM64.DrawingWand_Polyline(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Polyline(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.X64.DrawingWand_Polyline(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Polyline(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
+                NativeMethods.X86.DrawingWand_Polyline(Instance, PointInfoCollection.GetInstance(coordinates), (UIntPtr)length, out exception);
 #endif
             CheckException(exception);
         }
@@ -1754,19 +1754,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PopClipPath(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PopClipPath(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PopClipPath(Instance, out exception);
+                NativeMethods.X64.DrawingWand_PopClipPath(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PopClipPath(Instance, out exception);
+                NativeMethods.X86.DrawingWand_PopClipPath(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1777,19 +1777,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PopGraphicContext(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PopGraphicContext(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PopGraphicContext(Instance, out exception);
+                NativeMethods.X64.DrawingWand_PopGraphicContext(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PopGraphicContext(Instance, out exception);
+                NativeMethods.X86.DrawingWand_PopGraphicContext(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1800,19 +1800,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PopPattern(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PopPattern(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PopPattern(Instance, out exception);
+                NativeMethods.X64.DrawingWand_PopPattern(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PopPattern(Instance, out exception);
+                NativeMethods.X86.DrawingWand_PopPattern(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1824,19 +1824,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PushClipPath(Instance, clipPathNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PushClipPath(Instance, clipPathNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PushClipPath(Instance, clipPathNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_PushClipPath(Instance, clipPathNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PushClipPath(Instance, clipPathNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_PushClipPath(Instance, clipPathNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1847,19 +1847,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PushGraphicContext(Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_PushGraphicContext(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PushGraphicContext(Instance, out exception);
+                NativeMethods.X64.DrawingWand_PushGraphicContext(Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PushGraphicContext(Instance, out exception);
+                NativeMethods.X86.DrawingWand_PushGraphicContext(Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -1871,19 +1871,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_PushPattern(Instance, idNative.Instance, x, y, width, height, out exception);
+                NativeMethods.ARM64.DrawingWand_PushPattern(Instance, idNative.Instance, x, y, width, height, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_PushPattern(Instance, idNative.Instance, x, y, width, height, out exception);
+                NativeMethods.X64.DrawingWand_PushPattern(Instance, idNative.Instance, x, y, width, height, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_PushPattern(Instance, idNative.Instance, x, y, width, height, out exception);
+                NativeMethods.X86.DrawingWand_PushPattern(Instance, idNative.Instance, x, y, width, height, out exception);
 #endif
             CheckException(exception);
         }
@@ -1894,19 +1894,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Rectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
+                NativeMethods.ARM64.DrawingWand_Rectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Rectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
+                NativeMethods.X64.DrawingWand_Rectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Rectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
+                NativeMethods.X86.DrawingWand_Rectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
 #endif
             CheckException(exception);
         }
@@ -1917,19 +1917,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Rotation(Instance, angle, out exception);
+                NativeMethods.ARM64.DrawingWand_Rotation(Instance, angle, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Rotation(Instance, angle, out exception);
+                NativeMethods.X64.DrawingWand_Rotation(Instance, angle, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Rotation(Instance, angle, out exception);
+                NativeMethods.X86.DrawingWand_Rotation(Instance, angle, out exception);
 #endif
             CheckException(exception);
         }
@@ -1940,19 +1940,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_RoundRectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, cornerWidth, cornerHeight, out exception);
+                NativeMethods.ARM64.DrawingWand_RoundRectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, cornerWidth, cornerHeight, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_RoundRectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, cornerWidth, cornerHeight, out exception);
+                NativeMethods.X64.DrawingWand_RoundRectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, cornerWidth, cornerHeight, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_RoundRectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, cornerWidth, cornerHeight, out exception);
+                NativeMethods.X86.DrawingWand_RoundRectangle(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, cornerWidth, cornerHeight, out exception);
 #endif
             CheckException(exception);
         }
@@ -1963,19 +1963,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Scaling(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_Scaling(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Scaling(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_Scaling(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Scaling(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_Scaling(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -1986,19 +1986,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_SkewX(Instance, angle, out exception);
+                NativeMethods.ARM64.DrawingWand_SkewX(Instance, angle, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_SkewX(Instance, angle, out exception);
+                NativeMethods.X64.DrawingWand_SkewX(Instance, angle, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_SkewX(Instance, angle, out exception);
+                NativeMethods.X86.DrawingWand_SkewX(Instance, angle, out exception);
 #endif
             CheckException(exception);
         }
@@ -2009,19 +2009,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_SkewY(Instance, angle, out exception);
+                NativeMethods.ARM64.DrawingWand_SkewY(Instance, angle, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_SkewY(Instance, angle, out exception);
+                NativeMethods.X64.DrawingWand_SkewY(Instance, angle, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_SkewY(Instance, angle, out exception);
+                NativeMethods.X86.DrawingWand_SkewY(Instance, angle, out exception);
 #endif
             CheckException(exception);
         }
@@ -2032,19 +2032,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeAntialias(Instance, isEnabled, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeAntialias(Instance, isEnabled, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeAntialias(Instance, isEnabled, out exception);
+                NativeMethods.X64.DrawingWand_StrokeAntialias(Instance, isEnabled, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeAntialias(Instance, isEnabled, out exception);
+                NativeMethods.X86.DrawingWand_StrokeAntialias(Instance, isEnabled, out exception);
 #endif
             CheckException(exception);
         }
@@ -2056,19 +2056,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeColor(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_StrokeColor(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeColor(Instance, valueNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_StrokeColor(Instance, valueNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -2081,19 +2081,19 @@ internal partial class DrawingWand : IDisposable
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingWand_StrokeDashArray(Instance, dashFixed, (UIntPtr)length, out exception);
+                    NativeMethods.ARM64.DrawingWand_StrokeDashArray(Instance, dashFixed, (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingWand_StrokeDashArray(Instance, dashFixed, (UIntPtr)length, out exception);
+                    NativeMethods.X64.DrawingWand_StrokeDashArray(Instance, dashFixed, (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingWand_StrokeDashArray(Instance, dashFixed, (UIntPtr)length, out exception);
+                    NativeMethods.X86.DrawingWand_StrokeDashArray(Instance, dashFixed, (UIntPtr)length, out exception);
 #endif
                 CheckException(exception);
             }
@@ -2105,19 +2105,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeDashOffset(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeDashOffset(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeDashOffset(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_StrokeDashOffset(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeDashOffset(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_StrokeDashOffset(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2128,19 +2128,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeLineCap(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeLineCap(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeLineCap(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_StrokeLineCap(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeLineCap(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_StrokeLineCap(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2151,19 +2151,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeLineJoin(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeLineJoin(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeLineJoin(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_StrokeLineJoin(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeLineJoin(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_StrokeLineJoin(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2174,19 +2174,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeMiterLimit(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeMiterLimit(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeMiterLimit(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_StrokeMiterLimit(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeMiterLimit(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_StrokeMiterLimit(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2197,19 +2197,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeOpacity(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeOpacity(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeOpacity(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_StrokeOpacity(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeOpacity(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_StrokeOpacity(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2221,19 +2221,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokePatternUrl(Instance, valueNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokePatternUrl(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokePatternUrl(Instance, valueNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_StrokePatternUrl(Instance, valueNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokePatternUrl(Instance, valueNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_StrokePatternUrl(Instance, valueNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -2244,19 +2244,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_StrokeWidth(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_StrokeWidth(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_StrokeWidth(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_StrokeWidth(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_StrokeWidth(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_StrokeWidth(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2267,19 +2267,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextAlignment(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_TextAlignment(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextAlignment(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_TextAlignment(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextAlignment(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_TextAlignment(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2290,19 +2290,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextAntialias(Instance, isEnabled, out exception);
+                NativeMethods.ARM64.DrawingWand_TextAntialias(Instance, isEnabled, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextAntialias(Instance, isEnabled, out exception);
+                NativeMethods.X64.DrawingWand_TextAntialias(Instance, isEnabled, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextAntialias(Instance, isEnabled, out exception);
+                NativeMethods.X86.DrawingWand_TextAntialias(Instance, isEnabled, out exception);
 #endif
             CheckException(exception);
         }
@@ -2313,19 +2313,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextDecoration(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_TextDecoration(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextDecoration(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_TextDecoration(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextDecoration(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_TextDecoration(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2336,19 +2336,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextDirection(Instance, (UIntPtr)value, out exception);
+                NativeMethods.ARM64.DrawingWand_TextDirection(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextDirection(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X64.DrawingWand_TextDirection(Instance, (UIntPtr)value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextDirection(Instance, (UIntPtr)value, out exception);
+                NativeMethods.X86.DrawingWand_TextDirection(Instance, (UIntPtr)value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2360,19 +2360,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextEncoding(Instance, encodingNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_TextEncoding(Instance, encodingNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextEncoding(Instance, encodingNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_TextEncoding(Instance, encodingNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextEncoding(Instance, encodingNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_TextEncoding(Instance, encodingNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -2383,19 +2383,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextInterlineSpacing(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_TextInterlineSpacing(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextInterlineSpacing(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_TextInterlineSpacing(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextInterlineSpacing(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_TextInterlineSpacing(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2406,19 +2406,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextInterwordSpacing(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_TextInterwordSpacing(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextInterwordSpacing(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_TextInterwordSpacing(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextInterwordSpacing(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_TextInterwordSpacing(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2429,19 +2429,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextKerning(Instance, value, out exception);
+                NativeMethods.ARM64.DrawingWand_TextKerning(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextKerning(Instance, value, out exception);
+                NativeMethods.X64.DrawingWand_TextKerning(Instance, value, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextKerning(Instance, value, out exception);
+                NativeMethods.X86.DrawingWand_TextKerning(Instance, value, out exception);
 #endif
             CheckException(exception);
         }
@@ -2453,19 +2453,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_TextUnderColor(Instance, colorNative.Instance, out exception);
+                NativeMethods.ARM64.DrawingWand_TextUnderColor(Instance, colorNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_TextUnderColor(Instance, colorNative.Instance, out exception);
+                NativeMethods.X64.DrawingWand_TextUnderColor(Instance, colorNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_TextUnderColor(Instance, colorNative.Instance, out exception);
+                NativeMethods.X86.DrawingWand_TextUnderColor(Instance, colorNative.Instance, out exception);
 #endif
             CheckException(exception);
         }
@@ -2476,19 +2476,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Translation(Instance, x, y, out exception);
+                NativeMethods.ARM64.DrawingWand_Translation(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Translation(Instance, x, y, out exception);
+                NativeMethods.X64.DrawingWand_Translation(Instance, x, y, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Translation(Instance, x, y, out exception);
+                NativeMethods.X86.DrawingWand_Translation(Instance, x, y, out exception);
 #endif
             CheckException(exception);
         }
@@ -2499,19 +2499,19 @@ internal partial class DrawingWand : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingWand_Viewbox(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
+                NativeMethods.ARM64.DrawingWand_Viewbox(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingWand_Viewbox(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
+                NativeMethods.X64.DrawingWand_Viewbox(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingWand_Viewbox(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
+                NativeMethods.X86.DrawingWand_Viewbox(Instance, upperLeftX, upperLeftY, lowerRightX, lowerRightY, out exception);
 #endif
             CheckException(exception);
         }

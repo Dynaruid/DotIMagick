@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Encapsulates a matrix of doubles.

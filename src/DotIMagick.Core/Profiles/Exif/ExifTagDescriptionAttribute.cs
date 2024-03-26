@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 [AttributeUsage(AttributeTargets.Field, AllowMultiple = true)]
 internal sealed class ExifTagDescriptionAttribute : Attribute

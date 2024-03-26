@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class PrimaryInfo
 {
@@ -87,19 +87,19 @@ public partial class PrimaryInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.PrimaryInfo_Dispose(instance);
+                NativeMethods.ARM64.PrimaryInfo_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.PrimaryInfo_Dispose(instance);
+                NativeMethods.X64.PrimaryInfo_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.PrimaryInfo_Dispose(instance);
+                NativeMethods.X86.PrimaryInfo_Dispose(instance);
 #endif
         }
         public NativePrimaryInfo()
@@ -108,19 +108,19 @@ public partial class PrimaryInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.PrimaryInfo_Create();
+                Instance = NativeMethods.ARM64.PrimaryInfo_Create();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.PrimaryInfo_Create();
+                Instance = NativeMethods.X64.PrimaryInfo_Create();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.PrimaryInfo_Create();
+                Instance = NativeMethods.X86.PrimaryInfo_Create();
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -145,19 +145,19 @@ public partial class PrimaryInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.PrimaryInfo_X_Get(Instance);
+                    result = NativeMethods.ARM64.PrimaryInfo_X_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.PrimaryInfo_X_Get(Instance);
+                    result = NativeMethods.X64.PrimaryInfo_X_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.PrimaryInfo_X_Get(Instance);
+                    result = NativeMethods.X86.PrimaryInfo_X_Get(Instance);
 #endif
                 return result;
             }
@@ -167,19 +167,19 @@ public partial class PrimaryInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.PrimaryInfo_X_Set(Instance, value);
+                    NativeMethods.ARM64.PrimaryInfo_X_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.PrimaryInfo_X_Set(Instance, value);
+                    NativeMethods.X64.PrimaryInfo_X_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.PrimaryInfo_X_Set(Instance, value);
+                    NativeMethods.X86.PrimaryInfo_X_Set(Instance, value);
 #endif
             }
         }
@@ -192,19 +192,19 @@ public partial class PrimaryInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.PrimaryInfo_Y_Get(Instance);
+                    result = NativeMethods.ARM64.PrimaryInfo_Y_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.PrimaryInfo_Y_Get(Instance);
+                    result = NativeMethods.X64.PrimaryInfo_Y_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.PrimaryInfo_Y_Get(Instance);
+                    result = NativeMethods.X86.PrimaryInfo_Y_Get(Instance);
 #endif
                 return result;
             }
@@ -214,19 +214,19 @@ public partial class PrimaryInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.PrimaryInfo_Y_Set(Instance, value);
+                    NativeMethods.ARM64.PrimaryInfo_Y_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.PrimaryInfo_Y_Set(Instance, value);
+                    NativeMethods.X64.PrimaryInfo_Y_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.PrimaryInfo_Y_Set(Instance, value);
+                    NativeMethods.X86.PrimaryInfo_Y_Set(Instance, value);
 #endif
             }
         }
@@ -239,19 +239,19 @@ public partial class PrimaryInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.PrimaryInfo_Z_Get(Instance);
+                    result = NativeMethods.ARM64.PrimaryInfo_Z_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.PrimaryInfo_Z_Get(Instance);
+                    result = NativeMethods.X64.PrimaryInfo_Z_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.PrimaryInfo_Z_Get(Instance);
+                    result = NativeMethods.X86.PrimaryInfo_Z_Get(Instance);
 #endif
                 return result;
             }
@@ -261,19 +261,19 @@ public partial class PrimaryInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.PrimaryInfo_Z_Set(Instance, value);
+                    NativeMethods.ARM64.PrimaryInfo_Z_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.PrimaryInfo_Z_Set(Instance, value);
+                    NativeMethods.X64.PrimaryInfo_Z_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.PrimaryInfo_Z_Set(Instance, value);
+                    NativeMethods.X86.PrimaryInfo_Z_Set(Instance, value);
 #endif
             }
         }

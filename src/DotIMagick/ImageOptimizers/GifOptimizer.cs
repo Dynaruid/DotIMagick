@@ -13,7 +13,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick.ImageOptimizers;
+namespace DotIMagick.ImageOptimizers;
 
 /// <summary>
 /// Class that can be used to optimize gif files.

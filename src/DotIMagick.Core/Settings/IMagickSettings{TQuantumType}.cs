@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that contains various settings.

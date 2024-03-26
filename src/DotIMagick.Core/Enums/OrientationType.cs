@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Specified the photo orientation of the image.

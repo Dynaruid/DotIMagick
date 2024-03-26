@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class DoubleMatrix
 {
@@ -51,19 +51,19 @@ public partial class DoubleMatrix
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DoubleMatrix_Dispose(instance);
+                NativeMethods.ARM64.DoubleMatrix_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DoubleMatrix_Dispose(instance);
+                NativeMethods.X64.DoubleMatrix_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DoubleMatrix_Dispose(instance);
+                NativeMethods.X86.DoubleMatrix_Dispose(instance);
 #endif
         }
         public NativeDoubleMatrix(double[] values, int order)
@@ -74,19 +74,19 @@ public partial class DoubleMatrix
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                Instance = NativeMethods.ARM64.DoubleMatrix_Create(valuesFixed, (UIntPtr)order);
+                    Instance = NativeMethods.ARM64.DoubleMatrix_Create(valuesFixed, (UIntPtr)order);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                Instance = NativeMethods.X64.DoubleMatrix_Create(valuesFixed, (UIntPtr)order);
+                    Instance = NativeMethods.X64.DoubleMatrix_Create(valuesFixed, (UIntPtr)order);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                Instance = NativeMethods.X86.DoubleMatrix_Create(valuesFixed, (UIntPtr)order);
+                    Instance = NativeMethods.X86.DoubleMatrix_Create(valuesFixed, (UIntPtr)order);
 #endif
                 if (Instance == IntPtr.Zero)
                     throw new InvalidOperationException();

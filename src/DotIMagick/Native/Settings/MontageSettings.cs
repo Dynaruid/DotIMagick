@@ -17,7 +17,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class MontageSettings
 {
@@ -145,19 +145,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_Dispose(instance);
+                NativeMethods.ARM64.MontageSettings_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_Dispose(instance);
+                NativeMethods.X64.MontageSettings_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_Dispose(instance);
+                NativeMethods.X86.MontageSettings_Dispose(instance);
 #endif
         }
         public NativeMontageSettings()
@@ -166,19 +166,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.MontageSettings_Create();
+                Instance = NativeMethods.ARM64.MontageSettings_Create();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.MontageSettings_Create();
+                Instance = NativeMethods.X64.MontageSettings_Create();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.MontageSettings_Create();
+                Instance = NativeMethods.X86.MontageSettings_Create();
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -197,19 +197,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetBackgroundColor(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetBackgroundColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetBackgroundColor(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetBackgroundColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetBackgroundColor(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetBackgroundColor(Instance, valueNative.Instance);
 #endif
         }
         public void SetBorderColor(IMagickColor<QuantumType>? value)
@@ -219,19 +219,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetBorderColor(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetBorderColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetBorderColor(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetBorderColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetBorderColor(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetBorderColor(Instance, valueNative.Instance);
 #endif
         }
         public void SetBorderWidth(int value)
@@ -240,19 +240,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetBorderWidth(Instance, (UIntPtr)value);
+                NativeMethods.ARM64.MontageSettings_SetBorderWidth(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetBorderWidth(Instance, (UIntPtr)value);
+                NativeMethods.X64.MontageSettings_SetBorderWidth(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetBorderWidth(Instance, (UIntPtr)value);
+                NativeMethods.X86.MontageSettings_SetBorderWidth(Instance, (UIntPtr)value);
 #endif
         }
         public void SetFillColor(IMagickColor<QuantumType>? value)
@@ -262,19 +262,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetFillColor(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetFillColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetFillColor(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetFillColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetFillColor(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetFillColor(Instance, valueNative.Instance);
 #endif
         }
         public void SetFont(string? value)
@@ -284,19 +284,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetFont(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetFont(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetFont(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetFont(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetFont(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetFont(Instance, valueNative.Instance);
 #endif
         }
         public void SetFontPointsize(double value)
@@ -305,19 +305,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetFontPointsize(Instance, value);
+                NativeMethods.ARM64.MontageSettings_SetFontPointsize(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetFontPointsize(Instance, value);
+                NativeMethods.X64.MontageSettings_SetFontPointsize(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetFontPointsize(Instance, value);
+                NativeMethods.X86.MontageSettings_SetFontPointsize(Instance, value);
 #endif
         }
         public void SetFrameGeometry(string? value)
@@ -327,19 +327,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetFrameGeometry(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetFrameGeometry(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetFrameGeometry(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetFrameGeometry(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetFrameGeometry(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetFrameGeometry(Instance, valueNative.Instance);
 #endif
         }
         public void SetGeometry(string? value)
@@ -349,19 +349,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetGeometry(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetGeometry(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetGeometry(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetGeometry(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetGeometry(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetGeometry(Instance, valueNative.Instance);
 #endif
         }
         public void SetGravity(Gravity value)
@@ -370,19 +370,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetGravity(Instance, (UIntPtr)value);
+                NativeMethods.ARM64.MontageSettings_SetGravity(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetGravity(Instance, (UIntPtr)value);
+                NativeMethods.X64.MontageSettings_SetGravity(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetGravity(Instance, (UIntPtr)value);
+                NativeMethods.X86.MontageSettings_SetGravity(Instance, (UIntPtr)value);
 #endif
         }
         public void SetShadow(bool value)
@@ -391,19 +391,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetShadow(Instance, value);
+                NativeMethods.ARM64.MontageSettings_SetShadow(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetShadow(Instance, value);
+                NativeMethods.X64.MontageSettings_SetShadow(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetShadow(Instance, value);
+                NativeMethods.X86.MontageSettings_SetShadow(Instance, value);
 #endif
         }
         public void SetStrokeColor(IMagickColor<QuantumType>? value)
@@ -413,19 +413,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetStrokeColor(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetStrokeColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetStrokeColor(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetStrokeColor(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetStrokeColor(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetStrokeColor(Instance, valueNative.Instance);
 #endif
         }
         public void SetTextureFileName(string? value)
@@ -435,19 +435,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetTextureFileName(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetTextureFileName(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetTextureFileName(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetTextureFileName(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetTextureFileName(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetTextureFileName(Instance, valueNative.Instance);
 #endif
         }
         public void SetTileGeometry(string? value)
@@ -457,19 +457,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetTileGeometry(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetTileGeometry(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetTileGeometry(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetTileGeometry(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetTileGeometry(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetTileGeometry(Instance, valueNative.Instance);
 #endif
         }
         public void SetTitle(string? value)
@@ -479,19 +479,19 @@ public partial class MontageSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MontageSettings_SetTitle(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MontageSettings_SetTitle(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MontageSettings_SetTitle(Instance, valueNative.Instance);
+                NativeMethods.X64.MontageSettings_SetTitle(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MontageSettings_SetTitle(Instance, valueNative.Instance);
+                NativeMethods.X86.MontageSettings_SetTitle(Instance, valueNative.Instance);
 #endif
         }
     }

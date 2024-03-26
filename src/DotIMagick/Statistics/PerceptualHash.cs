@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Contains the he perceptual hash of one or more image channels.

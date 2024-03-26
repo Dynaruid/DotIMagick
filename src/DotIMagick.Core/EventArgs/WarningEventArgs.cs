@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Arguments for the Warning event.

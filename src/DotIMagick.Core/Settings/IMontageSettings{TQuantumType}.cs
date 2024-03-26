@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that contains setting for the montage operation.

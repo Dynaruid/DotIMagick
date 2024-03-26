@@ -8,7 +8,7 @@ using System.Xml.Linq;
 using System.Xml.XPath;
 using Microsoft.CodeAnalysis;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static class ISymbolExtensions
 {

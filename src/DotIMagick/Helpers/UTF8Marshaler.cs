@@ -5,7 +5,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class UTF8Marshaler : INativeInstance
 {

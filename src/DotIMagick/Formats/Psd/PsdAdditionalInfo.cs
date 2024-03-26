@@ -14,7 +14,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick.Formats;
+namespace DotIMagick.Formats;
 
 /// <summary>
 /// The additional info of a <see cref="MagickFormat.Psd"/> image.

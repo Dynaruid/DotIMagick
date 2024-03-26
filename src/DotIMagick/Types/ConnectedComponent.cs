@@ -15,7 +15,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Encapsulation of the ImageMagick connected component object.

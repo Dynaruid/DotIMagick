@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that implements <see cref="IDefine"/>.

@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class ChannelPerceptualHash
 {
@@ -57,19 +57,19 @@ public partial class ChannelPerceptualHash
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.ChannelPerceptualHash_GetHuPhash(Instance, (UIntPtr)colorSpaceIndex, (UIntPtr)index);
+                result = NativeMethods.ARM64.ChannelPerceptualHash_GetHuPhash(Instance, (UIntPtr)colorSpaceIndex, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.ChannelPerceptualHash_GetHuPhash(Instance, (UIntPtr)colorSpaceIndex, (UIntPtr)index);
+                result = NativeMethods.X64.ChannelPerceptualHash_GetHuPhash(Instance, (UIntPtr)colorSpaceIndex, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.ChannelPerceptualHash_GetHuPhash(Instance, (UIntPtr)colorSpaceIndex, (UIntPtr)index);
+                result = NativeMethods.X86.ChannelPerceptualHash_GetHuPhash(Instance, (UIntPtr)colorSpaceIndex, (UIntPtr)index);
 #endif
             return result;
         }

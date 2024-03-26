@@ -3,7 +3,7 @@
 
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Encapsulation of the DrawableTextEncoding object.

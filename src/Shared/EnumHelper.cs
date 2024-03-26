@@ -4,7 +4,7 @@
 using System;
 using System.IO;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static class EnumHelper
 {

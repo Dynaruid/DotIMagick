@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that can be used to access an individual pixel of an image.

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace ImageMagick.Formats;
+namespace DotIMagick.Formats;
 
 /// <summary>
 /// Class for defines that are used when a <see cref="MagickFormat.Pdf"/> image is written.

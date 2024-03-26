@@ -8,7 +8,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that can be used to access an Iptc profile.

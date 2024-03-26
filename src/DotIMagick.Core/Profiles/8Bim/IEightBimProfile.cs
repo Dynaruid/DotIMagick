@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Interface that describes an 8bim profile.

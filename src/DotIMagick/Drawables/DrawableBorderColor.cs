@@ -11,7 +11,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Sets the border color to be used for drawing bordered objects.

@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class PerceptualHash
 {
@@ -51,19 +51,19 @@ public partial class PerceptualHash
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.PerceptualHash_DisposeList(list);
+                NativeMethods.ARM64.PerceptualHash_DisposeList(list);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.PerceptualHash_DisposeList(list);
+                NativeMethods.X64.PerceptualHash_DisposeList(list);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.PerceptualHash_DisposeList(list);
+                NativeMethods.X86.PerceptualHash_DisposeList(list);
 #endif
         }
         public static IntPtr GetInstance(IMagickImage image, IntPtr list, PixelChannel channel)
@@ -73,19 +73,19 @@ public partial class PerceptualHash
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.PerceptualHash_GetInstance(MagickImage.GetInstance(image), list, (UIntPtr)channel);
+                result = NativeMethods.ARM64.PerceptualHash_GetInstance(MagickImage.GetInstance(image), list, (UIntPtr)channel);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.PerceptualHash_GetInstance(MagickImage.GetInstance(image), list, (UIntPtr)channel);
+                result = NativeMethods.X64.PerceptualHash_GetInstance(MagickImage.GetInstance(image), list, (UIntPtr)channel);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.PerceptualHash_GetInstance(MagickImage.GetInstance(image), list, (UIntPtr)channel);
+                result = NativeMethods.X86.PerceptualHash_GetInstance(MagickImage.GetInstance(image), list, (UIntPtr)channel);
 #endif
             return result;
         }

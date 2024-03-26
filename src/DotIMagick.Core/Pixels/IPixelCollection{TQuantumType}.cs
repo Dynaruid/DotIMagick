@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Interface that can be used to access the individual pixels of an image.

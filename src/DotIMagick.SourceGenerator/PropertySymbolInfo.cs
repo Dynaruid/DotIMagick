@@ -6,7 +6,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 
-namespace ImageMagick
+namespace DotIMagick
 {
     internal sealed class PropertySymbolInfo
     {

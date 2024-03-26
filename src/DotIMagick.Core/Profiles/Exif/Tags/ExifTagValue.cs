@@ -3,7 +3,7 @@
 
 /* Descriptions from: http://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/EXIF.html */
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// All exif tags from the Exif standard 2.31.

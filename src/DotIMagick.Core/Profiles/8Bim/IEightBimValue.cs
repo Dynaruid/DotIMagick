@@ -4,7 +4,7 @@
 using System;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// A value of the 8bim profile.

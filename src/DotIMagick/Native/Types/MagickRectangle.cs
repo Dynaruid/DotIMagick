@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal partial class MagickRectangle
 {
@@ -105,19 +105,19 @@ internal partial class MagickRectangle
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickRectangle_Dispose(instance);
+                NativeMethods.ARM64.MagickRectangle_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickRectangle_Dispose(instance);
+                NativeMethods.X64.MagickRectangle_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickRectangle_Dispose(instance);
+                NativeMethods.X86.MagickRectangle_Dispose(instance);
 #endif
         }
         public NativeMagickRectangle()
@@ -126,19 +126,19 @@ internal partial class MagickRectangle
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.MagickRectangle_Create();
+                Instance = NativeMethods.ARM64.MagickRectangle_Create();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.MagickRectangle_Create();
+                Instance = NativeMethods.X64.MagickRectangle_Create();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.MagickRectangle_Create();
+                Instance = NativeMethods.X86.MagickRectangle_Create();
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -163,19 +163,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickRectangle_X_Get(Instance);
+                    result = NativeMethods.ARM64.MagickRectangle_X_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickRectangle_X_Get(Instance);
+                    result = NativeMethods.X64.MagickRectangle_X_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickRectangle_X_Get(Instance);
+                    result = NativeMethods.X86.MagickRectangle_X_Get(Instance);
 #endif
                 return (int)result;
             }
@@ -185,19 +185,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickRectangle_X_Set(Instance, (IntPtr)value);
+                    NativeMethods.ARM64.MagickRectangle_X_Set(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickRectangle_X_Set(Instance, (IntPtr)value);
+                    NativeMethods.X64.MagickRectangle_X_Set(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickRectangle_X_Set(Instance, (IntPtr)value);
+                    NativeMethods.X86.MagickRectangle_X_Set(Instance, (IntPtr)value);
 #endif
             }
         }
@@ -210,19 +210,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickRectangle_Y_Get(Instance);
+                    result = NativeMethods.ARM64.MagickRectangle_Y_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickRectangle_Y_Get(Instance);
+                    result = NativeMethods.X64.MagickRectangle_Y_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickRectangle_Y_Get(Instance);
+                    result = NativeMethods.X86.MagickRectangle_Y_Get(Instance);
 #endif
                 return (int)result;
             }
@@ -232,19 +232,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickRectangle_Y_Set(Instance, (IntPtr)value);
+                    NativeMethods.ARM64.MagickRectangle_Y_Set(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickRectangle_Y_Set(Instance, (IntPtr)value);
+                    NativeMethods.X64.MagickRectangle_Y_Set(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickRectangle_Y_Set(Instance, (IntPtr)value);
+                    NativeMethods.X86.MagickRectangle_Y_Set(Instance, (IntPtr)value);
 #endif
             }
         }
@@ -257,19 +257,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickRectangle_Width_Get(Instance);
+                    result = NativeMethods.ARM64.MagickRectangle_Width_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickRectangle_Width_Get(Instance);
+                    result = NativeMethods.X64.MagickRectangle_Width_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickRectangle_Width_Get(Instance);
+                    result = NativeMethods.X86.MagickRectangle_Width_Get(Instance);
 #endif
                 return (int)result;
             }
@@ -279,19 +279,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickRectangle_Width_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickRectangle_Width_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickRectangle_Width_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickRectangle_Width_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickRectangle_Width_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickRectangle_Width_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -304,19 +304,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickRectangle_Height_Get(Instance);
+                    result = NativeMethods.ARM64.MagickRectangle_Height_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickRectangle_Height_Get(Instance);
+                    result = NativeMethods.X64.MagickRectangle_Height_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickRectangle_Height_Get(Instance);
+                    result = NativeMethods.X86.MagickRectangle_Height_Get(Instance);
 #endif
                 return (int)result;
             }
@@ -326,19 +326,19 @@ internal partial class MagickRectangle
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickRectangle_Height_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickRectangle_Height_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickRectangle_Height_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickRectangle_Height_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickRectangle_Height_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickRectangle_Height_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -350,19 +350,19 @@ internal partial class MagickRectangle
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickRectangle_FromPageSize(valueNative.Instance);
+                result = NativeMethods.ARM64.MagickRectangle_FromPageSize(valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickRectangle_FromPageSize(valueNative.Instance);
+                result = NativeMethods.X64.MagickRectangle_FromPageSize(valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickRectangle_FromPageSize(valueNative.Instance);
+                result = NativeMethods.X86.MagickRectangle_FromPageSize(valueNative.Instance);
 #endif
             return MagickRectangle.CreateInstance(result);
         }

@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal class PointDCoordinates : DrawableCoordinates<PointD>
 {

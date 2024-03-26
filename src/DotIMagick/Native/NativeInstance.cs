@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal abstract class NativeInstance : NativeHelper, INativeInstance, IDisposable
 {

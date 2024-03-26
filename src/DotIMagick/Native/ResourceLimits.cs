@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class ResourceLimits
 {
@@ -168,19 +168,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Area_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Area_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Area_Get();
+                    result = NativeMethods.X64.ResourceLimits_Area_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Area_Get();
+                    result = NativeMethods.X86.ResourceLimits_Area_Get();
 #endif
                 return result;
             }
@@ -190,19 +190,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Area_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Area_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Area_Set(value);
+                    NativeMethods.X64.ResourceLimits_Area_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Area_Set(value);
+                    NativeMethods.X86.ResourceLimits_Area_Set(value);
 #endif
             }
         }
@@ -215,19 +215,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Disk_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Disk_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Disk_Get();
+                    result = NativeMethods.X64.ResourceLimits_Disk_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Disk_Get();
+                    result = NativeMethods.X86.ResourceLimits_Disk_Get();
 #endif
                 return result;
             }
@@ -237,19 +237,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Disk_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Disk_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Disk_Set(value);
+                    NativeMethods.X64.ResourceLimits_Disk_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Disk_Set(value);
+                    NativeMethods.X86.ResourceLimits_Disk_Set(value);
 #endif
             }
         }
@@ -262,19 +262,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Height_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Height_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Height_Get();
+                    result = NativeMethods.X64.ResourceLimits_Height_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Height_Get();
+                    result = NativeMethods.X86.ResourceLimits_Height_Get();
 #endif
                 return result;
             }
@@ -284,19 +284,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Height_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Height_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Height_Set(value);
+                    NativeMethods.X64.ResourceLimits_Height_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Height_Set(value);
+                    NativeMethods.X86.ResourceLimits_Height_Set(value);
 #endif
             }
         }
@@ -309,19 +309,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_ListLength_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_ListLength_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_ListLength_Get();
+                    result = NativeMethods.X64.ResourceLimits_ListLength_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_ListLength_Get();
+                    result = NativeMethods.X86.ResourceLimits_ListLength_Get();
 #endif
                 return result;
             }
@@ -331,19 +331,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_ListLength_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_ListLength_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_ListLength_Set(value);
+                    NativeMethods.X64.ResourceLimits_ListLength_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_ListLength_Set(value);
+                    NativeMethods.X86.ResourceLimits_ListLength_Set(value);
 #endif
             }
         }
@@ -356,19 +356,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_MaxMemoryRequest_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_MaxMemoryRequest_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_MaxMemoryRequest_Get();
+                    result = NativeMethods.X64.ResourceLimits_MaxMemoryRequest_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_MaxMemoryRequest_Get();
+                    result = NativeMethods.X86.ResourceLimits_MaxMemoryRequest_Get();
 #endif
                 return result;
             }
@@ -378,19 +378,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_MaxMemoryRequest_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_MaxMemoryRequest_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_MaxMemoryRequest_Set(value);
+                    NativeMethods.X64.ResourceLimits_MaxMemoryRequest_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_MaxMemoryRequest_Set(value);
+                    NativeMethods.X86.ResourceLimits_MaxMemoryRequest_Set(value);
 #endif
             }
         }
@@ -403,19 +403,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Memory_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Memory_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Memory_Get();
+                    result = NativeMethods.X64.ResourceLimits_Memory_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Memory_Get();
+                    result = NativeMethods.X86.ResourceLimits_Memory_Get();
 #endif
                 return result;
             }
@@ -425,19 +425,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Memory_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Memory_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Memory_Set(value);
+                    NativeMethods.X64.ResourceLimits_Memory_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Memory_Set(value);
+                    NativeMethods.X86.ResourceLimits_Memory_Set(value);
 #endif
             }
         }
@@ -450,19 +450,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Thread_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Thread_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Thread_Get();
+                    result = NativeMethods.X64.ResourceLimits_Thread_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Thread_Get();
+                    result = NativeMethods.X86.ResourceLimits_Thread_Get();
 #endif
                 return result;
             }
@@ -472,19 +472,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Thread_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Thread_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Thread_Set(value);
+                    NativeMethods.X64.ResourceLimits_Thread_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Thread_Set(value);
+                    NativeMethods.X86.ResourceLimits_Thread_Set(value);
 #endif
             }
         }
@@ -497,19 +497,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Throttle_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Throttle_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Throttle_Get();
+                    result = NativeMethods.X64.ResourceLimits_Throttle_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Throttle_Get();
+                    result = NativeMethods.X86.ResourceLimits_Throttle_Get();
 #endif
                 return result;
             }
@@ -519,19 +519,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Throttle_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Throttle_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Throttle_Set(value);
+                    NativeMethods.X64.ResourceLimits_Throttle_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Throttle_Set(value);
+                    NativeMethods.X86.ResourceLimits_Throttle_Set(value);
 #endif
             }
         }
@@ -544,19 +544,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Time_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Time_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Time_Get();
+                    result = NativeMethods.X64.ResourceLimits_Time_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Time_Get();
+                    result = NativeMethods.X86.ResourceLimits_Time_Get();
 #endif
                 return result;
             }
@@ -566,19 +566,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Time_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Time_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Time_Set(value);
+                    NativeMethods.X64.ResourceLimits_Time_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Time_Set(value);
+                    NativeMethods.X86.ResourceLimits_Time_Set(value);
 #endif
             }
         }
@@ -591,19 +591,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.ResourceLimits_Width_Get();
+                    result = NativeMethods.ARM64.ResourceLimits_Width_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.ResourceLimits_Width_Get();
+                    result = NativeMethods.X64.ResourceLimits_Width_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.ResourceLimits_Width_Get();
+                    result = NativeMethods.X86.ResourceLimits_Width_Get();
 #endif
                 return result;
             }
@@ -613,19 +613,19 @@ public partial class ResourceLimits
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.ResourceLimits_Width_Set(value);
+                    NativeMethods.ARM64.ResourceLimits_Width_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.ResourceLimits_Width_Set(value);
+                    NativeMethods.X64.ResourceLimits_Width_Set(value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.ResourceLimits_Width_Set(value);
+                    NativeMethods.X86.ResourceLimits_Width_Set(value);
 #endif
             }
         }
@@ -635,19 +635,19 @@ public partial class ResourceLimits
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.ResourceLimits_LimitMemory(percentage);
+                NativeMethods.ARM64.ResourceLimits_LimitMemory(percentage);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.ResourceLimits_LimitMemory(percentage);
+                NativeMethods.X64.ResourceLimits_LimitMemory(percentage);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.ResourceLimits_LimitMemory(percentage);
+                NativeMethods.X86.ResourceLimits_LimitMemory(percentage);
 #endif
         }
     }

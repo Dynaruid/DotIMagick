@@ -4,7 +4,7 @@
 using System.IO;
 using System.Threading;
 
-namespace ImageMagick.ImageOptimizers;
+namespace DotIMagick.ImageOptimizers;
 
 /// <summary>
 /// Class that can be used to optimize jpeg files.

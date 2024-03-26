@@ -3,7 +3,7 @@
 
 using System.Globalization;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class ExifSignedLong : ExifValue<int>
 {

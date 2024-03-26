@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that contains information about an image format.

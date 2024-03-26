@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class MagickFormatInfo
 {
@@ -157,19 +157,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_Description_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_Description_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_Description_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_Description_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_Description_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_Description_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -183,19 +183,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_CanReadMultithreaded_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_CanReadMultithreaded_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_CanReadMultithreaded_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_CanReadMultithreaded_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_CanReadMultithreaded_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_CanReadMultithreaded_Get(Instance);
 #endif
                 return result;
             }
@@ -209,19 +209,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_CanWriteMultithreaded_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_CanWriteMultithreaded_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_CanWriteMultithreaded_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_CanWriteMultithreaded_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_CanWriteMultithreaded_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_CanWriteMultithreaded_Get(Instance);
 #endif
                 return result;
             }
@@ -235,19 +235,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_Format_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_Format_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_Format_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_Format_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_Format_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_Format_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -261,19 +261,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_SupportsMultipleFrames_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_SupportsMultipleFrames_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_SupportsMultipleFrames_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_SupportsMultipleFrames_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_SupportsMultipleFrames_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_SupportsMultipleFrames_Get(Instance);
 #endif
                 return result;
             }
@@ -287,19 +287,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_SupportsReading_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_SupportsReading_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_SupportsReading_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_SupportsReading_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_SupportsReading_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_SupportsReading_Get(Instance);
 #endif
                 return result;
             }
@@ -313,19 +313,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_SupportsWriting_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_SupportsWriting_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_SupportsWriting_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_SupportsWriting_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_SupportsWriting_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_SupportsWriting_Get(Instance);
 #endif
                 return result;
             }
@@ -339,19 +339,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_MimeType_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_MimeType_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_MimeType_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_MimeType_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_MimeType_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_MimeType_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManagedNullable(result);
             }
@@ -365,19 +365,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_Module_Get(Instance);
+                    result = NativeMethods.ARM64.MagickFormatInfo_Module_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_Module_Get(Instance);
+                    result = NativeMethods.X64.MagickFormatInfo_Module_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_Module_Get(Instance);
+                    result = NativeMethods.X86.MagickFormatInfo_Module_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -390,19 +390,19 @@ public partial class MagickFormatInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickFormatInfo_CreateList(out length, out exception);
+                result = NativeMethods.ARM64.MagickFormatInfo_CreateList(out length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickFormatInfo_CreateList(out length, out exception);
+                result = NativeMethods.X64.MagickFormatInfo_CreateList(out length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickFormatInfo_CreateList(out length, out exception);
+                result = NativeMethods.X86.MagickFormatInfo_CreateList(out length, out exception);
 #endif
             var magickException = MagickExceptionHelper.Create(exception);
             if (magickException is null)
@@ -422,19 +422,19 @@ public partial class MagickFormatInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickFormatInfo_DisposeList(instance, (UIntPtr)length);
+                NativeMethods.ARM64.MagickFormatInfo_DisposeList(instance, (UIntPtr)length);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickFormatInfo_DisposeList(instance, (UIntPtr)length);
+                NativeMethods.X64.MagickFormatInfo_DisposeList(instance, (UIntPtr)length);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickFormatInfo_DisposeList(instance, (UIntPtr)length);
+                NativeMethods.X86.MagickFormatInfo_DisposeList(instance, (UIntPtr)length);
 #endif
         }
         public void GetInfo(IntPtr list, int index)
@@ -445,19 +445,19 @@ public partial class MagickFormatInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickFormatInfo_GetInfo(list, (UIntPtr)index, out exception);
+                result = NativeMethods.ARM64.MagickFormatInfo_GetInfo(list, (UIntPtr)index, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickFormatInfo_GetInfo(list, (UIntPtr)index, out exception);
+                result = NativeMethods.X64.MagickFormatInfo_GetInfo(list, (UIntPtr)index, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickFormatInfo_GetInfo(list, (UIntPtr)index, out exception);
+                result = NativeMethods.X86.MagickFormatInfo_GetInfo(list, (UIntPtr)index, out exception);
 #endif
             CheckException(exception);
             if (result != IntPtr.Zero)
@@ -472,19 +472,19 @@ public partial class MagickFormatInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickFormatInfo_GetInfoByName(nameNative.Instance, out exception);
+                result = NativeMethods.ARM64.MagickFormatInfo_GetInfoByName(nameNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickFormatInfo_GetInfoByName(nameNative.Instance, out exception);
+                result = NativeMethods.X64.MagickFormatInfo_GetInfoByName(nameNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickFormatInfo_GetInfoByName(nameNative.Instance, out exception);
+                result = NativeMethods.X86.MagickFormatInfo_GetInfoByName(nameNative.Instance, out exception);
 #endif
             CheckException(exception);
             if (result != IntPtr.Zero)
@@ -500,19 +500,19 @@ public partial class MagickFormatInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickFormatInfo_GetInfoWithBlob(dataFixed, (UIntPtr)length, out exception);
+                    result = NativeMethods.ARM64.MagickFormatInfo_GetInfoWithBlob(dataFixed, (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickFormatInfo_GetInfoWithBlob(dataFixed, (UIntPtr)length, out exception);
+                    result = NativeMethods.X64.MagickFormatInfo_GetInfoWithBlob(dataFixed, (UIntPtr)length, out exception);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickFormatInfo_GetInfoWithBlob(dataFixed, (UIntPtr)length, out exception);
+                    result = NativeMethods.X86.MagickFormatInfo_GetInfoWithBlob(dataFixed, (UIntPtr)length, out exception);
 #endif
                 CheckException(exception);
                 if (result != IntPtr.Zero)
@@ -558,19 +558,19 @@ public partial class MagickFormatInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickFormatInfo_Unregister(nameNative.Instance);
+                result = NativeMethods.ARM64.MagickFormatInfo_Unregister(nameNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickFormatInfo_Unregister(nameNative.Instance);
+                result = NativeMethods.X64.MagickFormatInfo_Unregister(nameNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickFormatInfo_Unregister(nameNative.Instance);
+                result = NativeMethods.X86.MagickFormatInfo_Unregister(nameNative.Instance);
 #endif
             return result;
         }

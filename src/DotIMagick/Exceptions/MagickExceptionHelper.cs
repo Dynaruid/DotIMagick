@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static partial class MagickExceptionHelper
 {

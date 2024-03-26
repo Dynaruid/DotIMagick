@@ -3,7 +3,7 @@
 using System;
 using Microsoft.CodeAnalysis;
 
-namespace ImageMagick.SourceGenerator;
+namespace DotIMagick.SourceGenerator;
 
 internal static class IncrementalGeneratorInitializationContextExtensions
 {

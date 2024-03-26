@@ -6,7 +6,7 @@
 using System;
 using System.Buffers;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that can be used to create <see cref="IMagickImageInfo"/> instances.

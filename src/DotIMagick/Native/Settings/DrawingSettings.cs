@@ -17,7 +17,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal partial class DrawingSettings
 {
@@ -373,19 +373,19 @@ internal partial class DrawingSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingSettings_Dispose(instance);
+                NativeMethods.ARM64.DrawingSettings_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingSettings_Dispose(instance);
+                NativeMethods.X64.DrawingSettings_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingSettings_Dispose(instance);
+                NativeMethods.X86.DrawingSettings_Dispose(instance);
 #endif
         }
         public NativeDrawingSettings()
@@ -394,19 +394,19 @@ internal partial class DrawingSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.DrawingSettings_Create();
+                Instance = NativeMethods.ARM64.DrawingSettings_Create();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.DrawingSettings_Create();
+                Instance = NativeMethods.X64.DrawingSettings_Create();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.DrawingSettings_Create();
+                Instance = NativeMethods.X86.DrawingSettings_Create();
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -427,19 +427,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_BorderColor_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_BorderColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_BorderColor_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_BorderColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_BorderColor_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_BorderColor_Get(Instance);
 #endif
                 return MagickColor.CreateInstance(result);
             }
@@ -450,19 +450,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_BorderColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.DrawingSettings_BorderColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_BorderColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.DrawingSettings_BorderColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_BorderColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.DrawingSettings_BorderColor_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -475,19 +475,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_FillColor_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_FillColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_FillColor_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_FillColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_FillColor_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_FillColor_Get(Instance);
 #endif
                 return MagickColor.CreateInstance(result);
             }
@@ -498,19 +498,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_FillColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.DrawingSettings_FillColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_FillColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.DrawingSettings_FillColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_FillColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.DrawingSettings_FillColor_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -523,19 +523,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_FillRule_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_FillRule_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_FillRule_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_FillRule_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_FillRule_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_FillRule_Get(Instance);
 #endif
                 return (FillRule)result;
             }
@@ -545,19 +545,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_FillRule_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_FillRule_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_FillRule_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_FillRule_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_FillRule_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_FillRule_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -570,19 +570,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_Font_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_Font_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_Font_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_Font_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_Font_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_Font_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManagedNullable(result);
             }
@@ -593,19 +593,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_Font_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.DrawingSettings_Font_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_Font_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.DrawingSettings_Font_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_Font_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.DrawingSettings_Font_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -618,19 +618,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_FontFamily_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_FontFamily_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_FontFamily_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_FontFamily_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_FontFamily_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_FontFamily_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManagedNullable(result);
             }
@@ -641,19 +641,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_FontFamily_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.DrawingSettings_FontFamily_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_FontFamily_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.DrawingSettings_FontFamily_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_FontFamily_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.DrawingSettings_FontFamily_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -666,19 +666,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_FontPointsize_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_FontPointsize_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_FontPointsize_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_FontPointsize_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_FontPointsize_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_FontPointsize_Get(Instance);
 #endif
                 return result;
             }
@@ -688,19 +688,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_FontPointsize_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_FontPointsize_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_FontPointsize_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_FontPointsize_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_FontPointsize_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_FontPointsize_Set(Instance, value);
 #endif
             }
         }
@@ -713,19 +713,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_FontStyle_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_FontStyle_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_FontStyle_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_FontStyle_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_FontStyle_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_FontStyle_Get(Instance);
 #endif
                 return (FontStyleType)result;
             }
@@ -735,19 +735,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_FontStyle_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_FontStyle_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_FontStyle_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_FontStyle_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_FontStyle_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_FontStyle_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -760,19 +760,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_FontWeight_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_FontWeight_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_FontWeight_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_FontWeight_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_FontWeight_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_FontWeight_Get(Instance);
 #endif
                 return (FontWeight)result;
             }
@@ -782,19 +782,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_FontWeight_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_FontWeight_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_FontWeight_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_FontWeight_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_FontWeight_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_FontWeight_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -807,19 +807,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_StrokeAntiAlias_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_StrokeAntiAlias_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_StrokeAntiAlias_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_StrokeAntiAlias_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_StrokeAntiAlias_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_StrokeAntiAlias_Get(Instance);
 #endif
                 return result;
             }
@@ -829,19 +829,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_StrokeAntiAlias_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_StrokeAntiAlias_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_StrokeAntiAlias_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_StrokeAntiAlias_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_StrokeAntiAlias_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_StrokeAntiAlias_Set(Instance, value);
 #endif
             }
         }
@@ -854,19 +854,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_StrokeColor_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_StrokeColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_StrokeColor_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_StrokeColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_StrokeColor_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_StrokeColor_Get(Instance);
 #endif
                 return MagickColor.CreateInstance(result);
             }
@@ -877,19 +877,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_StrokeColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.DrawingSettings_StrokeColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_StrokeColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.DrawingSettings_StrokeColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_StrokeColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.DrawingSettings_StrokeColor_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -902,19 +902,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_StrokeDashOffset_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_StrokeDashOffset_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_StrokeDashOffset_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_StrokeDashOffset_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_StrokeDashOffset_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_StrokeDashOffset_Get(Instance);
 #endif
                 return result;
             }
@@ -924,19 +924,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_StrokeDashOffset_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_StrokeDashOffset_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_StrokeDashOffset_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_StrokeDashOffset_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_StrokeDashOffset_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_StrokeDashOffset_Set(Instance, value);
 #endif
             }
         }
@@ -949,19 +949,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_StrokeLineCap_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_StrokeLineCap_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_StrokeLineCap_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_StrokeLineCap_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_StrokeLineCap_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_StrokeLineCap_Get(Instance);
 #endif
                 return (LineCap)result;
             }
@@ -971,19 +971,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_StrokeLineCap_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_StrokeLineCap_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_StrokeLineCap_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_StrokeLineCap_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_StrokeLineCap_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_StrokeLineCap_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -996,19 +996,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_StrokeLineJoin_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_StrokeLineJoin_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_StrokeLineJoin_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_StrokeLineJoin_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_StrokeLineJoin_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_StrokeLineJoin_Get(Instance);
 #endif
                 return (LineJoin)result;
             }
@@ -1018,19 +1018,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_StrokeLineJoin_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_StrokeLineJoin_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_StrokeLineJoin_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_StrokeLineJoin_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_StrokeLineJoin_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_StrokeLineJoin_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -1043,19 +1043,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_StrokeMiterLimit_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_StrokeMiterLimit_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_StrokeMiterLimit_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_StrokeMiterLimit_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_StrokeMiterLimit_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_StrokeMiterLimit_Get(Instance);
 #endif
                 return (int)result;
             }
@@ -1065,19 +1065,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_StrokeMiterLimit_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_StrokeMiterLimit_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_StrokeMiterLimit_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_StrokeMiterLimit_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_StrokeMiterLimit_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_StrokeMiterLimit_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -1090,19 +1090,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_StrokeWidth_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_StrokeWidth_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_StrokeWidth_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_StrokeWidth_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_StrokeWidth_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_StrokeWidth_Get(Instance);
 #endif
                 return result;
             }
@@ -1112,19 +1112,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_StrokeWidth_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_StrokeWidth_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_StrokeWidth_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_StrokeWidth_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_StrokeWidth_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_StrokeWidth_Set(Instance, value);
 #endif
             }
         }
@@ -1137,19 +1137,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextAntiAlias_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextAntiAlias_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextAntiAlias_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextAntiAlias_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextAntiAlias_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextAntiAlias_Get(Instance);
 #endif
                 return result;
             }
@@ -1159,19 +1159,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextAntiAlias_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_TextAntiAlias_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextAntiAlias_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_TextAntiAlias_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextAntiAlias_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_TextAntiAlias_Set(Instance, value);
 #endif
             }
         }
@@ -1184,19 +1184,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextDirection_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextDirection_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextDirection_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextDirection_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextDirection_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextDirection_Get(Instance);
 #endif
                 return (TextDirection)result;
             }
@@ -1206,19 +1206,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextDirection_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_TextDirection_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextDirection_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_TextDirection_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextDirection_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_TextDirection_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -1231,19 +1231,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextEncoding_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextEncoding_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextEncoding_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextEncoding_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextEncoding_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextEncoding_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManagedNullable(result);
             }
@@ -1254,19 +1254,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextEncoding_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.DrawingSettings_TextEncoding_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextEncoding_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.DrawingSettings_TextEncoding_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextEncoding_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.DrawingSettings_TextEncoding_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -1279,19 +1279,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextGravity_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextGravity_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextGravity_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextGravity_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextGravity_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextGravity_Get(Instance);
 #endif
                 return (Gravity)result;
             }
@@ -1301,19 +1301,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextGravity_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.DrawingSettings_TextGravity_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextGravity_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.DrawingSettings_TextGravity_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextGravity_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.DrawingSettings_TextGravity_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -1326,19 +1326,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextInterlineSpacing_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextInterlineSpacing_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextInterlineSpacing_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextInterlineSpacing_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextInterlineSpacing_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextInterlineSpacing_Get(Instance);
 #endif
                 return result;
             }
@@ -1348,19 +1348,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextInterlineSpacing_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_TextInterlineSpacing_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextInterlineSpacing_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_TextInterlineSpacing_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextInterlineSpacing_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_TextInterlineSpacing_Set(Instance, value);
 #endif
             }
         }
@@ -1373,19 +1373,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextInterwordSpacing_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextInterwordSpacing_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextInterwordSpacing_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextInterwordSpacing_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextInterwordSpacing_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextInterwordSpacing_Get(Instance);
 #endif
                 return result;
             }
@@ -1395,19 +1395,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextInterwordSpacing_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_TextInterwordSpacing_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextInterwordSpacing_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_TextInterwordSpacing_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextInterwordSpacing_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_TextInterwordSpacing_Set(Instance, value);
 #endif
             }
         }
@@ -1420,19 +1420,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextKerning_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextKerning_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextKerning_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextKerning_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextKerning_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextKerning_Get(Instance);
 #endif
                 return result;
             }
@@ -1442,19 +1442,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextKerning_Set(Instance, value);
+                    NativeMethods.ARM64.DrawingSettings_TextKerning_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextKerning_Set(Instance, value);
+                    NativeMethods.X64.DrawingSettings_TextKerning_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextKerning_Set(Instance, value);
+                    NativeMethods.X86.DrawingSettings_TextKerning_Set(Instance, value);
 #endif
             }
         }
@@ -1467,19 +1467,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.DrawingSettings_TextUnderColor_Get(Instance);
+                    result = NativeMethods.ARM64.DrawingSettings_TextUnderColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.DrawingSettings_TextUnderColor_Get(Instance);
+                    result = NativeMethods.X64.DrawingSettings_TextUnderColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.DrawingSettings_TextUnderColor_Get(Instance);
+                    result = NativeMethods.X86.DrawingSettings_TextUnderColor_Get(Instance);
 #endif
                 return MagickColor.CreateInstance(result);
             }
@@ -1490,19 +1490,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_TextUnderColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.DrawingSettings_TextUnderColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_TextUnderColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.DrawingSettings_TextUnderColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_TextUnderColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.DrawingSettings_TextUnderColor_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -1513,19 +1513,19 @@ internal partial class DrawingSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingSettings_SetFillPattern(Instance, MagickImage.GetInstance(value), out exception);
+                NativeMethods.ARM64.DrawingSettings_SetFillPattern(Instance, MagickImage.GetInstance(value), out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingSettings_SetFillPattern(Instance, MagickImage.GetInstance(value), out exception);
+                NativeMethods.X64.DrawingSettings_SetFillPattern(Instance, MagickImage.GetInstance(value), out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingSettings_SetFillPattern(Instance, MagickImage.GetInstance(value), out exception);
+                NativeMethods.X86.DrawingSettings_SetFillPattern(Instance, MagickImage.GetInstance(value), out exception);
 #endif
             CheckException(exception);
         }
@@ -1535,19 +1535,19 @@ internal partial class DrawingSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingSettings_SetAffine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY);
+                NativeMethods.ARM64.DrawingSettings_SetAffine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingSettings_SetAffine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY);
+                NativeMethods.X64.DrawingSettings_SetAffine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingSettings_SetAffine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY);
+                NativeMethods.X86.DrawingSettings_SetAffine(Instance, scaleX, scaleY, shearX, shearY, translateX, translateY);
 #endif
         }
         public void SetStrokeDashArray(double[] dash, int length)
@@ -1558,19 +1558,19 @@ internal partial class DrawingSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.DrawingSettings_SetStrokeDashArray(Instance, dashFixed, (UIntPtr)length);
+                    NativeMethods.ARM64.DrawingSettings_SetStrokeDashArray(Instance, dashFixed, (UIntPtr)length);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.DrawingSettings_SetStrokeDashArray(Instance, dashFixed, (UIntPtr)length);
+                    NativeMethods.X64.DrawingSettings_SetStrokeDashArray(Instance, dashFixed, (UIntPtr)length);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.DrawingSettings_SetStrokeDashArray(Instance, dashFixed, (UIntPtr)length);
+                    NativeMethods.X86.DrawingSettings_SetStrokeDashArray(Instance, dashFixed, (UIntPtr)length);
 #endif
             }
         }
@@ -1581,19 +1581,19 @@ internal partial class DrawingSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingSettings_SetStrokePattern(Instance, MagickImage.GetInstance(value), out exception);
+                NativeMethods.ARM64.DrawingSettings_SetStrokePattern(Instance, MagickImage.GetInstance(value), out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingSettings_SetStrokePattern(Instance, MagickImage.GetInstance(value), out exception);
+                NativeMethods.X64.DrawingSettings_SetStrokePattern(Instance, MagickImage.GetInstance(value), out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingSettings_SetStrokePattern(Instance, MagickImage.GetInstance(value), out exception);
+                NativeMethods.X86.DrawingSettings_SetStrokePattern(Instance, MagickImage.GetInstance(value), out exception);
 #endif
             CheckException(exception);
         }
@@ -1604,19 +1604,19 @@ internal partial class DrawingSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.DrawingSettings_SetText(Instance, valueNative.Instance);
+                NativeMethods.ARM64.DrawingSettings_SetText(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.DrawingSettings_SetText(Instance, valueNative.Instance);
+                NativeMethods.X64.DrawingSettings_SetText(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.DrawingSettings_SetText(Instance, valueNative.Instance);
+                NativeMethods.X86.DrawingSettings_SetText(Instance, valueNative.Instance);
 #endif
         }
     }

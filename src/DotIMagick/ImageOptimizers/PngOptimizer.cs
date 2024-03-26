@@ -3,7 +3,7 @@
 
 using System.IO;
 
-namespace ImageMagick.ImageOptimizers;
+namespace DotIMagick.ImageOptimizers;
 
 /// <summary>
 /// Class that can be used to optimize png files.

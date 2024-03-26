@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class OpenCLDevice
 {
@@ -106,19 +106,19 @@ public partial class OpenCLDevice
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.OpenCLDevice_BenchmarkScore_Get(Instance);
+                    result = NativeMethods.ARM64.OpenCLDevice_BenchmarkScore_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.OpenCLDevice_BenchmarkScore_Get(Instance);
+                    result = NativeMethods.X64.OpenCLDevice_BenchmarkScore_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.OpenCLDevice_BenchmarkScore_Get(Instance);
+                    result = NativeMethods.X86.OpenCLDevice_BenchmarkScore_Get(Instance);
 #endif
                 return result;
             }
@@ -132,19 +132,19 @@ public partial class OpenCLDevice
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.OpenCLDevice_DeviceType_Get(Instance);
+                    result = NativeMethods.ARM64.OpenCLDevice_DeviceType_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.OpenCLDevice_DeviceType_Get(Instance);
+                    result = NativeMethods.X64.OpenCLDevice_DeviceType_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.OpenCLDevice_DeviceType_Get(Instance);
+                    result = NativeMethods.X86.OpenCLDevice_DeviceType_Get(Instance);
 #endif
                 return (OpenCLDeviceType)result;
             }
@@ -158,19 +158,19 @@ public partial class OpenCLDevice
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.OpenCLDevice_IsEnabled_Get(Instance);
+                    result = NativeMethods.ARM64.OpenCLDevice_IsEnabled_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.OpenCLDevice_IsEnabled_Get(Instance);
+                    result = NativeMethods.X64.OpenCLDevice_IsEnabled_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.OpenCLDevice_IsEnabled_Get(Instance);
+                    result = NativeMethods.X86.OpenCLDevice_IsEnabled_Get(Instance);
 #endif
                 return result;
             }
@@ -180,19 +180,19 @@ public partial class OpenCLDevice
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.OpenCLDevice_IsEnabled_Set(Instance, value);
+                    NativeMethods.ARM64.OpenCLDevice_IsEnabled_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.OpenCLDevice_IsEnabled_Set(Instance, value);
+                    NativeMethods.X64.OpenCLDevice_IsEnabled_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.OpenCLDevice_IsEnabled_Set(Instance, value);
+                    NativeMethods.X86.OpenCLDevice_IsEnabled_Set(Instance, value);
 #endif
             }
         }
@@ -205,19 +205,19 @@ public partial class OpenCLDevice
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.OpenCLDevice_Name_Get(Instance);
+                    result = NativeMethods.ARM64.OpenCLDevice_Name_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.OpenCLDevice_Name_Get(Instance);
+                    result = NativeMethods.X64.OpenCLDevice_Name_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.OpenCLDevice_Name_Get(Instance);
+                    result = NativeMethods.X86.OpenCLDevice_Name_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -231,19 +231,19 @@ public partial class OpenCLDevice
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.OpenCLDevice_Version_Get(Instance);
+                    result = NativeMethods.ARM64.OpenCLDevice_Version_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.OpenCLDevice_Version_Get(Instance);
+                    result = NativeMethods.X64.OpenCLDevice_Version_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.OpenCLDevice_Version_Get(Instance);
+                    result = NativeMethods.X86.OpenCLDevice_Version_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -255,19 +255,19 @@ public partial class OpenCLDevice
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.OpenCLDevice_GetKernelProfileRecords(Instance, out length);
+                result = NativeMethods.ARM64.OpenCLDevice_GetKernelProfileRecords(Instance, out length);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.OpenCLDevice_GetKernelProfileRecords(Instance, out length);
+                result = NativeMethods.X64.OpenCLDevice_GetKernelProfileRecords(Instance, out length);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.OpenCLDevice_GetKernelProfileRecords(Instance, out length);
+                result = NativeMethods.X86.OpenCLDevice_GetKernelProfileRecords(Instance, out length);
 #endif
             return result;
         }
@@ -278,19 +278,19 @@ public partial class OpenCLDevice
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.OpenCLDevice_GetKernelProfileRecord(list, (UIntPtr)index);
+                result = NativeMethods.ARM64.OpenCLDevice_GetKernelProfileRecord(list, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.OpenCLDevice_GetKernelProfileRecord(list, (UIntPtr)index);
+                result = NativeMethods.X64.OpenCLDevice_GetKernelProfileRecord(list, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.OpenCLDevice_GetKernelProfileRecord(list, (UIntPtr)index);
+                result = NativeMethods.X86.OpenCLDevice_GetKernelProfileRecord(list, (UIntPtr)index);
 #endif
             return result;
         }
@@ -300,19 +300,19 @@ public partial class OpenCLDevice
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.OpenCLDevice_SetProfileKernels(Instance, value);
+                NativeMethods.ARM64.OpenCLDevice_SetProfileKernels(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.OpenCLDevice_SetProfileKernels(Instance, value);
+                NativeMethods.X64.OpenCLDevice_SetProfileKernels(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.OpenCLDevice_SetProfileKernels(Instance, value);
+                NativeMethods.X86.OpenCLDevice_SetProfileKernels(Instance, value);
 #endif
         }
     }

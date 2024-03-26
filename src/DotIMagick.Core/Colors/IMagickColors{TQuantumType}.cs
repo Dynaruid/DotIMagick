@@ -4,7 +4,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Interface that contains the same colors as System.Drawing.Colors.

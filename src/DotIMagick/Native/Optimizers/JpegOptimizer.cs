@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick.ImageOptimizers;
+namespace DotIMagick.ImageOptimizers;
 
 public partial class JpegOptimizer
 {
@@ -56,19 +56,19 @@ public partial class JpegOptimizer
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.JpegOptimizer_CompressFile(inputNative.Instance, outputNative.Instance, progressive, lossless, (UIntPtr)quality, out exception);
+                NativeMethods.ARM64.JpegOptimizer_CompressFile(inputNative.Instance, outputNative.Instance, progressive, lossless, (UIntPtr)quality, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.JpegOptimizer_CompressFile(inputNative.Instance, outputNative.Instance, progressive, lossless, (UIntPtr)quality, out exception);
+                NativeMethods.X64.JpegOptimizer_CompressFile(inputNative.Instance, outputNative.Instance, progressive, lossless, (UIntPtr)quality, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.JpegOptimizer_CompressFile(inputNative.Instance, outputNative.Instance, progressive, lossless, (UIntPtr)quality, out exception);
+                NativeMethods.X86.JpegOptimizer_CompressFile(inputNative.Instance, outputNative.Instance, progressive, lossless, (UIntPtr)quality, out exception);
 #endif
             CheckException(exception);
         }
@@ -79,19 +79,19 @@ public partial class JpegOptimizer
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.JpegOptimizer_CompressStream(reader, writer, progressive, lossless, (UIntPtr)quality, out exception);
+                NativeMethods.ARM64.JpegOptimizer_CompressStream(reader, writer, progressive, lossless, (UIntPtr)quality, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.JpegOptimizer_CompressStream(reader, writer, progressive, lossless, (UIntPtr)quality, out exception);
+                NativeMethods.X64.JpegOptimizer_CompressStream(reader, writer, progressive, lossless, (UIntPtr)quality, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.JpegOptimizer_CompressStream(reader, writer, progressive, lossless, (UIntPtr)quality, out exception);
+                NativeMethods.X86.JpegOptimizer_CompressStream(reader, writer, progressive, lossless, (UIntPtr)quality, out exception);
 #endif
             CheckException(exception);
         }

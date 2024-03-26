@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ImageMagick.Formats;
+namespace DotIMagick.Formats;
 
 /// <summary>
 /// Class for defines that are used when a <see cref="MagickFormat.Dds"/> image is written.

@@ -4,7 +4,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Specifies channel types.

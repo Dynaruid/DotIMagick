@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static partial class Throw
 {

@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal partial class StringInfo
 {
@@ -65,19 +65,19 @@ internal partial class StringInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.StringInfo_Datum_Get(Instance);
+                    result = NativeMethods.ARM64.StringInfo_Datum_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.StringInfo_Datum_Get(Instance);
+                    result = NativeMethods.X64.StringInfo_Datum_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.StringInfo_Datum_Get(Instance);
+                    result = NativeMethods.X86.StringInfo_Datum_Get(Instance);
 #endif
                 return result;
             }
@@ -91,19 +91,19 @@ internal partial class StringInfo
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.StringInfo_Length_Get(Instance);
+                    result = NativeMethods.ARM64.StringInfo_Length_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.StringInfo_Length_Get(Instance);
+                    result = NativeMethods.X64.StringInfo_Length_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.StringInfo_Length_Get(Instance);
+                    result = NativeMethods.X86.StringInfo_Length_Get(Instance);
 #endif
                 return (int)result;
             }

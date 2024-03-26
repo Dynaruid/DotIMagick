@@ -12,7 +12,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that can be used to create various instances.

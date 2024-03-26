@@ -4,7 +4,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static class ByteConverter
 {

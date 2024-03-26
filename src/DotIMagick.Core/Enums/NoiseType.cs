@@ -1,7 +1,7 @@
 ﻿// Copyright Dirk Lemstra https://github.com/dlemstra/Magick.NET.
 // Licensed under the Apache License, Version 2.0.
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Specified the type of noise that should be added to the image.

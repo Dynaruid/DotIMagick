@@ -4,7 +4,7 @@
 using System.Globalization;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class ClipPathReader
 {

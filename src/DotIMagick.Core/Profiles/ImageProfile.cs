@@ -4,7 +4,7 @@
 using System;
 using System.IO;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that contains an image profile.

@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// The normalized moments of one or more image channels.

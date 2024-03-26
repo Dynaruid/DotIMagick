@@ -8,7 +8,7 @@ using System;
 using System.Buffers;
 using System.IO;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed unsafe class ReadOnlySequenceWrapper
 {

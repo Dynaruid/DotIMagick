@@ -3,7 +3,7 @@
 
 using System.IO;
 
-namespace ImageMagick
+namespace DotIMagick
 {
     internal static class MemoryStreamExtensions
     {

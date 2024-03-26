@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class ExifWriter
 {

@@ -3,7 +3,7 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Specifies a kind of color space.

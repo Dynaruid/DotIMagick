@@ -5,7 +5,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <content/>
 public partial class ImageProfile : IImageProfile

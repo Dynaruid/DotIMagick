@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal partial class OffsetInfo
 {
@@ -63,19 +63,19 @@ internal partial class OffsetInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.OffsetInfo_Dispose(instance);
+                NativeMethods.ARM64.OffsetInfo_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.OffsetInfo_Dispose(instance);
+                NativeMethods.X64.OffsetInfo_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.OffsetInfo_Dispose(instance);
+                NativeMethods.X86.OffsetInfo_Dispose(instance);
 #endif
         }
         public NativeOffsetInfo()
@@ -84,19 +84,19 @@ internal partial class OffsetInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.OffsetInfo_Create();
+                Instance = NativeMethods.ARM64.OffsetInfo_Create();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.OffsetInfo_Create();
+                Instance = NativeMethods.X64.OffsetInfo_Create();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.OffsetInfo_Create();
+                Instance = NativeMethods.X86.OffsetInfo_Create();
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -114,19 +114,19 @@ internal partial class OffsetInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.OffsetInfo_SetX(Instance, (IntPtr)value);
+                NativeMethods.ARM64.OffsetInfo_SetX(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.OffsetInfo_SetX(Instance, (IntPtr)value);
+                NativeMethods.X64.OffsetInfo_SetX(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.OffsetInfo_SetX(Instance, (IntPtr)value);
+                NativeMethods.X86.OffsetInfo_SetX(Instance, (IntPtr)value);
 #endif
         }
         public void SetY(int value)
@@ -135,19 +135,19 @@ internal partial class OffsetInfo
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.OffsetInfo_SetY(Instance, (IntPtr)value);
+                NativeMethods.ARM64.OffsetInfo_SetY(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.OffsetInfo_SetY(Instance, (IntPtr)value);
+                NativeMethods.X64.OffsetInfo_SetY(Instance, (IntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.OffsetInfo_SetY(Instance, (IntPtr)value);
+                NativeMethods.X86.OffsetInfo_SetY(Instance, (IntPtr)value);
 #endif
         }
     }

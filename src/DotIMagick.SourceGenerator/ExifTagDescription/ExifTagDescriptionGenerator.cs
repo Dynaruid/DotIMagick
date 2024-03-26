@@ -8,7 +8,7 @@ using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
-namespace ImageMagick.SourceGenerator;
+namespace DotIMagick.SourceGenerator;
 
 [Generator]
 internal class ExifTagDescriptionGenerator : IIncrementalGenerator
@@ -36,7 +36,7 @@ internal class ExifTagDescriptionGenerator : IIncrementalGenerator
         codeBuilder.AppendLine();
         codeBuilder.AppendLine("using System.Collections.Generic;");
         codeBuilder.AppendLine();
-        codeBuilder.AppendLine("namespace ImageMagick;");
+        codeBuilder.AppendLine("namespace DotIMagick;");
         codeBuilder.AppendLine();
         codeBuilder.AppendLine("internal static class ExifTagDescriptions");
         codeBuilder.AppendLine("{");

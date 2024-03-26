@@ -5,7 +5,7 @@ using System;
 using System.Globalization;
 using System.Xml;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static partial class XmlHelper
 {

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class TemporaryDefines : IDisposable
 {

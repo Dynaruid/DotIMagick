@@ -4,7 +4,7 @@
 using System;
 using System.Globalization;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Represents a percentage value.

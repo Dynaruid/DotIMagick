@@ -11,7 +11,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Represents an argument for the SparseColor method.

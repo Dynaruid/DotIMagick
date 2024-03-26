@@ -17,7 +17,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class MagickColor
 {
@@ -160,19 +160,19 @@ public partial class MagickColor
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickColor_Dispose(instance);
+                NativeMethods.ARM64.MagickColor_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickColor_Dispose(instance);
+                NativeMethods.X64.MagickColor_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickColor_Dispose(instance);
+                NativeMethods.X86.MagickColor_Dispose(instance);
 #endif
         }
         public NativeMagickColor()
@@ -181,19 +181,19 @@ public partial class MagickColor
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.MagickColor_Create();
+                Instance = NativeMethods.ARM64.MagickColor_Create();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.MagickColor_Create();
+                Instance = NativeMethods.X64.MagickColor_Create();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.MagickColor_Create();
+                Instance = NativeMethods.X86.MagickColor_Create();
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -218,19 +218,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickColor_Count_Get(Instance);
+                    result = NativeMethods.ARM64.MagickColor_Count_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickColor_Count_Get(Instance);
+                    result = NativeMethods.X64.MagickColor_Count_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickColor_Count_Get(Instance);
+                    result = NativeMethods.X86.MagickColor_Count_Get(Instance);
 #endif
                 return result;
             }
@@ -244,19 +244,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickColor_Red_Get(Instance);
+                    result = NativeMethods.ARM64.MagickColor_Red_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickColor_Red_Get(Instance);
+                    result = NativeMethods.X64.MagickColor_Red_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickColor_Red_Get(Instance);
+                    result = NativeMethods.X86.MagickColor_Red_Get(Instance);
 #endif
                 return result;
             }
@@ -266,19 +266,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickColor_Red_Set(Instance, value);
+                    NativeMethods.ARM64.MagickColor_Red_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickColor_Red_Set(Instance, value);
+                    NativeMethods.X64.MagickColor_Red_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickColor_Red_Set(Instance, value);
+                    NativeMethods.X86.MagickColor_Red_Set(Instance, value);
 #endif
             }
         }
@@ -291,19 +291,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickColor_Green_Get(Instance);
+                    result = NativeMethods.ARM64.MagickColor_Green_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickColor_Green_Get(Instance);
+                    result = NativeMethods.X64.MagickColor_Green_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickColor_Green_Get(Instance);
+                    result = NativeMethods.X86.MagickColor_Green_Get(Instance);
 #endif
                 return result;
             }
@@ -313,19 +313,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickColor_Green_Set(Instance, value);
+                    NativeMethods.ARM64.MagickColor_Green_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickColor_Green_Set(Instance, value);
+                    NativeMethods.X64.MagickColor_Green_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickColor_Green_Set(Instance, value);
+                    NativeMethods.X86.MagickColor_Green_Set(Instance, value);
 #endif
             }
         }
@@ -338,19 +338,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickColor_Blue_Get(Instance);
+                    result = NativeMethods.ARM64.MagickColor_Blue_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickColor_Blue_Get(Instance);
+                    result = NativeMethods.X64.MagickColor_Blue_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickColor_Blue_Get(Instance);
+                    result = NativeMethods.X86.MagickColor_Blue_Get(Instance);
 #endif
                 return result;
             }
@@ -360,19 +360,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickColor_Blue_Set(Instance, value);
+                    NativeMethods.ARM64.MagickColor_Blue_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickColor_Blue_Set(Instance, value);
+                    NativeMethods.X64.MagickColor_Blue_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickColor_Blue_Set(Instance, value);
+                    NativeMethods.X86.MagickColor_Blue_Set(Instance, value);
 #endif
             }
         }
@@ -385,19 +385,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickColor_Alpha_Get(Instance);
+                    result = NativeMethods.ARM64.MagickColor_Alpha_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickColor_Alpha_Get(Instance);
+                    result = NativeMethods.X64.MagickColor_Alpha_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickColor_Alpha_Get(Instance);
+                    result = NativeMethods.X86.MagickColor_Alpha_Get(Instance);
 #endif
                 return result;
             }
@@ -407,19 +407,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickColor_Alpha_Set(Instance, value);
+                    NativeMethods.ARM64.MagickColor_Alpha_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickColor_Alpha_Set(Instance, value);
+                    NativeMethods.X64.MagickColor_Alpha_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickColor_Alpha_Set(Instance, value);
+                    NativeMethods.X86.MagickColor_Alpha_Set(Instance, value);
 #endif
             }
         }
@@ -432,19 +432,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickColor_Black_Get(Instance);
+                    result = NativeMethods.ARM64.MagickColor_Black_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickColor_Black_Get(Instance);
+                    result = NativeMethods.X64.MagickColor_Black_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickColor_Black_Get(Instance);
+                    result = NativeMethods.X86.MagickColor_Black_Get(Instance);
 #endif
                 return result;
             }
@@ -454,19 +454,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickColor_Black_Set(Instance, value);
+                    NativeMethods.ARM64.MagickColor_Black_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickColor_Black_Set(Instance, value);
+                    NativeMethods.X64.MagickColor_Black_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickColor_Black_Set(Instance, value);
+                    NativeMethods.X86.MagickColor_Black_Set(Instance, value);
 #endif
             }
         }
@@ -479,19 +479,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickColor_IsCMYK_Get(Instance);
+                    result = NativeMethods.ARM64.MagickColor_IsCMYK_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickColor_IsCMYK_Get(Instance);
+                    result = NativeMethods.X64.MagickColor_IsCMYK_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickColor_IsCMYK_Get(Instance);
+                    result = NativeMethods.X86.MagickColor_IsCMYK_Get(Instance);
 #endif
                 return result;
             }
@@ -501,19 +501,19 @@ public partial class MagickColor
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickColor_IsCMYK_Set(Instance, value);
+                    NativeMethods.ARM64.MagickColor_IsCMYK_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickColor_IsCMYK_Set(Instance, value);
+                    NativeMethods.X64.MagickColor_IsCMYK_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickColor_IsCMYK_Set(Instance, value);
+                    NativeMethods.X86.MagickColor_IsCMYK_Set(Instance, value);
 #endif
             }
         }
@@ -525,19 +525,19 @@ public partial class MagickColor
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickColor_FuzzyEquals(Instance, otherNative.Instance, fuzz);
+                result = NativeMethods.ARM64.MagickColor_FuzzyEquals(Instance, otherNative.Instance, fuzz);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickColor_FuzzyEquals(Instance, otherNative.Instance, fuzz);
+                result = NativeMethods.X64.MagickColor_FuzzyEquals(Instance, otherNative.Instance, fuzz);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickColor_FuzzyEquals(Instance, otherNative.Instance, fuzz);
+                result = NativeMethods.X86.MagickColor_FuzzyEquals(Instance, otherNative.Instance, fuzz);
 #endif
             return result;
         }
@@ -549,19 +549,19 @@ public partial class MagickColor
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickColor_Initialize(Instance, valueNative.Instance);
+                result = NativeMethods.ARM64.MagickColor_Initialize(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickColor_Initialize(Instance, valueNative.Instance);
+                result = NativeMethods.X64.MagickColor_Initialize(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickColor_Initialize(Instance, valueNative.Instance);
+                result = NativeMethods.X86.MagickColor_Initialize(Instance, valueNative.Instance);
 #endif
             return result;
         }

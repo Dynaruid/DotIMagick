@@ -17,7 +17,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class Quantum
 {
@@ -70,19 +70,19 @@ public partial class Quantum
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.Quantum_Depth_Get();
+                    result = NativeMethods.ARM64.Quantum_Depth_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.Quantum_Depth_Get();
+                    result = NativeMethods.X64.Quantum_Depth_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.Quantum_Depth_Get();
+                    result = NativeMethods.X86.Quantum_Depth_Get();
 #endif
                 return (int)result;
             }
@@ -96,19 +96,19 @@ public partial class Quantum
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.Quantum_Max_Get();
+                    result = NativeMethods.ARM64.Quantum_Max_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.Quantum_Max_Get();
+                    result = NativeMethods.X64.Quantum_Max_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.Quantum_Max_Get();
+                    result = NativeMethods.X86.Quantum_Max_Get();
 #endif
                 return result;
             }
@@ -120,19 +120,19 @@ public partial class Quantum
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.Quantum_ScaleToByte(value);
+                result = NativeMethods.ARM64.Quantum_ScaleToByte(value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.Quantum_ScaleToByte(value);
+                result = NativeMethods.X64.Quantum_ScaleToByte(value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.Quantum_ScaleToByte(value);
+                result = NativeMethods.X86.Quantum_ScaleToByte(value);
 #endif
             return result;
         }

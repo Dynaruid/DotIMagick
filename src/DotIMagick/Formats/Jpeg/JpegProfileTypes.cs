@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick.Formats;
+namespace DotIMagick.Formats;
 
 /// <summary>
 /// Specifies profile types.

@@ -4,7 +4,7 @@
 using System;
 using System.Globalization;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Encapsulation of the ImageMagick geometry object.

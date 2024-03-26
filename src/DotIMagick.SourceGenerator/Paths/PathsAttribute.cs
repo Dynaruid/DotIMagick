@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick.SourceGenerator;
+namespace DotIMagick.SourceGenerator;
 
 [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class)]
 internal sealed class PathsAttribute : Attribute;

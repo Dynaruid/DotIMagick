@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick.Formats;
+namespace DotIMagick.Formats;
 
 /// <summary>
 /// Specifies jpeg tables mode that will be used when using jpeg compression in a tiff image.

@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static partial class MagickExceptionHelper
 {
@@ -76,19 +76,19 @@ internal static partial class MagickExceptionHelper
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickExceptionHelper_Description(exception);
+                result = NativeMethods.ARM64.MagickExceptionHelper_Description(exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickExceptionHelper_Description(exception);
+                result = NativeMethods.X64.MagickExceptionHelper_Description(exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickExceptionHelper_Description(exception);
+                result = NativeMethods.X86.MagickExceptionHelper_Description(exception);
 #endif
             return UTF8Marshaler.NativeToManagedNullable(result);
         }
@@ -98,19 +98,19 @@ internal static partial class MagickExceptionHelper
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickExceptionHelper_Dispose(exception);
+                NativeMethods.ARM64.MagickExceptionHelper_Dispose(exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickExceptionHelper_Dispose(exception);
+                NativeMethods.X64.MagickExceptionHelper_Dispose(exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickExceptionHelper_Dispose(exception);
+                NativeMethods.X86.MagickExceptionHelper_Dispose(exception);
 #endif
         }
         public static string? Message(IntPtr exception)
@@ -120,19 +120,19 @@ internal static partial class MagickExceptionHelper
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickExceptionHelper_Message(exception);
+                result = NativeMethods.ARM64.MagickExceptionHelper_Message(exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickExceptionHelper_Message(exception);
+                result = NativeMethods.X64.MagickExceptionHelper_Message(exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickExceptionHelper_Message(exception);
+                result = NativeMethods.X86.MagickExceptionHelper_Message(exception);
 #endif
             return UTF8Marshaler.NativeToManagedNullable(result);
         }
@@ -143,19 +143,19 @@ internal static partial class MagickExceptionHelper
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickExceptionHelper_Related(exception, (UIntPtr)index);
+                result = NativeMethods.ARM64.MagickExceptionHelper_Related(exception, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickExceptionHelper_Related(exception, (UIntPtr)index);
+                result = NativeMethods.X64.MagickExceptionHelper_Related(exception, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickExceptionHelper_Related(exception, (UIntPtr)index);
+                result = NativeMethods.X86.MagickExceptionHelper_Related(exception, (UIntPtr)index);
 #endif
             return result;
         }
@@ -166,19 +166,19 @@ internal static partial class MagickExceptionHelper
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickExceptionHelper_RelatedCount(exception);
+                result = NativeMethods.ARM64.MagickExceptionHelper_RelatedCount(exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickExceptionHelper_RelatedCount(exception);
+                result = NativeMethods.X64.MagickExceptionHelper_RelatedCount(exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickExceptionHelper_RelatedCount(exception);
+                result = NativeMethods.X86.MagickExceptionHelper_RelatedCount(exception);
 #endif
             return (int)result;
         }
@@ -189,19 +189,19 @@ internal static partial class MagickExceptionHelper
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickExceptionHelper_Severity(exception);
+                result = NativeMethods.ARM64.MagickExceptionHelper_Severity(exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickExceptionHelper_Severity(exception);
+                result = NativeMethods.X64.MagickExceptionHelper_Severity(exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickExceptionHelper_Severity(exception);
+                result = NativeMethods.X86.MagickExceptionHelper_Severity(exception);
 #endif
             return (int)result;
         }

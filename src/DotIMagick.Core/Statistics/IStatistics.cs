@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Encapsulation of the ImageMagick statistics object.

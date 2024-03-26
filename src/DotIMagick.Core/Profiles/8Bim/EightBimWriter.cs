@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class EightBimWriter
 {

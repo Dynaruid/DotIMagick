@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed partial class ChannelStatistics : IChannelStatistics
 {

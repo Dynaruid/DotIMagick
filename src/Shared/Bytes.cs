@@ -5,7 +5,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed partial class Bytes
 {

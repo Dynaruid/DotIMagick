@@ -3,7 +3,7 @@
 
 using System.Xml.XPath;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// A value of the exif profile.

@@ -1,8 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <Version>1.0.12</Version>
     <TargetFrameworks>net8.0</TargetFrameworks>
     <Platforms>AnyCPU</Platforms>
     <Configurations>Debug;Test;Release;DebugQ8;ReleaseQ8</Configurations>
+    
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/Dynaruid/DotIMagick</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -41,10 +45,6 @@
       <LogicalName>ImageMagick.Resources.ColorProfiles.RGB.SRGB.icm</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
-
-  <PropertyGroup>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />

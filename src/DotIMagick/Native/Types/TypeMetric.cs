@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class TypeMetric
 {
@@ -91,19 +91,19 @@ public partial class TypeMetric
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.TypeMetric_Dispose(instance);
+                NativeMethods.ARM64.TypeMetric_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.TypeMetric_Dispose(instance);
+                NativeMethods.X64.TypeMetric_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.TypeMetric_Dispose(instance);
+                NativeMethods.X86.TypeMetric_Dispose(instance);
 #endif
         }
         public NativeTypeMetric(IntPtr instance)
@@ -126,19 +126,19 @@ public partial class TypeMetric
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.TypeMetric_Ascent_Get(Instance);
+                    result = NativeMethods.ARM64.TypeMetric_Ascent_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.TypeMetric_Ascent_Get(Instance);
+                    result = NativeMethods.X64.TypeMetric_Ascent_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.TypeMetric_Ascent_Get(Instance);
+                    result = NativeMethods.X86.TypeMetric_Ascent_Get(Instance);
 #endif
                 return result;
             }
@@ -152,19 +152,19 @@ public partial class TypeMetric
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.TypeMetric_Descent_Get(Instance);
+                    result = NativeMethods.ARM64.TypeMetric_Descent_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.TypeMetric_Descent_Get(Instance);
+                    result = NativeMethods.X64.TypeMetric_Descent_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.TypeMetric_Descent_Get(Instance);
+                    result = NativeMethods.X86.TypeMetric_Descent_Get(Instance);
 #endif
                 return result;
             }
@@ -178,19 +178,19 @@ public partial class TypeMetric
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.TypeMetric_MaxHorizontalAdvance_Get(Instance);
+                    result = NativeMethods.ARM64.TypeMetric_MaxHorizontalAdvance_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.TypeMetric_MaxHorizontalAdvance_Get(Instance);
+                    result = NativeMethods.X64.TypeMetric_MaxHorizontalAdvance_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.TypeMetric_MaxHorizontalAdvance_Get(Instance);
+                    result = NativeMethods.X86.TypeMetric_MaxHorizontalAdvance_Get(Instance);
 #endif
                 return result;
             }
@@ -204,19 +204,19 @@ public partial class TypeMetric
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.TypeMetric_TextHeight_Get(Instance);
+                    result = NativeMethods.ARM64.TypeMetric_TextHeight_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.TypeMetric_TextHeight_Get(Instance);
+                    result = NativeMethods.X64.TypeMetric_TextHeight_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.TypeMetric_TextHeight_Get(Instance);
+                    result = NativeMethods.X86.TypeMetric_TextHeight_Get(Instance);
 #endif
                 return result;
             }
@@ -230,19 +230,19 @@ public partial class TypeMetric
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.TypeMetric_TextWidth_Get(Instance);
+                    result = NativeMethods.ARM64.TypeMetric_TextWidth_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.TypeMetric_TextWidth_Get(Instance);
+                    result = NativeMethods.X64.TypeMetric_TextWidth_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.TypeMetric_TextWidth_Get(Instance);
+                    result = NativeMethods.X86.TypeMetric_TextWidth_Get(Instance);
 #endif
                 return result;
             }
@@ -256,19 +256,19 @@ public partial class TypeMetric
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.TypeMetric_UnderlinePosition_Get(Instance);
+                    result = NativeMethods.ARM64.TypeMetric_UnderlinePosition_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.TypeMetric_UnderlinePosition_Get(Instance);
+                    result = NativeMethods.X64.TypeMetric_UnderlinePosition_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.TypeMetric_UnderlinePosition_Get(Instance);
+                    result = NativeMethods.X86.TypeMetric_UnderlinePosition_Get(Instance);
 #endif
                 return result;
             }
@@ -282,19 +282,19 @@ public partial class TypeMetric
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.TypeMetric_UnderlineThickness_Get(Instance);
+                    result = NativeMethods.ARM64.TypeMetric_UnderlineThickness_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.TypeMetric_UnderlineThickness_Get(Instance);
+                    result = NativeMethods.X64.TypeMetric_UnderlineThickness_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.TypeMetric_UnderlineThickness_Get(Instance);
+                    result = NativeMethods.X86.TypeMetric_UnderlineThickness_Get(Instance);
 #endif
                 return result;
             }

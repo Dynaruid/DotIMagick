@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick.Helpers;
+namespace DotIMagick.Helpers;
 
 internal static unsafe class NativeMemory
 {

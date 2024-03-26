@@ -8,7 +8,7 @@ using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 
-namespace ImageMagick.SourceGenerator;
+namespace DotIMagick.SourceGenerator;
 
 internal static class IncrementalGeneratorPostInitializationContextExtensions
 {

@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class MagickNET
 {
@@ -110,19 +110,19 @@ public partial class MagickNET
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.Magick_Delegates_Get();
+                    result = NativeMethods.ARM64.Magick_Delegates_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.Magick_Delegates_Get();
+                    result = NativeMethods.X64.Magick_Delegates_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.Magick_Delegates_Get();
+                    result = NativeMethods.X86.Magick_Delegates_Get();
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -136,19 +136,19 @@ public partial class MagickNET
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.Magick_Features_Get();
+                    result = NativeMethods.ARM64.Magick_Features_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.Magick_Features_Get();
+                    result = NativeMethods.X64.Magick_Features_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.Magick_Features_Get();
+                    result = NativeMethods.X86.Magick_Features_Get();
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -162,19 +162,19 @@ public partial class MagickNET
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.Magick_ImageMagickVersion_Get();
+                    result = NativeMethods.ARM64.Magick_ImageMagickVersion_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.Magick_ImageMagickVersion_Get();
+                    result = NativeMethods.X64.Magick_ImageMagickVersion_Get();
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.Magick_ImageMagickVersion_Get();
+                    result = NativeMethods.X86.Magick_ImageMagickVersion_Get();
 #endif
                 return UTF8Marshaler.NativeToManaged(result);
             }
@@ -187,19 +187,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.Magick_GetFonts(out length, out exception);
+                result = NativeMethods.ARM64.Magick_GetFonts(out length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.Magick_GetFonts(out length, out exception);
+                result = NativeMethods.X64.Magick_GetFonts(out length, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.Magick_GetFonts(out length, out exception);
+                result = NativeMethods.X86.Magick_GetFonts(out length, out exception);
 #endif
             var magickException = MagickExceptionHelper.Create(exception);
             if (magickException is null)
@@ -219,19 +219,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.Magick_GetFontName(instance, (UIntPtr)index);
+                result = NativeMethods.ARM64.Magick_GetFontName(instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.Magick_GetFontName(instance, (UIntPtr)index);
+                result = NativeMethods.X64.Magick_GetFontName(instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.Magick_GetFontName(instance, (UIntPtr)index);
+                result = NativeMethods.X86.Magick_GetFontName(instance, (UIntPtr)index);
 #endif
             return UTF8Marshaler.NativeToManagedNullable(result);
         }
@@ -242,19 +242,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.Magick_GetFontFamily(instance, (UIntPtr)index);
+                result = NativeMethods.ARM64.Magick_GetFontFamily(instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.Magick_GetFontFamily(instance, (UIntPtr)index);
+                result = NativeMethods.X64.Magick_GetFontFamily(instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.Magick_GetFontFamily(instance, (UIntPtr)index);
+                result = NativeMethods.X86.Magick_GetFontFamily(instance, (UIntPtr)index);
 #endif
             return UTF8Marshaler.NativeToManagedNullable(result);
         }
@@ -264,19 +264,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.Magick_DisposeFonts(instance);
+                NativeMethods.ARM64.Magick_DisposeFonts(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.Magick_DisposeFonts(instance);
+                NativeMethods.X64.Magick_DisposeFonts(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.Magick_DisposeFonts(instance);
+                NativeMethods.X86.Magick_DisposeFonts(instance);
 #endif
         }
         public static void SetDefaultFontFile(string fileName)
@@ -287,19 +287,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.Magick_SetDefaultFontFile(fileNameNative.Instance, out exception);
+                NativeMethods.ARM64.Magick_SetDefaultFontFile(fileNameNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.Magick_SetDefaultFontFile(fileNameNative.Instance, out exception);
+                NativeMethods.X64.Magick_SetDefaultFontFile(fileNameNative.Instance, out exception);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.Magick_SetDefaultFontFile(fileNameNative.Instance, out exception);
+                NativeMethods.X86.Magick_SetDefaultFontFile(fileNameNative.Instance, out exception);
 #endif
             MagickExceptionHelper.Check(exception);
         }
@@ -309,19 +309,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.Magick_SetLogDelegate(method);
+                NativeMethods.ARM64.Magick_SetLogDelegate(method);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.Magick_SetLogDelegate(method);
+                NativeMethods.X64.Magick_SetLogDelegate(method);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.Magick_SetLogDelegate(method);
+                NativeMethods.X86.Magick_SetLogDelegate(method);
 #endif
         }
         public static void SetLogEvents(string events)
@@ -331,19 +331,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.Magick_SetLogEvents(eventsNative.Instance);
+                NativeMethods.ARM64.Magick_SetLogEvents(eventsNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.Magick_SetLogEvents(eventsNative.Instance);
+                NativeMethods.X64.Magick_SetLogEvents(eventsNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.Magick_SetLogEvents(eventsNative.Instance);
+                NativeMethods.X86.Magick_SetLogEvents(eventsNative.Instance);
 #endif
         }
         public static void SetRandomSeed(long value)
@@ -352,19 +352,19 @@ public partial class MagickNET
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.Magick_SetRandomSeed(value);
+                NativeMethods.ARM64.Magick_SetRandomSeed(value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.Magick_SetRandomSeed(value);
+                NativeMethods.X64.Magick_SetRandomSeed(value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.Magick_SetRandomSeed(value);
+                NativeMethods.X86.Magick_SetRandomSeed(value);
 #endif
         }
     }

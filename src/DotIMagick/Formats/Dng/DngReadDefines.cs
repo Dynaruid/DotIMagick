@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace ImageMagick.Formats;
+namespace DotIMagick.Formats;
 
 /// <summary>
 /// Class for defines that are used when a <see cref="MagickFormat.Dng"/> image is read.

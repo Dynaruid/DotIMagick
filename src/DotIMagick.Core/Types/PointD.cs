@@ -4,7 +4,7 @@
 using System;
 using System.Globalization;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Struct for a point with doubles.

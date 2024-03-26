@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Text;
 
-namespace ImageMagick.SourceGenerator;
+namespace DotIMagick.SourceGenerator;
 
 [Generator]
 internal class DrawablesGenerator : IIncrementalGenerator
@@ -290,7 +290,7 @@ internal class DrawablesGenerator : IIncrementalGenerator
         }
 
         codeBuilder.AppendLine();
-        codeBuilder.AppendLine("namespace ImageMagick;");
+        codeBuilder.AppendLine("namespace DotIMagick;");
         codeBuilder.AppendLine();
 
         codeBuilder.Append("public partial ");

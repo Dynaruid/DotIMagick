@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal partial class Statistics
 {
@@ -51,19 +51,19 @@ internal partial class Statistics
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.Statistics_DisposeList(list);
+                NativeMethods.ARM64.Statistics_DisposeList(list);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.Statistics_DisposeList(list);
+                NativeMethods.X64.Statistics_DisposeList(list);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.Statistics_DisposeList(list);
+                NativeMethods.X86.Statistics_DisposeList(list);
 #endif
         }
         public static IntPtr GetInstance(IntPtr list, PixelChannel channel)
@@ -73,19 +73,19 @@ internal partial class Statistics
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.Statistics_GetInstance(list, (UIntPtr)channel);
+                result = NativeMethods.ARM64.Statistics_GetInstance(list, (UIntPtr)channel);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.Statistics_GetInstance(list, (UIntPtr)channel);
+                result = NativeMethods.X64.Statistics_GetInstance(list, (UIntPtr)channel);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.Statistics_GetInstance(list, (UIntPtr)channel);
+                result = NativeMethods.X86.Statistics_GetInstance(list, (UIntPtr)channel);
 #endif
             return result;
         }

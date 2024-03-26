@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class OpenCL
 {
@@ -70,19 +70,19 @@ public partial class OpenCL
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.OpenCL_GetDevices(out length);
+                result = NativeMethods.ARM64.OpenCL_GetDevices(out length);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.OpenCL_GetDevices(out length);
+                result = NativeMethods.X64.OpenCL_GetDevices(out length);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.OpenCL_GetDevices(out length);
+                result = NativeMethods.X86.OpenCL_GetDevices(out length);
 #endif
             return result;
         }
@@ -93,19 +93,19 @@ public partial class OpenCL
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.OpenCL_GetDevice(list, (UIntPtr)index);
+                result = NativeMethods.ARM64.OpenCL_GetDevice(list, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.OpenCL_GetDevice(list, (UIntPtr)index);
+                result = NativeMethods.X64.OpenCL_GetDevice(list, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.OpenCL_GetDevice(list, (UIntPtr)index);
+                result = NativeMethods.X86.OpenCL_GetDevice(list, (UIntPtr)index);
 #endif
             return result;
         }
@@ -116,19 +116,19 @@ public partial class OpenCL
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.OpenCL_GetEnabled();
+                result = NativeMethods.ARM64.OpenCL_GetEnabled();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.OpenCL_GetEnabled();
+                result = NativeMethods.X64.OpenCL_GetEnabled();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.OpenCL_GetEnabled();
+                result = NativeMethods.X86.OpenCL_GetEnabled();
 #endif
             return result;
         }
@@ -139,19 +139,19 @@ public partial class OpenCL
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.OpenCL_SetEnabled(value);
+                result = NativeMethods.ARM64.OpenCL_SetEnabled(value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.OpenCL_SetEnabled(value);
+                result = NativeMethods.X64.OpenCL_SetEnabled(value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.OpenCL_SetEnabled(value);
+                result = NativeMethods.X86.OpenCL_SetEnabled(value);
 #endif
             return result;
         }

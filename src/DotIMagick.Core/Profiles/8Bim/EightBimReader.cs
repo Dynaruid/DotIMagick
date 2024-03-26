@@ -5,7 +5,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class EightBimReader
 {

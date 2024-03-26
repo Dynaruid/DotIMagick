@@ -6,7 +6,7 @@
 using System;
 using System.Buffers;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <content />
 public partial interface IMagickImageInfo<TQuantumType> : IMagickImageInfo

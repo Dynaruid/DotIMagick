@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Represents an OpenCL device.

@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal static partial class MagickColorCollection
 {
@@ -51,19 +51,19 @@ internal static partial class MagickColorCollection
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickColorCollection_DisposeList(list);
+                NativeMethods.ARM64.MagickColorCollection_DisposeList(list);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickColorCollection_DisposeList(list);
+                NativeMethods.X64.MagickColorCollection_DisposeList(list);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickColorCollection_DisposeList(list);
+                NativeMethods.X86.MagickColorCollection_DisposeList(list);
 #endif
         }
         public static IntPtr GetInstance(IntPtr list, int index)
@@ -73,19 +73,19 @@ internal static partial class MagickColorCollection
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickColorCollection_GetInstance(list, (UIntPtr)index);
+                result = NativeMethods.ARM64.MagickColorCollection_GetInstance(list, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickColorCollection_GetInstance(list, (UIntPtr)index);
+                result = NativeMethods.X64.MagickColorCollection_GetInstance(list, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickColorCollection_GetInstance(list, (UIntPtr)index);
+                result = NativeMethods.X86.MagickColorCollection_GetInstance(list, (UIntPtr)index);
 #endif
             return result;
         }

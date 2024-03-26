@@ -1,7 +1,7 @@
 // Copyright Dirk Lemstra https://github.com/dlemstra/Magick.NET.
 // Licensed under the Apache License, Version 2.0.
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Draws a cubic Bezier curve from the current point to (x, y) using (x1, y1) as the control point

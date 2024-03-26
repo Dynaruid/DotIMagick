@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Interface for an object that specifies defines for an image.

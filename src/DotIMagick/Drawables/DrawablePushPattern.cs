@@ -3,7 +3,7 @@
 
 using System;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// indicates that subsequent commands up to a DrawablePopPattern command comprise the definition

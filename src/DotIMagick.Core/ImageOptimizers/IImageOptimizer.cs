@@ -3,7 +3,7 @@
 
 using System.IO;
 
-namespace ImageMagick.ImageOptimizers;
+namespace DotIMagick.ImageOptimizers;
 
 /// <summary>
 /// Interface for classes that can optimize an image.

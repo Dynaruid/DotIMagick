@@ -16,7 +16,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <content/>
 public sealed partial class MagickImage

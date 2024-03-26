@@ -5,7 +5,7 @@ using ImageMagick.SourceGenerator;
 using System;
 using System.Collections.Generic;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Class that can be used to chain draw actions.

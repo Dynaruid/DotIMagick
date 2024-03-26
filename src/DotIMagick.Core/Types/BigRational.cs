@@ -4,7 +4,7 @@
 using System;
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal struct BigRational : IEquatable<BigRational>
 {

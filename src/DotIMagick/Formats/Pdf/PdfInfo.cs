@@ -3,7 +3,7 @@
 
 using System.IO;
 
-namespace ImageMagick.Formats;
+namespace DotIMagick.Formats;
 
 /// <summary>
 /// The info of a <see cref="MagickFormat.Pdf"/> file.

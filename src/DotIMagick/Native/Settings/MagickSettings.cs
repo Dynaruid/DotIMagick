@@ -17,7 +17,7 @@ using QuantumType = System.Single;
 #error Not implemented!
 #endif
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 public partial class MagickSettings
 {
@@ -319,19 +319,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_Dispose(instance);
+                NativeMethods.ARM64.MagickSettings_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_Dispose(instance);
+                NativeMethods.X64.MagickSettings_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_Dispose(instance);
+                NativeMethods.X86.MagickSettings_Dispose(instance);
 #endif
         }
         public NativeMagickSettings()
@@ -340,19 +340,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.MagickSettings_Create();
+                Instance = NativeMethods.ARM64.MagickSettings_Create();
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.MagickSettings_Create();
+                Instance = NativeMethods.X64.MagickSettings_Create();
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.MagickSettings_Create();
+                Instance = NativeMethods.X86.MagickSettings_Create();
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -373,19 +373,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_AntiAlias_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_AntiAlias_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_AntiAlias_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_AntiAlias_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_AntiAlias_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_AntiAlias_Get(Instance);
 #endif
                 return result;
             }
@@ -395,19 +395,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_AntiAlias_Set(Instance, value);
+                    NativeMethods.ARM64.MagickSettings_AntiAlias_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_AntiAlias_Set(Instance, value);
+                    NativeMethods.X64.MagickSettings_AntiAlias_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_AntiAlias_Set(Instance, value);
+                    NativeMethods.X86.MagickSettings_AntiAlias_Set(Instance, value);
 #endif
             }
         }
@@ -420,19 +420,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_BackgroundColor_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_BackgroundColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_BackgroundColor_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_BackgroundColor_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_BackgroundColor_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_BackgroundColor_Get(Instance);
 #endif
                 return MagickColor.CreateInstance(result);
             }
@@ -443,19 +443,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_BackgroundColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.MagickSettings_BackgroundColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_BackgroundColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.MagickSettings_BackgroundColor_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_BackgroundColor_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.MagickSettings_BackgroundColor_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -468,19 +468,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_ColorSpace_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_ColorSpace_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_ColorSpace_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_ColorSpace_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_ColorSpace_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_ColorSpace_Get(Instance);
 #endif
                 return (ColorSpace)result;
             }
@@ -490,19 +490,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_ColorSpace_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickSettings_ColorSpace_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_ColorSpace_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickSettings_ColorSpace_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_ColorSpace_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickSettings_ColorSpace_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -515,19 +515,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_ColorType_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_ColorType_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_ColorType_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_ColorType_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_ColorType_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_ColorType_Get(Instance);
 #endif
                 return (ColorType)result;
             }
@@ -537,19 +537,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_ColorType_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickSettings_ColorType_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_ColorType_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickSettings_ColorType_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_ColorType_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickSettings_ColorType_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -562,19 +562,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Compression_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Compression_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Compression_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Compression_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Compression_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Compression_Get(Instance);
 #endif
                 return (CompressionMethod)result;
             }
@@ -584,19 +584,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Compression_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickSettings_Compression_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Compression_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickSettings_Compression_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Compression_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickSettings_Compression_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -609,19 +609,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Debug_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Debug_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Debug_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Debug_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Debug_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Debug_Get(Instance);
 #endif
                 return result;
             }
@@ -631,19 +631,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Debug_Set(Instance, value);
+                    NativeMethods.ARM64.MagickSettings_Debug_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Debug_Set(Instance, value);
+                    NativeMethods.X64.MagickSettings_Debug_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Debug_Set(Instance, value);
+                    NativeMethods.X86.MagickSettings_Debug_Set(Instance, value);
 #endif
             }
         }
@@ -656,19 +656,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Density_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Density_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Density_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Density_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Density_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Density_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManagedNullable(result);
             }
@@ -679,19 +679,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Density_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.MagickSettings_Density_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Density_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.MagickSettings_Density_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Density_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.MagickSettings_Density_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -704,19 +704,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Depth_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Depth_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Depth_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Depth_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Depth_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Depth_Get(Instance);
 #endif
                 return (int)result;
             }
@@ -726,19 +726,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Depth_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickSettings_Depth_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Depth_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickSettings_Depth_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Depth_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickSettings_Depth_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -751,19 +751,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Endian_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Endian_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Endian_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Endian_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Endian_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Endian_Get(Instance);
 #endif
                 return (Endian)result;
             }
@@ -773,19 +773,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Endian_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickSettings_Endian_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Endian_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickSettings_Endian_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Endian_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickSettings_Endian_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -798,19 +798,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Extract_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Extract_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Extract_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Extract_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Extract_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Extract_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManagedNullable(result);
             }
@@ -821,19 +821,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Extract_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.MagickSettings_Extract_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Extract_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.MagickSettings_Extract_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Extract_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.MagickSettings_Extract_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -846,19 +846,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Format_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Format_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Format_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Format_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Format_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Format_Get(Instance);
 #endif
                 return UTF8Marshaler.NativeToManagedNullable(result);
             }
@@ -869,19 +869,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Format_Set(Instance, valueNative.Instance);
+                    NativeMethods.ARM64.MagickSettings_Format_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Format_Set(Instance, valueNative.Instance);
+                    NativeMethods.X64.MagickSettings_Format_Set(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Format_Set(Instance, valueNative.Instance);
+                    NativeMethods.X86.MagickSettings_Format_Set(Instance, valueNative.Instance);
 #endif
             }
         }
@@ -894,19 +894,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_FontPointsize_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_FontPointsize_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_FontPointsize_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_FontPointsize_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_FontPointsize_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_FontPointsize_Get(Instance);
 #endif
                 return result;
             }
@@ -916,19 +916,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_FontPointsize_Set(Instance, value);
+                    NativeMethods.ARM64.MagickSettings_FontPointsize_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_FontPointsize_Set(Instance, value);
+                    NativeMethods.X64.MagickSettings_FontPointsize_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_FontPointsize_Set(Instance, value);
+                    NativeMethods.X86.MagickSettings_FontPointsize_Set(Instance, value);
 #endif
             }
         }
@@ -941,19 +941,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Monochrome_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Monochrome_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Monochrome_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Monochrome_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Monochrome_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Monochrome_Get(Instance);
 #endif
                 return result;
             }
@@ -963,19 +963,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Monochrome_Set(Instance, value);
+                    NativeMethods.ARM64.MagickSettings_Monochrome_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Monochrome_Set(Instance, value);
+                    NativeMethods.X64.MagickSettings_Monochrome_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Monochrome_Set(Instance, value);
+                    NativeMethods.X86.MagickSettings_Monochrome_Set(Instance, value);
 #endif
             }
         }
@@ -988,19 +988,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Interlace_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Interlace_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Interlace_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Interlace_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Interlace_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Interlace_Get(Instance);
 #endif
                 return (Interlace)result;
             }
@@ -1010,19 +1010,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Interlace_Set(Instance, (UIntPtr)value);
+                    NativeMethods.ARM64.MagickSettings_Interlace_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Interlace_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X64.MagickSettings_Interlace_Set(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Interlace_Set(Instance, (UIntPtr)value);
+                    NativeMethods.X86.MagickSettings_Interlace_Set(Instance, (UIntPtr)value);
 #endif
             }
         }
@@ -1035,19 +1035,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                result = NativeMethods.ARM64.MagickSettings_Verbose_Get(Instance);
+                    result = NativeMethods.ARM64.MagickSettings_Verbose_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                result = NativeMethods.X64.MagickSettings_Verbose_Get(Instance);
+                    result = NativeMethods.X64.MagickSettings_Verbose_Get(Instance);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                result = NativeMethods.X86.MagickSettings_Verbose_Get(Instance);
+                    result = NativeMethods.X86.MagickSettings_Verbose_Get(Instance);
 #endif
                 return result;
             }
@@ -1057,19 +1057,19 @@ public partial class MagickSettings
                 if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-                NativeMethods.ARM64.MagickSettings_Verbose_Set(Instance, value);
+                    NativeMethods.ARM64.MagickSettings_Verbose_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-                NativeMethods.X64.MagickSettings_Verbose_Set(Instance, value);
+                    NativeMethods.X64.MagickSettings_Verbose_Set(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
                 else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-                NativeMethods.X86.MagickSettings_Verbose_Set(Instance, value);
+                    NativeMethods.X86.MagickSettings_Verbose_Set(Instance, value);
 #endif
             }
         }
@@ -1079,19 +1079,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetColorFuzz(Instance, value);
+                NativeMethods.ARM64.MagickSettings_SetColorFuzz(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetColorFuzz(Instance, value);
+                NativeMethods.X64.MagickSettings_SetColorFuzz(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetColorFuzz(Instance, value);
+                NativeMethods.X86.MagickSettings_SetColorFuzz(Instance, value);
 #endif
         }
         public void SetFileName(string? value)
@@ -1101,19 +1101,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetFileName(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MagickSettings_SetFileName(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetFileName(Instance, valueNative.Instance);
+                NativeMethods.X64.MagickSettings_SetFileName(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetFileName(Instance, valueNative.Instance);
+                NativeMethods.X86.MagickSettings_SetFileName(Instance, valueNative.Instance);
 #endif
         }
         public string? SetFont(string? value)
@@ -1124,19 +1124,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.MagickSettings_SetFont(Instance, valueNative.Instance);
+                result = NativeMethods.ARM64.MagickSettings_SetFont(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.MagickSettings_SetFont(Instance, valueNative.Instance);
+                result = NativeMethods.X64.MagickSettings_SetFont(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.MagickSettings_SetFont(Instance, valueNative.Instance);
+                result = NativeMethods.X86.MagickSettings_SetFont(Instance, valueNative.Instance);
 #endif
             return UTF8Marshaler.NativeToManagedNullable(result);
         }
@@ -1146,19 +1146,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetNumberScenes(Instance, (UIntPtr)value);
+                NativeMethods.ARM64.MagickSettings_SetNumberScenes(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetNumberScenes(Instance, (UIntPtr)value);
+                NativeMethods.X64.MagickSettings_SetNumberScenes(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetNumberScenes(Instance, (UIntPtr)value);
+                NativeMethods.X86.MagickSettings_SetNumberScenes(Instance, (UIntPtr)value);
 #endif
         }
         public void SetOption(string key, string? value)
@@ -1169,19 +1169,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetOption(Instance, keyNative.Instance, valueNative.Instance);
+                NativeMethods.ARM64.MagickSettings_SetOption(Instance, keyNative.Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetOption(Instance, keyNative.Instance, valueNative.Instance);
+                NativeMethods.X64.MagickSettings_SetOption(Instance, keyNative.Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetOption(Instance, keyNative.Instance, valueNative.Instance);
+                NativeMethods.X86.MagickSettings_SetOption(Instance, keyNative.Instance, valueNative.Instance);
 #endif
         }
         public void SetPage(string? value)
@@ -1191,19 +1191,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetPage(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MagickSettings_SetPage(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetPage(Instance, valueNative.Instance);
+                NativeMethods.X64.MagickSettings_SetPage(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetPage(Instance, valueNative.Instance);
+                NativeMethods.X86.MagickSettings_SetPage(Instance, valueNative.Instance);
 #endif
         }
         public void SetPing(bool value)
@@ -1212,19 +1212,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetPing(Instance, value);
+                NativeMethods.ARM64.MagickSettings_SetPing(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetPing(Instance, value);
+                NativeMethods.X64.MagickSettings_SetPing(Instance, value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetPing(Instance, value);
+                NativeMethods.X86.MagickSettings_SetPing(Instance, value);
 #endif
         }
         public void SetQuality(int value)
@@ -1233,19 +1233,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetQuality(Instance, (UIntPtr)value);
+                NativeMethods.ARM64.MagickSettings_SetQuality(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetQuality(Instance, (UIntPtr)value);
+                NativeMethods.X64.MagickSettings_SetQuality(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetQuality(Instance, (UIntPtr)value);
+                NativeMethods.X86.MagickSettings_SetQuality(Instance, (UIntPtr)value);
 #endif
         }
         public void SetScenes(string? value)
@@ -1255,19 +1255,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetScenes(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MagickSettings_SetScenes(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetScenes(Instance, valueNative.Instance);
+                NativeMethods.X64.MagickSettings_SetScenes(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetScenes(Instance, valueNative.Instance);
+                NativeMethods.X86.MagickSettings_SetScenes(Instance, valueNative.Instance);
 #endif
         }
         public void SetScene(int value)
@@ -1276,19 +1276,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetScene(Instance, (UIntPtr)value);
+                NativeMethods.ARM64.MagickSettings_SetScene(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetScene(Instance, (UIntPtr)value);
+                NativeMethods.X64.MagickSettings_SetScene(Instance, (UIntPtr)value);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetScene(Instance, (UIntPtr)value);
+                NativeMethods.X86.MagickSettings_SetScene(Instance, (UIntPtr)value);
 #endif
         }
         public void SetSize(string? value)
@@ -1298,19 +1298,19 @@ public partial class MagickSettings
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.MagickSettings_SetSize(Instance, valueNative.Instance);
+                NativeMethods.ARM64.MagickSettings_SetSize(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.MagickSettings_SetSize(Instance, valueNative.Instance);
+                NativeMethods.X64.MagickSettings_SetSize(Instance, valueNative.Instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.MagickSettings_SetSize(Instance, valueNative.Instance);
+                NativeMethods.X86.MagickSettings_SetSize(Instance, valueNative.Instance);
 #endif
         }
     }

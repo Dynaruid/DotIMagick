@@ -3,7 +3,7 @@
 
 using System.Text;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class EndianReader
 {

@@ -3,7 +3,7 @@
 
 using System.Collections.ObjectModel;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal sealed class ExifData
 {

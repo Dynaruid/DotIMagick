@@ -7,7 +7,7 @@ using System;
 using System.Security;
 using System.Runtime.InteropServices;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 internal partial class PointInfoCollection : IDisposable
 {
@@ -70,19 +70,19 @@ internal partial class PointInfoCollection : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.PointInfoCollection_Dispose(instance);
+                NativeMethods.ARM64.PointInfoCollection_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.PointInfoCollection_Dispose(instance);
+                NativeMethods.X64.PointInfoCollection_Dispose(instance);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.PointInfoCollection_Dispose(instance);
+                NativeMethods.X86.PointInfoCollection_Dispose(instance);
 #endif
         }
         public NativePointInfoCollection(int length)
@@ -91,19 +91,19 @@ internal partial class PointInfoCollection : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.ARM64.PointInfoCollection_Create((UIntPtr)length);
+                Instance = NativeMethods.ARM64.PointInfoCollection_Create((UIntPtr)length);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X64.PointInfoCollection_Create((UIntPtr)length);
+                Instance = NativeMethods.X64.PointInfoCollection_Create((UIntPtr)length);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            Instance = NativeMethods.X86.PointInfoCollection_Create((UIntPtr)length);
+                Instance = NativeMethods.X86.PointInfoCollection_Create((UIntPtr)length);
 #endif
             if (Instance == IntPtr.Zero)
                 throw new InvalidOperationException();
@@ -126,19 +126,19 @@ internal partial class PointInfoCollection : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.PointInfoCollection_GetX(Instance, (UIntPtr)index);
+                result = NativeMethods.ARM64.PointInfoCollection_GetX(Instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.PointInfoCollection_GetX(Instance, (UIntPtr)index);
+                result = NativeMethods.X64.PointInfoCollection_GetX(Instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.PointInfoCollection_GetX(Instance, (UIntPtr)index);
+                result = NativeMethods.X86.PointInfoCollection_GetX(Instance, (UIntPtr)index);
 #endif
             return result;
         }
@@ -149,19 +149,19 @@ internal partial class PointInfoCollection : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            result = NativeMethods.ARM64.PointInfoCollection_GetY(Instance, (UIntPtr)index);
+                result = NativeMethods.ARM64.PointInfoCollection_GetY(Instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            result = NativeMethods.X64.PointInfoCollection_GetY(Instance, (UIntPtr)index);
+                result = NativeMethods.X64.PointInfoCollection_GetY(Instance, (UIntPtr)index);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            result = NativeMethods.X86.PointInfoCollection_GetY(Instance, (UIntPtr)index);
+                result = NativeMethods.X86.PointInfoCollection_GetY(Instance, (UIntPtr)index);
 #endif
             return result;
         }
@@ -171,19 +171,19 @@ internal partial class PointInfoCollection : IDisposable
             if (Runtime.IsArm64)
 #endif
 #if PLATFORM_arm64 || PLATFORM_AnyCPU
-            NativeMethods.ARM64.PointInfoCollection_Set(Instance, (UIntPtr)index, x, y);
+                NativeMethods.ARM64.PointInfoCollection_Set(Instance, (UIntPtr)index, x, y);
 #endif
 #if PLATFORM_AnyCPU
             else if (Runtime.Is64Bit)
 #endif
 #if PLATFORM_x64 || PLATFORM_AnyCPU
-            NativeMethods.X64.PointInfoCollection_Set(Instance, (UIntPtr)index, x, y);
+                NativeMethods.X64.PointInfoCollection_Set(Instance, (UIntPtr)index, x, y);
 #endif
 #if PLATFORM_AnyCPU
             else
 #endif
 #if PLATFORM_x86 || PLATFORM_AnyCPU
-            NativeMethods.X86.PointInfoCollection_Set(Instance, (UIntPtr)index, x, y);
+                NativeMethods.X86.PointInfoCollection_Set(Instance, (UIntPtr)index, x, y);
 #endif
         }
     }

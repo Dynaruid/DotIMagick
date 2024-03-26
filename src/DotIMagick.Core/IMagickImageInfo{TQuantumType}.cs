@@ -4,7 +4,7 @@
 using System;
 using System.IO;
 
-namespace ImageMagick;
+namespace DotIMagick;
 
 /// <summary>
 /// Interface that contains basic information about an image.
