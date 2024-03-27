@@ -15,8 +15,8 @@ namespace aot_example_DotIMaickAOT
             Console.WriteLine("init....done");
         }
 
-        [UnmanagedCallersOnly(EntryPoint = "RecognizeImage")]
-        public static unsafe IntPtr RecognizeImage(
+        [UnmanagedCallersOnly(EntryPoint = "RunDemo")]
+        public static unsafe IntPtr RunDemo(
             long imageArrPointer,
             int height,
             int width,
@@ -65,11 +65,33 @@ namespace aot_example_DotIMaickAOT
             }
 
             var image = ConvertArrayToMagickImage(targetArray);
-            MemoryStream memoryStream = new();
-            image.Write(memoryStream);
+            // 작업수행
+            targetArray = ConvertMagickImageToArray(image);
+
+            unsafe
+            {
+                GCHandle gch = GCHandle.Alloc(targetArray, GCHandleType.Pinned);
+                try
+                {
+                    IntPtr dataPtr = gch.AddrOfPinnedObject();
+                    // 여기에서 Buffer.MemoryCopy를 사용
+                    Buffer.MemoryCopy(
+                        dataPtr.ToPointer(),
+                        inputPtr.ToPointer(),
+                        dataSize,
+                        dataSize
+                    );
+                }
+                finally
+                {
+                    if (gch.IsAllocated)
+                    {
+                        gch.Free();
+                    }
+                }
+            }
 
             image.Dispose();
-            memoryStream.Dispose();
 
             return inputPtr;
         }
@@ -103,6 +125,33 @@ namespace aot_example_DotIMaickAOT
             image.Format = MagickFormat.Tiff;
 
             return image;
+        }
+
+        public static float[,,] ConvertMagickImageToArray(MagickImage image)
+        {
+            int width = image.Width;
+            int height = image.Height;
+            int channel = 4; // RGB 채널만 고려
+
+            float[,,] targetArray = new float[height, width, channel];
+
+            // PixelCollection을 사용하여 이미지의 픽셀 데이터에 접근
+            var pixels = image.GetPixels();
+
+            for (int y = 0; y < height; y++)
+            {
+                for (int x = 0; x < width; x++)
+                {
+                    // RGBA 형식의 픽셀 데이터에서 RGB 값을 추출하고, 0-255 범위를 0-1 범위로 변환
+                    var pixel = pixels.GetPixel(x, y).ToColor()!;
+                    targetArray[y, x, 0] = pixel.R / 255f; // R
+                    targetArray[y, x, 1] = pixel.G / 255f; // G
+                    targetArray[y, x, 2] = pixel.B / 255f; // B
+                    targetArray[y, x, 3] = 255;
+                }
+            }
+
+            return targetArray;
         }
     }
 }
