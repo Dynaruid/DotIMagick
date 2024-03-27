@@ -1,0 +1,8 @@
+.DS_Store
+/.vs
+/Properties
+/bin
+/obj
+/libraries
+/pyenv311
+/binary
