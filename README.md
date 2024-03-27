@@ -10,10 +10,11 @@
 그것을 위해서는 이 프로젝트 디렉토리의 src/Magick.Native에서 Magick.NET의 [Install Magick.Native](https://github.com/dlemstra/Magick.NET/blob/main/Building.md#install-magicknative)지침을 따르십시오.
 
 ### DotIMagick 프로젝트에서 직접 빌드
-DotIMagick솔루션에서 DotIMagick프로젝트를 빌드하는것 자체는 Magick.Native의 libraries가 꼭 필요하지는 않습니다. 하지만 DotIMagick빌드 결과물의 사용을 위해서는 Magick.Native의 libraries가 필요합니다.
+DotIMagick솔루션에서 DotIMagick프로젝트를 빌드하는것 자체는 Magick.Native의 libraries가 꼭 필요하지는 않습니다. 하지만 DotIMagick빌드 결과물의 사용을 위해서는 Magick.Native의 libraries가 필요합니다. 만약 Magick.Native디렉토리에 libraries의 네이티브 라이브러리를 받은 상태에서 DotIMagick 프로젝트를 Publish한다면 DotIMagick 프로젝트의 빌드출력경로에 magickNativeFiles디렉토리와 그 안에 libraries의 요소가 복사되어 존재할것입니다. 
+빌드출력경로의 magickNativeFiles디렉토리의 이름을 "libraries"로 변경후에 DotIMagick패키지를 사용할 프로젝트루트에 이름을 "libraries"로 변경한 디렉토리를 복사하면 해당 프로젝트에서 Publish시에 DotIMagick패키지가 올바르게 동작할것 입니다.
 
 ## DotIMagick 패키지를 자신의 프로젝트에서 사용하기
-DotIMagick와 함께 프로젝트를 빌드하면 빌드 출력경로에 magickNativeFiles디렉토리가 생성됩니다. 이 디렉토리에는 Magick.Native의 libraries에서 복사된 네이티브 라이브러리가 위치합니다.
+DotIMagick패키지의 빌드 동작에는 이 패키지가 사용되는 프로젝트의 루트에 libraries디렉토리가 있는지 체크하는 과정이 있습니다. DotIMagick와 함께 프로젝트를 빌드하면 빌드 출력경로에 magickNativeFiles디렉토리가 생성됩니다. 이 디렉토리에는 libraries에서 복사된 네이티브 라이브러리가 위치합니다.
 DotIMagick의 닷넷라이브러리 또는 nuget을 통해 DotIMagick을 설치하였고 Magick.Native의 libraries를 자신의 프로젝트 루트에 위치했다면 
 이제 DotIMagick를 사용하기 위해 초기화가 필요합니다.
 ```
