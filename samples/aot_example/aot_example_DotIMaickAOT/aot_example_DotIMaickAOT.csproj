@@ -7,7 +7,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PublishAot>true</PublishAot>
 
-    <Configurations>DebugQ8;DebugQ16;DebugQ16-HDRI;TestQ8;TestQ16;TestQ16-HDRI;ReleaseQ8;ReleaseQ16;ReleaseQ16-HDRI</Configurations>
+    <Configurations>Release;Debug</Configurations>
     <Platforms>x86;x64;arm64;AnyCPU</Platforms>
     
   </PropertyGroup>
@@ -27,13 +27,7 @@
   </PropertyGroup>
 
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    
-    <ItemGroup>
-      <libraries Include="$(MSBuildProjectDirectory)\libraries\**\*" />
-    </ItemGroup>
-    <Message Text="Copying native libraries..." Importance="high" />
-    <Copy SourceFiles="@(libraries)" DestinationFiles="@(libraries->'$(OutputPath)\magickNativeFiles\%(RecursiveDir)%(Filename)%(Extension)')" />
+  <Target Name="PostPublish" AfterTargets="Publish">
     
     <ItemGroup>
       <BuildOutputs Include="$(TargetDir)\**\*" />
@@ -44,7 +38,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.14" />
+    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.16" />
   </ItemGroup>
 
 </Project>

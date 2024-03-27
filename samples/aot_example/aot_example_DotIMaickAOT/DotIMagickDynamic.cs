@@ -101,19 +101,13 @@ namespace aot_example_DotIMaickAOT
             int halfWidth = rightHalfImage.Width / 2;
 
             // 가로로 절반으로 자르기
-            MagickGeometry size = new MagickGeometry(halfWidth, rightHalfImage.Height)
+            MagickGeometry size = new MagickGeometry(halfWidth, 0, halfWidth, rightHalfImage.Height)
             {
                 IgnoreAspectRatio = true
             };
 
             rightHalfImage.Crop(size);
-            rightHalfImage.Page = new MagickGeometry(
-                halfWidth,
-                0,
-                halfWidth,
-                rightHalfImage.Height
-            );
-            rightHalfImage.GaussianBlur(5, 10);
+            rightHalfImage.GaussianBlur(9, 10);
             image.Composite(rightHalfImage, halfWidth, 0, CompositeOperator.Over);
         }
 
