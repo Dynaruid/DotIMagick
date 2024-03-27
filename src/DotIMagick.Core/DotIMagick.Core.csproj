@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net8</TargetFrameworks>
     <Platforms>AnyCPU</Platforms>
     <Configurations>Debug;Test;Release;DebugQ8;ReleaseQ8</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

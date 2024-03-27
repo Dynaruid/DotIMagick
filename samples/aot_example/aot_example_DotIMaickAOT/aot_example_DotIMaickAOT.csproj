@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PublishAot>true</PublishAot>
+
+    <Configurations>DebugQ8;DebugQ16;DebugQ16-HDRI;TestQ8;TestQ16;TestQ16-HDRI;ReleaseQ8;ReleaseQ16;ReleaseQ16-HDRI</Configurations>
+    <Platforms>x86;x64;arm64;AnyCPU</Platforms>
+    
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,12 +18,33 @@
 
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\src\DotIMagick\DotIMagick.csproj" />
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>6</WarningLevel>
+  </PropertyGroup>
+
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Copy SourceFiles="$(TargetDir)\*.*"
-          DestinationFolder="(MSBuildProjectDirectory)\..\binary"
-          SkipUnchangedFiles="true" />
+    
+    <ItemGroup>
+      <libraries Include="$(MSBuildProjectDirectory)\libraries\**\*" />
+    </ItemGroup>
+    <Message Text="Copying native libraries..." Importance="high" />
+    <Copy SourceFiles="@(libraries)" DestinationFiles="@(libraries->'$(OutputPath)\magickNativeFiles\%(RecursiveDir)%(Filename)%(Extension)')" />
+    
+    <ItemGroup>
+      <BuildOutputs Include="$(TargetDir)\**\*" />
+    </ItemGroup>
+    <Message Text="targets: $(TargetDir)" Importance="high" />
+    <Copy SourceFiles="@(BuildOutputs)" DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
+
+
+  <ItemGroup>
+    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.14" />
+  </ItemGroup>
+
 </Project>

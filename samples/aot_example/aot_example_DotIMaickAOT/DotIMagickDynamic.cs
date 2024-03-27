@@ -8,15 +8,12 @@ namespace aot_example_DotIMaickAOT
         [UnmanagedCallersOnly(EntryPoint = "InitEngine")]
         public static void InitEngine(IntPtr basePathPtr)
         {
-            //Console.WriteLine("initialization function is called");
             string basePath = Marshal.PtrToStringUTF8(basePathPtr)!;
             DotIMagick.NativeConstants.InitBaseLibraryPath(basePath);
-
-            Console.WriteLine("init....done");
         }
 
-        [UnmanagedCallersOnly(EntryPoint = "RunDemo")]
-        public static unsafe IntPtr RunDemo(
+        [UnmanagedCallersOnly(EntryPoint = "RunDemoBulrRightHalfImage")]
+        public static unsafe void RunDemoBulrRightHalfImage(
             long imageArrPointer,
             int height,
             int width,
@@ -25,20 +22,20 @@ namespace aot_example_DotIMaickAOT
         {
             float[,,] targetArray = new float[height, width, channel];
             int dataSize = sizeof(float) * targetArray.Length;
-            IntPtr inputPtr = IntPtr.Zero;
+            IntPtr imagePtr = IntPtr.Zero;
             try
             {
-                inputPtr = checked((IntPtr)imageArrPointer);
+                imagePtr = checked((IntPtr)imageArrPointer);
             }
             catch (System.OverflowException)
             {
                 Console.WriteLine("Overflow 발생!");
             }
 
-            if (inputPtr == IntPtr.Zero)
+            if (imagePtr == IntPtr.Zero)
             {
                 Console.WriteLine("이미지 데이터를 받을수 없습니다!");
-                return IntPtr.Zero;
+                //return IntPtr.Zero;
             }
 
             unsafe
@@ -47,9 +44,9 @@ namespace aot_example_DotIMaickAOT
                 try
                 {
                     IntPtr dataPtr = gch.AddrOfPinnedObject();
-                    // 여기에서 Buffer.MemoryCopy를 사용
+
                     Buffer.MemoryCopy(
-                        inputPtr.ToPointer(),
+                        imagePtr.ToPointer(),
                         dataPtr.ToPointer(),
                         dataSize,
                         dataSize
@@ -65,7 +62,9 @@ namespace aot_example_DotIMaickAOT
             }
 
             var image = ConvertArrayToMagickImage(targetArray);
-            // 작업수행
+
+            BlurRightHalfOfImage(image);
+
             targetArray = ConvertMagickImageToArray(image);
 
             unsafe
@@ -77,7 +76,7 @@ namespace aot_example_DotIMaickAOT
                     // 여기에서 Buffer.MemoryCopy를 사용
                     Buffer.MemoryCopy(
                         dataPtr.ToPointer(),
-                        inputPtr.ToPointer(),
+                        imagePtr.ToPointer(),
                         dataSize,
                         dataSize
                     );
@@ -93,15 +92,35 @@ namespace aot_example_DotIMaickAOT
 
             image.Dispose();
 
-            return inputPtr;
+            //return inputPtr;
+        }
+
+        public static void BlurRightHalfOfImage(MagickImage image)
+        {
+            using MagickImage rightHalfImage = (MagickImage)image.Clone();
+            int halfWidth = rightHalfImage.Width / 2;
+
+            // 가로로 절반으로 자르기
+            MagickGeometry size = new MagickGeometry(halfWidth, rightHalfImage.Height)
+            {
+                IgnoreAspectRatio = true
+            };
+
+            rightHalfImage.Crop(size);
+            rightHalfImage.Page = new MagickGeometry(
+                halfWidth,
+                0,
+                halfWidth,
+                rightHalfImage.Height
+            );
+            rightHalfImage.GaussianBlur(5, 10);
+            image.Composite(rightHalfImage, halfWidth, 0, CompositeOperator.Over);
         }
 
         public static MagickImage ConvertArrayToMagickImage(float[,,] array)
         {
             int height = array.GetLength(0);
             int width = array.GetLength(1);
-
-            Console.WriteLine("try ConvertArrayToMagickImage");
 
             MagickImage image = new MagickImage(MagickColors.White, width, height);
             // PixelCollection을 사용하여 이미지의 픽셀 데이터에 접근
