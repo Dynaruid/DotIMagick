@@ -20,6 +20,8 @@ public static class NativeConstants
 
     public const string ARM64Name = Name + "-" + QuantumName + "-arm64.dll";
 
+    private static string Suffix = "";
+
 #if Q8
     private const string Quantum = "Q8";
 #elif Q16
@@ -49,6 +51,7 @@ public static class NativeConstants
         }
         else if (OperatingSystem.IsLinux())
         {
+            Suffix = ".so";
             // musl을 사용하는 시스템은 특정 파일이나 경로가 존재할 수 있습니다.
             // 예를 들어, /etc/alpine-release 파일은 Alpine Linux (musl을 사용) 에서 존재합니다.
             // 다른 musl 기반 시스템을 확인하기 위한 추가적인 파일이나 조건을 추가할 수 있습니다.
@@ -64,6 +67,7 @@ public static class NativeConstants
         }
         else if (OperatingSystem.IsMacOS())
         {
+            Suffix = ".dylib";
             runtimeOperatingSystemStr = "osx";
         }
 
@@ -94,17 +98,17 @@ public static class NativeConstants
     {
         if (libraryName == X86Name)
         {
-            var currentNativeLibraryName = BaseLibraryPath + X86Name;
+            var currentNativeLibraryName = BaseLibraryPath + X86Name+Suffix;
             return NativeLibrary.Load(currentNativeLibraryName, assembly, searchPath);
         }
         else if (libraryName == X64Name)
         {
-            var currentNativeLibraryName = BaseLibraryPath + X64Name;
+            var currentNativeLibraryName = BaseLibraryPath + X64Name + Suffix;
             return NativeLibrary.Load(currentNativeLibraryName, assembly, searchPath);
         }
         else if (libraryName == ARM64Name)
         {
-            var currentNativeLibraryName = BaseLibraryPath + ARM64Name;
+            var currentNativeLibraryName = BaseLibraryPath + ARM64Name + Suffix;
             return NativeLibrary.Load(currentNativeLibraryName, assembly, searchPath);
         }
 

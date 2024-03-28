@@ -45,7 +45,5 @@ def running():
     plt.show()
     
 
-
-# ��ũ��Ʈ�� �����Ϸ��� ������ ��� ��ư�� �����ϴ�.
 if __name__ == '__main__':
     running()
