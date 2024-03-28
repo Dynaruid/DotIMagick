@@ -2,6 +2,7 @@
   <PropertyGroup>
     <!--무조건 netstandard20 이어야함-->
     <TargetFrameworks>netstandard20</TargetFrameworks>
+    <Platforms>AnyCPU</Platforms>
     <LangVersion>12.0</LangVersion>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <Configurations>Debug;Release;</Configurations>
