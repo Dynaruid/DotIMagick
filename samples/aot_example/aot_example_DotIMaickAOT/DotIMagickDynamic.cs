@@ -139,7 +139,7 @@ namespace aot_example_DotIMaickAOT
         {
             int width = image.Width;
             int height = image.Height;
-            int channel = 4; // RGB 채널만 고려
+            int channel = 4; // RGBA 채널만 고려
 
             byte[,,] targetArray = new byte[height, width, channel];
 

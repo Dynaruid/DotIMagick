@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 def running():
-    path = "images/phototest.tif"
+    path = "images/receipt.jpg"
     input_img = plt.imread(path)
     
     input_img_row = input_img.shape[0]
