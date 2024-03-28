@@ -23,11 +23,6 @@
       <BuildOutputs Include="$(TargetDir)\**\*" />
     </ItemGroup>
     <Message Text="targets: $(TargetDir)" Importance="high" />
-    <Copy SourceFiles="@(BuildOutputs)"
-      DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')"
-      SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(BuildOutputs)" DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
-  <ItemGroup>
-    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.18" />
-  </ItemGroup>
 </Project>
