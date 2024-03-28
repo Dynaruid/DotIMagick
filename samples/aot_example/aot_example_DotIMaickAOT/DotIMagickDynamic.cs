@@ -20,8 +20,8 @@ namespace aot_example_DotIMaickAOT
             int channel
         )
         {
-            float[,,] targetArray = new float[height, width, channel];
-            int dataSize = sizeof(float) * targetArray.Length;
+            byte[,,] targetArray = new byte[height, width, channel];
+            int dataSize = sizeof(byte) * targetArray.Length;
             IntPtr imagePtr = IntPtr.Zero;
             try
             {
@@ -111,7 +111,7 @@ namespace aot_example_DotIMaickAOT
             image.Composite(rightHalfImage, halfWidth, 0, CompositeOperator.Over);
         }
 
-        public static MagickImage ConvertArrayToMagickImage(float[,,] array)
+        public static MagickImage ConvertArrayToMagickImage(byte[,,] array)
         {
             int height = array.GetLength(0);
             int width = array.GetLength(1);
@@ -124,12 +124,8 @@ namespace aot_example_DotIMaickAOT
             {
                 for (int x = 0; x < width; x++)
                 {
-                    // 배열에서 RGB 값을 가져오고, 0-1 범위를 0-255 범위로 변환
-                    byte r = Convert.ToByte(array[y, x, 0]);
-                    byte g = Convert.ToByte(array[y, x, 1]);
-                    byte b = Convert.ToByte(array[y, x, 2]);
 
-                    byte[] color = { r, g, b, 255 }; // RGBA 형식
+                    byte[] color = [array[y, x, 0], array[y, x, 1], array[y, x, 2], 255]; // RGBA 형식
                     // 픽셀 색상 설정
                     pixels.SetPixel(x, y, color);
                 }
@@ -140,13 +136,13 @@ namespace aot_example_DotIMaickAOT
             return image;
         }
 
-        public static float[,,] ConvertMagickImageToArray(MagickImage image)
+        public static byte[,,] ConvertMagickImageToArray(MagickImage image)
         {
             int width = image.Width;
             int height = image.Height;
             int channel = 4; // RGB 채널만 고려
 
-            float[,,] targetArray = new float[height, width, channel];
+            byte[,,] targetArray = new byte[height, width, channel];
 
             // PixelCollection을 사용하여 이미지의 픽셀 데이터에 접근
             var pixels = image.GetPixels();
@@ -155,11 +151,10 @@ namespace aot_example_DotIMaickAOT
             {
                 for (int x = 0; x < width; x++)
                 {
-                    // RGBA 형식의 픽셀 데이터에서 RGB 값을 추출하고, 0-255 범위를 0-1 범위로 변환
                     var pixel = pixels.GetPixel(x, y).ToColor()!;
-                    targetArray[y, x, 0] = pixel.R / 255f; // R
-                    targetArray[y, x, 1] = pixel.G / 255f; // G
-                    targetArray[y, x, 2] = pixel.B / 255f; // B
+                    targetArray[y, x, 0] = pixel.R; // R
+                    targetArray[y, x, 1] = pixel.G; // G
+                    targetArray[y, x, 2] = pixel.B; // B
                     targetArray[y, x, 3] = 255;
                 }
             }

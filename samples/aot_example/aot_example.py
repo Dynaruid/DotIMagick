@@ -8,14 +8,17 @@ import matplotlib.pyplot as plt
 def running():
     path = "images/phototest.tif"
     input_img = plt.imread(path)
-    input_img = input_img.astype(np.float32)
+    
     input_img_row = input_img.shape[0]
     input_img_col = input_img.shape[1]
 
     if len(input_img.shape) == 3:
         if input_img.shape[2] == 3:
-            plus_array = np.zeros((input_img_row, input_img_col), dtype=np.float32) + 255
+            plus_array = np.zeros((input_img_row, input_img_col), dtype=np.uint8) + 255
             input_img = np.dstack((input_img, plus_array))
+            
+    plt.imshow(input_img)
+    plt.show()
     
     os_name = platform.system()
     library_path = ""

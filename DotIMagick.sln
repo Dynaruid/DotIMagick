@@ -21,9 +21,6 @@ EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "aot_example", "samples\aot_example\aot_example.pyproj", "{6F0468A9-22FA-4965-AC93-2B0B6E007417}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aot_example_DotIMaickAOT", "samples\aot_example\aot_example_DotIMaickAOT\aot_example_DotIMaickAOT.csproj", "{4D78DF03-956C-4BA6-84C1-7023C41672E3}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B71824E7-A3DA-4B30-88B7-0B6633CB73A5} = {B71824E7-A3DA-4B30-88B7-0B6633CB73A5}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
