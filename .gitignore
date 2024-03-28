@@ -8,6 +8,7 @@ obj
 lib
 runtimes
 api.key.txt
+/libraries
 /src/Magick.Native/libraries
 /src/Magick.Native/nuget.config
 /src/Magick.Native/resources
