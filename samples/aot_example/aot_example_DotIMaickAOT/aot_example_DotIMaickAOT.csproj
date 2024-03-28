@@ -20,12 +20,14 @@
   </PropertyGroup>
   <Target Name="PostPublish" AfterTargets="Publish">
     <ItemGroup>
-      <BuildOutputs Include="$(TargetDir)\**\*"/>
+      <BuildOutputs Include="$(TargetDir)\**\*" />
     </ItemGroup>
-    <Message Text="targets: $(TargetDir)" Importance="high"/>
-    <Copy SourceFiles="@(BuildOutputs)" DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true"/>
+    <Message Text="targets: $(TargetDir)" Importance="high" />
+    <Copy SourceFiles="@(BuildOutputs)"
+      DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="true" />
   </Target>
   <ItemGroup>
-    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.17"/>
+    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.18" />
   </ItemGroup>
 </Project>
