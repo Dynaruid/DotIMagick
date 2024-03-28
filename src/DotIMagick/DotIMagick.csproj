@@ -6,14 +6,16 @@
     <Configurations>
       DebugQ8;DebugQ16;DebugQ16-HDRI;TestQ8;TestQ16;TestQ16-HDRI;TestQ8-OpenMP;TestQ16-OpenMP;TestQ16-HDRI-OpenMP;ReleaseQ8;ReleaseQ8-OpenMP;ReleaseQ16;ReleaseQ16-OpenMP;ReleaseQ16-HDRI;ReleaseQ16-HDRI-OpenMP</Configurations>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.16</Version>
+    <Version>1.0.17</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Apache-2.0 license</Copyright>
     <PackageTags>imagemagick;image</PackageTags>
-    <Description>This is a forked version of Magick.NET with AOT (Ahead-Of-Time compilation) support.</Description>
+    <Description>This is a forked version of Magick.NET with AOT (Ahead-Of-Time compilation)
+      support.</Description>
     <RepositoryUrl>https://github.com/Dynaruid/DotIMagick</RepositoryUrl>
-  
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
   </PropertyGroup>
 
   <PropertyGroup>
@@ -51,7 +53,7 @@
     <QuantumName>Q16-HDRI-OpenMP</QuantumName>
   </PropertyGroup>
 
-  
+
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
@@ -64,7 +66,7 @@
   <PropertyGroup Condition="'$(Platform)' == 'arm64'">
     <PlatformTarget>ARM64</PlatformTarget>
   </PropertyGroup>
-  
+
 
   <ItemGroup>
     <Compile Include="../Magick.Native/TrademarkAttribute.cs" Link="TrademarkAttribute.cs" />
@@ -80,11 +82,11 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <AssemblyName>DotIMagick-$(QuantumName)-$(Platform)</AssemblyName>
     <AssemblyTitle>DotIMagick $(QuantumName) $(Platform) $(TargetFrameWork)</AssemblyTitle>
-    
+
   </PropertyGroup>
   <Import Project="CopyTargetsFile.targets" />
   <Import Project="DotIMagick.targets" />
@@ -94,7 +96,8 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <ProjectReference Include="..\DotIMagick.Core\DotIMagick.Core.csproj" />
-    <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj"
+      OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <None Include="README.md" Pack="true" PackagePath="\" />
     <None Include="LICENSE" Pack="true" PackagePath="\" />
   </ItemGroup>

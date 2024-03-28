@@ -17,7 +17,8 @@
     <PropertyGroup>
       <QuantumName
         Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(
-        $(MSBuildThisFileName), 'Q8'))">Q8</QuantumName>
+        $(MSBuildThisFileName), 'Q8'))">
+        Q8</QuantumName>
     </PropertyGroup>
     <PropertyGroup>
       <QuantumName
@@ -28,7 +29,8 @@
     <PropertyGroup>
       <QuantumName
         Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(
-        $(MSBuildThisFileName), 'Q16'))">Q16</QuantumName>
+        $(MSBuildThisFileName), 'Q16'))">
+        Q16</QuantumName>
     </PropertyGroup>
     <PropertyGroup>
       <QuantumName
@@ -61,33 +63,45 @@
     <Message Text="RID: '$(RuntimeIdentifier)'" Importance="high" />
     <Message Text="Magick.Native-$(QuantumName)-$(Platform).dll" Importance="high" />
     <ItemGroup
-      Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(RuntimeIdentifier), 'win-x64'))">
+      Condition="'$(RuntimeIdentifier)' == 'win-x64'">
       <AllFiles
         Include='$(OutputPath)\magickNativeFiles\**\*'
-        Exclude="$(OutputPath)\magickNativeFiles\win\Magick.Native-$(QuantumName)-$(Platform).dll" />
+        Exclude="$(OutputPath)\magickNativeFiles\win\Magick.Native-$(QuantumName)-x64.dll" />
     </ItemGroup>
 
     <ItemGroup
-      Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(RuntimeIdentifier), 'linux-arm64')) 
-               or $([System.Text.RegularExpressions.Regex]::IsMatch($(RuntimeIdentifier), 'linux-x64'))">
+      Condition="'$(RuntimeIdentifier)' ==  'linux-arm64'">
       <AllFiles
         Include='$(OutputPath)\magickNativeFiles\**\*'
-        Exclude="$(OutputPath)\magickNativeFiles\linux\Magick.Native-$(QuantumName)-$(Platform).dll" />
-    </ItemGroup>
-    <ItemGroup
-      Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(RuntimeIdentifier), 'linux-musl-x64'))">
-      <AllFiles
-        Include='$(OutputPath)\magickNativeFiles\**\*'
-        Exclude="$(OutputPath)\magickNativeFiles\linux-musl\Magick.Native-$(QuantumName)-$(Platform).dll" />
+        Exclude="$(OutputPath)\magickNativeFiles\linux\Magick.Native-$(QuantumName)-arm64.dll" />
     </ItemGroup>
 
     <ItemGroup
-      Condition="$([System.Text.RegularExpressions.Regex]::IsMatch($(RuntimeIdentifier), 'osx-arm64'))">
+      Condition="'$(RuntimeIdentifier)' ==  'linux-x64'">
       <AllFiles
         Include='$(OutputPath)\magickNativeFiles\**\*'
-        Exclude="$(OutputPath)\magickNativeFiles\osx\Magick.Native-$(QuantumName)-$(Platform).dll" />
+        Exclude="$(OutputPath)\magickNativeFiles\linux\Magick.Native-$(QuantumName)-x64.dll" />
     </ItemGroup>
-    
+    <ItemGroup
+      Condition="'$(RuntimeIdentifier)' ==  'linux-musl-x64'">
+      <AllFiles
+        Include='$(OutputPath)\magickNativeFiles\**\*'
+        Exclude="$(OutputPath)\magickNativeFiles\linux-musl\Magick.Native-$(QuantumName)-x64.dll" />
+    </ItemGroup>
+
+    <ItemGroup
+      Condition="'$(RuntimeIdentifier)' == 'osx-arm64'">
+      <AllFiles
+        Include='$(OutputPath)\magickNativeFiles\**\*'
+        Exclude="$(OutputPath)\magickNativeFiles\osx\Magick.Native-$(QuantumName)-arm64.dll" />
+    </ItemGroup>
+    <ItemGroup
+      Condition="'$(RuntimeIdentifier)' == 'osx-x64'">
+      <AllFiles
+        Include='$(OutputPath)\magickNativeFiles\**\*'
+        Exclude="$(OutputPath)\magickNativeFiles\osx\Magick.Native-$(QuantumName)-x64.dll" />
+    </ItemGroup>
+
 
     <!-- 특정 파일을 제외한 모든 파일 삭제 -->
     <Delete Files="@(AllFiles)" TreatErrorsAsWarnings="true" />
