@@ -1,44 +1,31 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PublishAot>true</PublishAot>
-
     <Configurations>Release;Debug</Configurations>
     <Platforms>x86;x64;arm64;AnyCPU</Platforms>
-    
   </PropertyGroup>
-
   <PropertyGroup>
     <AssemblyName>DotIMagickDynamic</AssemblyName>
     <AssemblyTitle>DotIMagickDynamic $(TargetFrameWork)</AssemblyTitle>
-
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>6</WarningLevel>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <WarningLevel>6</WarningLevel>
   </PropertyGroup>
-
-
   <Target Name="PostPublish" AfterTargets="Publish">
-    
     <ItemGroup>
-      <BuildOutputs Include="$(TargetDir)\**\*" />
+      <BuildOutputs Include="$(TargetDir)\**\*"/>
     </ItemGroup>
-    <Message Text="targets: $(TargetDir)" Importance="high" />
-    <Copy SourceFiles="@(BuildOutputs)" DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Message Text="targets: $(TargetDir)" Importance="high"/>
+    <Copy SourceFiles="@(BuildOutputs)" DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true"/>
   </Target>
-
-
   <ItemGroup>
-    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.16" />
+    <PackageReference Include="DotIMagick-Q8-AnyCPU" Version="1.0.17"/>
   </ItemGroup>
-
 </Project>
