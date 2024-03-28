@@ -61,7 +61,7 @@ namespace aot_example_DotIMaickAOT
                 }
             }
 
-            var image = ConvertArrayToMagickImage(targetArray);
+            using var image = ConvertArrayToMagickImage(targetArray);
 
             BlurRightHalfOfImage(image);
 
@@ -90,7 +90,6 @@ namespace aot_example_DotIMaickAOT
                 }
             }
 
-            image.Dispose();
 
             //return inputPtr;
         }
@@ -115,36 +114,10 @@ namespace aot_example_DotIMaickAOT
         {
             int height = array.GetLength(0);
             int width = array.GetLength(1);
-            int channel = array.GetLength(2);
-
-            MagickReadSettings settings = new MagickReadSettings()
-            {
-                Width = width, // 이미지 너비
-                Height = height, // 이미지 높이
-                Format = MagickFormat.Rgba // 알파 채널 포함
-            };
-
-            /*
-            byte[] serializedImage = new byte[height * width * channel];
-            int pixelIndex = 0;
-            
-            for (int y = 0; y < height; y++)
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    serializedImage[pixelIndex++] = array[y, x, 0];
-                    serializedImage[pixelIndex++] = array[y, x, 1];
-                    serializedImage[pixelIndex++] = array[y, x, 2];
-                    serializedImage[pixelIndex++] = array[y, x, 3];
-                }
-            }
-            MagickImage image = new MagickImage(serializedImage, settings);
-            */
-
 
             // PixelCollection을 사용하여 이미지의 픽셀 데이터에 접근
             MagickImage image = new MagickImage(MagickColors.White, width, height);
-            var pixels = image.GetPixels();
+            using var pixels = image.GetPixels();
 
             for (int y = 0; y < height; y++)
             {
@@ -183,22 +156,6 @@ namespace aot_example_DotIMaickAOT
                 }
             }
 
-            /*
-            // PixelCollection을 사용하여 이미지의 픽셀 데이터에 접근
-            
-            //var pixels = image.GetPixels();
-            for (int y = 0; y < height; y++)
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    var pixel = pixels.GetPixel(x, y).ToColor()!;
-                    targetArray[y, x, 0] = pixel.R; // R
-                    targetArray[y, x, 1] = pixel.G; // G
-                    targetArray[y, x, 2] = pixel.B; // B
-                    targetArray[y, x, 3] = 255;
-                }
-            }
-            */
 
             return targetArray;
         }
