@@ -106,7 +106,7 @@ namespace aot_example_DotIMaickAOT
             };
 
             rightHalfImage.Crop(size);
-            rightHalfImage.GaussianBlur(9, 10);
+            rightHalfImage.Blur(9, 5);
             image.Composite(rightHalfImage, halfWidth, 0, CompositeOperator.Over);
         }
 
