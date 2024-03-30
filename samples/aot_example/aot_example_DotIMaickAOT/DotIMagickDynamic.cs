@@ -21,7 +21,7 @@ namespace aot_example_DotIMaickAOT
         )
         {
             byte[,,] targetArray = new byte[height, width, channel];
-            int dataSize = sizeof(byte) * targetArray.Length;
+            long dataSize = sizeof(byte) * targetArray.LongLength;
             IntPtr imagePtr = IntPtr.Zero;
             try
             {
@@ -64,9 +64,7 @@ namespace aot_example_DotIMaickAOT
             using var image = ConvertArrayToMagickImage(targetArray);
 
             BlurRightHalfOfImage(image);
-
             targetArray = ConvertMagickImageToArray(image);
-
             unsafe
             {
                 GCHandle gch = GCHandle.Alloc(targetArray, GCHandleType.Pinned);
@@ -142,17 +140,16 @@ namespace aot_example_DotIMaickAOT
             int channel = 4; // RGBA 채널만 고려
 
             byte[,,] targetArray = new byte[height, width, channel];
-
-            byte[] pixels = image.GetPixels().ToArray()!;
-            int pixelIndex = 0;
+            var pixels = image.GetPixels();
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
                 {
-                    targetArray[y, x, 0] = pixels[pixelIndex++]; // R
-                    targetArray[y, x, 1] = pixels[pixelIndex++]; // G
-                    targetArray[y, x, 2] = pixels[pixelIndex++]; // B
-                    targetArray[y, x, 3] = 255;
+                    var pixelColor = pixels.GetPixel(x,y).ToColor()!;
+                    targetArray[y, x, 0] = pixelColor.R; // R
+                    targetArray[y, x, 1] = pixelColor.G; // G
+                    targetArray[y, x, 2] = pixelColor.B; // B
+                    targetArray[y, x, 3] = pixelColor.A; // A
                 }
             }
 
