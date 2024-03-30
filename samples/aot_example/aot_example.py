@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 
 
 def running():
-    #path = "images/Spirited-Away-landscape-Studio-Ghibli-anime-clouds-water.jpg"
-    path = "images/kor_sample.jpg"
-    loaded_img = Image.open(path).convert("RGB")
+    path = "images/Spirited-Away-landscape-Studio-Ghibli-anime-clouds-water.jpg"
+    #path = "images/kor_sample.jpg"
+    loaded_img = Image.open(path).convert("RGBA")
     input_img = np.array(loaded_img)
     
     input_img_row = input_img.shape[0]
