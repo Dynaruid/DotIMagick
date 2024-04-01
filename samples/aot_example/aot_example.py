@@ -7,7 +7,6 @@ from PIL import Image,ImageTk
 import numpy as np
 
 def show_image(image_arr):
-
     image = Image.fromarray(image_arr)
     target_width = 500
     width_percent = (target_width / float(image.size[0]))
