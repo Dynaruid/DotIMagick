@@ -34,11 +34,9 @@ def running():
     if len(input_img.shape) == 2:
         print("error: The image must have at least 3 channels!")
         return
-
     show_image(input_img)
 
     os_name = platform.system()
-    library_path = ""
     if os_name == 'Windows':
         library_path = "./binary/native/DotIMagickDynamic.dll"
     elif os_name == 'Linux':
