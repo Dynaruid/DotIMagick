@@ -1,5 +1,6 @@
-﻿using DotIMagick;
+﻿using System.IO.Compression;
 using System.Runtime.InteropServices;
+using DotIMagick;
 
 namespace aot_example_DotIMaickAOT
 {
@@ -61,8 +62,8 @@ namespace aot_example_DotIMaickAOT
                 }
             }
 
+            //using var image = ConvertArrayToMagickImage(targetArray);
             using var image = ConvertArrayToMagickImage(targetArray);
-
             BlurRightHalfOfImage(image);
             targetArray = ConvertMagickImageToArray(image);
             unsafe
@@ -88,7 +89,6 @@ namespace aot_example_DotIMaickAOT
                 }
             }
 
-
             //return inputPtr;
         }
 
@@ -112,23 +112,30 @@ namespace aot_example_DotIMaickAOT
         {
             int height = array.GetLength(0);
             int width = array.GetLength(1);
-
-            // PixelCollection을 사용하여 이미지의 픽셀 데이터에 접근
-            MagickImage image = new MagickImage(MagickColors.White, width, height);
-            using var pixels = image.GetPixels();
-
-            for (int y = 0; y < height; y++)
+            int channelCount = array.GetLength(2);
+            MagickReadSettings settings = new MagickReadSettings
             {
-                for (int x = 0; x < width; x++)
-                {
+                Width = width,
+                Height = height,
+                Format = channelCount == 4 ? MagickFormat.Rgba : MagickFormat.Rgb
+            };
 
-                    byte[] color = [array[y, x, 0], array[y, x, 1], array[y, x, 2], 255]; // RGBA 형식
-                    // 픽셀 색상 설정
-                    pixels.SetPixel(x, y, color);
+            int totalSize = height * width * channelCount;
+            byte[] oneDimensionalArray = new byte[totalSize];
+
+            // 3차원 배열의 모든 요소를 1차원 배열로 복사합니다.
+            int index = 0;
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    for (int k = 0; k < channelCount; k++)
+                    {
+                        oneDimensionalArray[index++] = array[i, j, k];
+                    }
                 }
             }
-
-            //image.Format = MagickFormat.Tiff;
+            MagickImage image = new MagickImage(oneDimensionalArray, settings);
 
             return image;
         }
@@ -137,22 +144,31 @@ namespace aot_example_DotIMaickAOT
         {
             int width = image.Width;
             int height = image.Height;
-            int channel = 4; // RGBA 채널만 고려
+            int channel;
+            if (image.HasAlpha)
+            {
+                channel = 4;
+            }
+            else
+            {
+                channel = 3;
+            }
 
             byte[,,] targetArray = new byte[height, width, channel];
-            var pixels = image.GetPixels();
+
+            var imageByteArr = image.ToByteArray();
+
+            int index = 0;
             for (int y = 0; y < height; y++)
             {
                 for (int x = 0; x < width; x++)
                 {
-                    var pixelColor = pixels.GetPixel(x,y).ToColor()!;
-                    targetArray[y, x, 0] = pixelColor.R; // R
-                    targetArray[y, x, 1] = pixelColor.G; // G
-                    targetArray[y, x, 2] = pixelColor.B; // B
-                    targetArray[y, x, 3] = pixelColor.A; // A
+                    for (int z = 0; z < channel; z++)
+                    {
+                        targetArray[y, x, z] = imageByteArr[index++];
+                    }
                 }
             }
-
 
             return targetArray;
         }
