@@ -2,12 +2,9 @@ import os
 import platform
 import time
 from ctypes import *
-
 from tkinter import Tk, Label
-
 from PIL import Image,ImageTk
 import numpy as np
-import matplotlib.pyplot as plt
 
 def show_image(image_arr):
 
