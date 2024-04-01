@@ -3,14 +3,34 @@ import platform
 import time
 from ctypes import *
 
-from PIL import Image
+from tkinter import Tk, Label
+
+from PIL import Image,ImageTk
 import numpy as np
 import matplotlib.pyplot as plt
 
+def show_image(image_arr):
+
+    image = Image.fromarray(image_arr)
+    target_width = 500
+    width_percent = (target_width / float(image.size[0]))
+    target_height = int((float(image.size[1]) * float(width_percent)))
+    # 이미지 크기 조절
+    resized_image = image.resize((target_width, target_height))
+    window = Tk()
+    window.title("viewer")
+    window.geometry("600x500+100+150")
+
+    photo = ImageTk.PhotoImage(resized_image)
+    # 이미지를 표시할 레이블 생성 및 배치
+    label = Label(window, image=photo)
+    label.pack(expand=True)
+    # GUI 실행
+    window.mainloop()
 
 def running():
-    path = "images/Spirited-Away-landscape-Studio-Ghibli-anime-clouds-water.jpg"
-    #path = "images/kor_sample.jpg"
+    #path = "images/Spirited-Away-landscape-Studio-Ghibli-anime-clouds-water.jpg"
+    path = "images/kor_sample.jpg"
     loaded_img = Image.open(path).convert("RGBA")
     input_img = np.array(loaded_img)
     
@@ -22,11 +42,10 @@ def running():
             plus_array = np.zeros((input_img_row, input_img_col), dtype=np.uint8) + 255
             input_img = np.dstack((input_img, plus_array))
         else:
-            print(input_img.shape);
-            
+            print(input_img.shape)
+
+    show_image(input_img)
   
-    plt.imshow(input_img)
-    plt.show()
     
     os_name = platform.system()
     library_path = ""
@@ -53,8 +72,7 @@ def running():
     end_time = time.time()
     elapsed_time = end_time - start_time
     print(f"Function execution time: {elapsed_time} seconds")
-    plt.imshow(input_img)
-    plt.show()
+    show_image(input_img)
     
 
 if __name__ == '__main__':
