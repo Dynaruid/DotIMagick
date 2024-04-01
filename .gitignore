@@ -16,3 +16,5 @@ api.key.txt
 /samples/Magick.NET.Samples/Samples/Magick.NET/Files/*.pp
 /samples/Magick.NET.Samples/Samples/Magick.NET/Scripts/*.pp
 /tools/windows/*.exe
+samples/aot_example/.idea/aot_example.iml
+samples/aot_example/.idea/misc.xml
