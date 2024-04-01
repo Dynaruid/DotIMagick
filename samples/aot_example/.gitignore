@@ -1,9 +1,9 @@
 .DS_Store
 /.vs
 /.venv
+/.idea
 /Properties
 /bin
 /obj
 /libraries
-/pyenv311
 /binary
