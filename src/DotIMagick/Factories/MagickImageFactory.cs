@@ -4,7 +4,6 @@
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16

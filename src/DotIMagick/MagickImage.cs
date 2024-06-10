@@ -10,7 +10,6 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16
@@ -1154,8 +1153,7 @@ public sealed partial class MagickImage : IMagickImage<QuantumType>, INativeInst
     /// </summary>
     /// <param name="noiseType">The type of noise that should be added to the image.</param>
     /// <exception cref="MagickException">Thrown when an error is raised by DotIMagick.</exception>
-    public void AddNoise(NoiseType noiseType) =>
-        AddNoise(noiseType, DotIMagick.Channels.Undefined);
+    public void AddNoise(NoiseType noiseType) => AddNoise(noiseType, DotIMagick.Channels.Undefined);
 
     /// <summary>
     /// Add noise to the specified channel of the image with the specified noise type.
@@ -4457,7 +4455,8 @@ public sealed partial class MagickImage : IMagickImage<QuantumType>, INativeInst
         int iterations
     )
     {
-        var newKernel = Enum.GetName(kernel.GetType(), kernel)!.ToLowerInvariant() + ":" + arguments;
+        var newKernel =
+            Enum.GetName(kernel.GetType(), kernel)!.ToLowerInvariant() + ":" + arguments;
 
         Morphology(method, newKernel, channels, iterations);
     }

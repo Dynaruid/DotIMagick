@@ -1,3 +1,0 @@
-*.sh eol=lf
-*.pl eol=lf
-sample.pdf eol=crlf

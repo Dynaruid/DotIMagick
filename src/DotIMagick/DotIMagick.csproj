@@ -4,8 +4,9 @@
     <Platforms>x86;x64;arm64;AnyCPU</Platforms>
     <RuntimeIdentifiers>win-x64;linux-x64;osx-arm64</RuntimeIdentifiers>
     <Configurations>DebugQ8;DebugQ16;DebugQ16-HDRI;ReleaseQ8;ReleaseQ8-OpenMP;ReleaseQ16;ReleaseQ16-OpenMP;ReleaseQ16-HDRI;ReleaseQ16-HDRI-OpenMP;Release;Debug</Configurations>
+    <!-- ex) dotnet build -c ReleaseQ8 -->
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.22</Version>
+    <Version>1.0.26</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Apache-2.0 license</Copyright>
@@ -52,8 +53,8 @@
     <QuantumName>Q16-HDRI-OpenMP</QuantumName>
   </PropertyGroup>
 
-
   <ItemGroup>
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="13.9.1" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Platform)' == 'x86'">
@@ -66,9 +67,7 @@
     <PlatformTarget>ARM64</PlatformTarget>
   </PropertyGroup>
 
-
   <ItemGroup>
-    <Compile Include="../Magick.Native/TrademarkAttribute.cs" Link="TrademarkAttribute.cs" />
     <Compile Include="../Shared/Bytes.cs" Link="Helpers/Bytes.cs" />
     <Compile Include="../Shared/EnumHelper.cs" Link="Helpers/EnumHelper.cs" />
     <Compile Include="../Shared/FileHelper.cs" Link="Helpers/FileHelper.cs" />
@@ -79,25 +78,22 @@
   <PropertyGroup>
     <NoWarn>$(NoWarn);CS0414</NoWarn>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup>
     <AssemblyName>DotIMagick-$(QuantumName)</AssemblyName>
     <AssemblyTitle>DotIMagick $(QuantumName) $(TargetFrameWork)</AssemblyTitle>
-
   </PropertyGroup>
-  <Import Project="CopyTargetsFile.targets" />
-  <Import Project="DotIMagick.targets" />
 
+  <Import Project="../DotIMagick.props" />
   <ItemGroup>
-    <Content Include="build\$(AssemblyName).targets">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Content>
-    <ProjectReference Include="..\DotIMagick.Core\DotIMagick.Core.csproj" />
-    <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     <None Include="README.md" Pack="true" PackagePath="\" />
     <None Include="LICENSE" Pack="true" PackagePath="\" />
   </ItemGroup>
-  <Import Project="../DotIMagick.props" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotIMagick.Core\DotIMagick.Core.csproj" />
+    <ProjectReference Include="..\DotIMagick.SourceGenerator\DotIMagick.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
 </Project>

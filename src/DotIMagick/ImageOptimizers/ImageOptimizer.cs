@@ -1,10 +1,10 @@
 ﻿// Copyright Dirk Lemstra https://github.com/dlemstra/Magick.NET.
 // Licensed under the Apache License, Version 2.0.
 
-using DotIMagick.ImageOptimizers;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using DotIMagick.ImageOptimizers;
 
 namespace DotIMagick;
 

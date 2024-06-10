@@ -2,7 +2,6 @@
 // Licensed under the Apache License, Version 2.0.
 
 using System;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16
@@ -36,8 +35,7 @@ public sealed class ColorCMYK : ColorBase
                 PercentageHelper.ToQuantumType(key),
                 Quantum.Max
             )
-        )
-    { }
+        ) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="ColorCMYK"/> class.
@@ -62,8 +60,7 @@ public sealed class ColorCMYK : ColorBase
                 PercentageHelper.ToQuantumType(key),
                 PercentageHelper.ToQuantumType(alpha)
             )
-        )
-    { }
+        ) { }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="ColorCMYK"/> class.

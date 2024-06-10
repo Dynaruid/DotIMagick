@@ -6,7 +6,6 @@
 using System;
 using System.Buffers;
 using System.Collections.Generic;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16

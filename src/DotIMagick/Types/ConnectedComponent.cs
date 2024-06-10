@@ -4,7 +4,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16

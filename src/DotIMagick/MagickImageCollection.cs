@@ -8,7 +8,6 @@ using System.Globalization;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16
@@ -477,10 +476,13 @@ public sealed partial class MagickImageCollection : IMagickImageCollection<Quant
             AttachImages();
 
             if (complexSettings.SignalToNoiseRatio is not null)
-                _images[0].SetArtifact(
-                    "complex:snr",
-                    complexSettings.SignalToNoiseRatio.Value.ToString(CultureInfo.InvariantCulture)
-                );
+                _images[0]
+                    .SetArtifact(
+                        "complex:snr",
+                        complexSettings.SignalToNoiseRatio.Value.ToString(
+                            CultureInfo.InvariantCulture
+                        )
+                    );
 
             images = _nativeInstance.Complex(_images[0], complexSettings.ComplexOperator);
         }

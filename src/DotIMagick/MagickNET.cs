@@ -215,7 +215,6 @@ public partial class MagickNET : IMagickNET
     /// </summary>
     public static void Initialize() => Environment.Initialize();
 
-
     /// <summary>
     /// Resets the pseudo-random number generator secret key.
     /// </summary>

@@ -2,7 +2,6 @@
 // Licensed under the Apache License, Version 2.0.
 
 using System.Collections.Generic;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16

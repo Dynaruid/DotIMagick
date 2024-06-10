@@ -26,6 +26,6 @@
     <Copy SourceFiles="@(BuildOutputs)" DestinationFiles="@(BuildOutputs->'$(ProjectDir)..\binary\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
   <ItemGroup>
-    <PackageReference Include="DotIMagick-Q8" Version="1.0.22" />
+    <PackageReference Include="DotIMagick-Q8" Version="1.0.26" />
   </ItemGroup>
 </Project>

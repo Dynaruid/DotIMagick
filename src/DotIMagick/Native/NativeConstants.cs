@@ -1,5 +1,4 @@
-﻿// Copyright Dirk Lemstra https://github.com/dlemstra/Magick.NET.
-// Licensed under the Apache License, Version 2.0.
+﻿// Licensed under the Apache License, Version 2.0.
 
 using System;
 using System.IO;
@@ -71,13 +70,15 @@ public static class NativeConstants
             runtimeOperatingSystemStr = "osx";
         }
 
-        BaseLibraryPath =
-            baseLibraryPath
-            + sep
-            + "magickNativeFiles"
-            + sep
-            + runtimeOperatingSystemStr
-            + sep;
+        // BaseLibraryPath =
+        //     baseLibraryPath
+        //     + sep
+        //     + "magickNativeFiles"
+        //     + sep
+        //     + runtimeOperatingSystemStr
+        //     + sep;
+
+        BaseLibraryPath = baseLibraryPath + sep;
         InitNativeLoader();
     }
 
@@ -98,7 +99,7 @@ public static class NativeConstants
     {
         if (libraryName == X86Name)
         {
-            var currentNativeLibraryName = BaseLibraryPath + X86Name+Suffix;
+            var currentNativeLibraryName = BaseLibraryPath + X86Name + Suffix;
             return NativeLibrary.Load(currentNativeLibraryName, assembly, searchPath);
         }
         else if (libraryName == X64Name)

@@ -4,7 +4,6 @@
 #if NETSTANDARD2_1
 
 using System;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16

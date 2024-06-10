@@ -3,7 +3,6 @@
 
 using System;
 using DotIMagick.Helpers;
-
 #if Q8
 using QuantumType = System.Byte;
 #elif Q16
