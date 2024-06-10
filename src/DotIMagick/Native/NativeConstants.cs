@@ -70,14 +70,6 @@ public static class NativeConstants
             runtimeOperatingSystemStr = "osx";
         }
 
-        // BaseLibraryPath =
-        //     baseLibraryPath
-        //     + sep
-        //     + "magickNativeFiles"
-        //     + sep
-        //     + runtimeOperatingSystemStr
-        //     + sep;
-
         BaseLibraryPath = baseLibraryPath + sep;
         InitNativeLoader();
     }
